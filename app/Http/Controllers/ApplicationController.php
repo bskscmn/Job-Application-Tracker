@@ -12,7 +12,7 @@ class ApplicationController extends Controller
 
     	$user = auth()->user();
 
-    	$apps = Application::where('user_id', $user->id)->get();
+    	$apps = Application::where('user_id', $user->id)->with('condition')->get();
 
     	return Inertia::render('Applications/Index',[
     		'apps' => $apps
@@ -21,7 +21,7 @@ class ApplicationController extends Controller
 
     public function show(int $id) {
 
-    	$app = Application::where('id', $id)->first();
+    	$app = Application::where('id', $id)->with('condition')->first();
 
     	return Inertia::render('Applications/Show',[
     		'app' => $app

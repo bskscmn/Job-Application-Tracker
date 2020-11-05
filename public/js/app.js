@@ -3445,6 +3445,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -3473,6 +3494,26 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -26118,7 +26159,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Applications\n        ")]
+                [_vm._v("\n                Applications\n            ")]
               )
             ]
           },
@@ -26143,18 +26184,84 @@ var render = function() {
                     "div",
                     { staticClass: "flex justify-between items-center" },
                     [
-                      _c("div", [
-                        _c("b", [_vm._v("Company:")]),
-                        _vm._v(" " + _vm._s(app.company) + " ")
+                      _c("div", { staticClass: "text-sm text-teal-800" }, [
+                        _vm._v("Application Date: ../../.... ")
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "text-sm text-gray-800" }, [
-                        _vm._v("Application Date: ../../.... ")
-                      ])
+                      app.condition_id === 1
+                        ? _c("div", [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
+                              },
+                              [_vm._v(_vm._s(app.condition.condition))]
+                            )
+                          ])
+                        : app.condition_id === 2
+                        ? _c("div", [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
+                              },
+                              [_vm._v(_vm._s(app.condition.condition))]
+                            )
+                          ])
+                        : app.condition_id === 3
+                        ? _c("div", [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                              },
+                              [_vm._v(_vm._s(app.condition.condition))]
+                            )
+                          ])
+                        : app.condition_id === 4
+                        ? _c("div", [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800"
+                              },
+                              [_vm._v(_vm._s(app.condition.condition))]
+                            )
+                          ])
+                        : app.condition_id === 5
+                        ? _c("div", [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white"
+                              },
+                              [_vm._v(_vm._s(app.condition.condition))]
+                            )
+                          ])
+                        : _c("div", [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
+                              },
+                              [_vm._v(_vm._s(app.condition.condition))]
+                            )
+                          ])
                     ]
                   ),
                   _vm._v(" "),
                   _c("div", [
+                    _c("b", [_vm._v("Company:")]),
+                    _vm._v(" " + _vm._s(app.company) + " ")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-4" }, [
                     _c("b", [_vm._v("Post:")]),
                     _vm._v(" " + _vm._s(app.post_title))
                   ]),
@@ -26163,7 +26270,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "bg-indigo-500 text-white px-2 py-1 mt-2 rounded hover:bg-indigo-700",
+                        "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
                       attrs: { href: "application/" + app.id }
                     },
                     [_vm._v("Details")]
@@ -26234,14 +26341,80 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "flex justify-between items-center" }, [
-                _c("div", [
-                  _c("b", [_vm._v("Company:")]),
-                  _vm._v(" " + _vm._s(_vm.app.company) + " ")
+                _c("div", { staticClass: "text-sm text-teal-800" }, [
+                  _vm._v("Application Date: ../../.... ")
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "text-sm text-gray-800" }, [
-                  _vm._v("Application Date: ../../.... ")
-                ])
+                _vm.app.condition_id === 1
+                  ? _c("div", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
+                        },
+                        [_vm._v(_vm._s(_vm.app.condition.condition))]
+                      )
+                    ])
+                  : _vm.app.condition_id === 2
+                  ? _c("div", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
+                        },
+                        [_vm._v(_vm._s(_vm.app.condition.condition))]
+                      )
+                    ])
+                  : _vm.app.condition_id === 3
+                  ? _c("div", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                        },
+                        [_vm._v(_vm._s(_vm.app.condition.condition))]
+                      )
+                    ])
+                  : _vm.app.condition_id === 4
+                  ? _c("div", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800"
+                        },
+                        [_vm._v(_vm._s(_vm.app.condition.condition))]
+                      )
+                    ])
+                  : _vm.app.condition_id === 5
+                  ? _c("div", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white"
+                        },
+                        [_vm._v(_vm._s(_vm.app.condition.condition))]
+                      )
+                    ])
+                  : _c("div", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
+                        },
+                        [_vm._v(_vm._s(_vm.app.condition.condition))]
+                      )
+                    ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("b", [_vm._v("Company:")]),
+                _vm._v(" " + _vm._s(_vm.app.company) + " ")
               ]),
               _vm._v(" "),
               _c("div", [
