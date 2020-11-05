@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Application;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
+use DateTime;
 
 class ApplicationController extends Controller
 {
@@ -31,5 +34,23 @@ class ApplicationController extends Controller
     public function create() {
 
     	return Inertia::render('Applications/Create',[]);
+    }
+
+    public function store(Request $request)
+    {
+    	$validator = Validator::make($request->all(), [
+            'company' => 'required|max:255',
+            'post_title' => 'required',
+        ])->validate();
+
+    	$user = auth()->user();
+        $request['user_id'] = $user->id;
+
+        $d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
+        $request['app_date'] = $d->format('Y-m-d H:i:s');
+
+        Application::create($request->all());
+
+        return Redirect::route('/applications');
     }
 }

@@ -11,6 +11,25 @@ class Application extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'company',
+		'contactPerson',
+		'email',
+		'phone',
+		'post_title',
+		'link',
+		'location',
+		'description',
+        'sent_files',
+		'motivation_letter',
+		'created_at',
+		'updated_at',
+		'app_date',
+		'comment',
+		'condition_id',
+    ];
+
     public function user() {
         return $this->belongsTo(User::class);
     }

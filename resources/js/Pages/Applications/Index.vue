@@ -13,7 +13,7 @@
                 		<div class="p-3 shadow-xl">
                 			
                 			<div class="flex justify-between items-center">
-                				<div class="text-sm text-teal-800">Application Date: ../../.... </div>
+                				<div class="text-sm text-teal-800">Application Date: <span v-if="app.app_date !== null"><b>{{ app.app_date | moment }}</b></span> </div>
 
                 				<div v-if="app.condition_id === 1">
 								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{ app.condition.condition }}</span>
@@ -31,7 +31,7 @@
 								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white">{{ app.condition.condition }}</span>
 								</div>
 								<div v-else>
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{ app.condition.condition }}</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">No Action</span>
 								</div>
                 				
                 			</div>
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+	import moment from 'moment'
     import AppLayout from '@/Layouts/AppLayout'
 
     export default {
@@ -61,7 +62,11 @@
         		appList: this.apps
         	}
         },
-
+		filters: {
+		     moment: function (date) {
+		       return moment(date).format('Do MMMM YYYY, h:mm A');
+		     }
+		},
         mounted() {
         	console.log(this.appList);
         }     	
