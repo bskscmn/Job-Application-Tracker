@@ -9,6 +9,11 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
+                	<div v-if="this.appList.length == 0" class="text-center">
+                		<div class="px-5 py-2 bg-indigo-800 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+						    <span class="font-semibold text-center flex-auto">You dont have any job application in your list.</span>
+						</div>
+						</div>
                 	<div v-for="app in this.appList" v-bind:key="app.id">
                 		<div class="p-3 shadow-xl">
                 			
