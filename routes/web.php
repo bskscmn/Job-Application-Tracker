@@ -25,8 +25,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 	})->name('dashboard');
 
     Route::get('/applications', 'App\Http\Controllers\ApplicationController@index')->name('applications.index');
-	Route::get('/application/{id}', 'App\Http\Controllers\ApplicationController@show')->name('applications.show');
-
+    Route::get('/application/create', 'App\Http\Controllers\ApplicationController@create')->name('applications.create');
+  	Route::get('/application/{id}', 'App\Http\Controllers\ApplicationController@show')->name('applications.show');
 
 });
 

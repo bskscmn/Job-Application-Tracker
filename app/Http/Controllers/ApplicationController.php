@@ -27,4 +27,9 @@ class ApplicationController extends Controller
     		'app' => $app
     	]);
     }
+
+    public function create() {
+
+    	return Inertia::render('Applications/Create',[]);
+    }
 }

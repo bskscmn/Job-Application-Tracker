@@ -1,0 +1,250 @@
+<template>
+    <app-layout>
+        <template #header>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                Application
+            </h2>
+        </template>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
+
+                    <form class="w-full ">
+                        <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">    
+                            <div class="container mx-auto p-4 divide-y divide-gray-200">
+                                <div class="mt-2">
+                                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="condition_id">
+                                            Status
+                                        </label>
+                                        <select class="shadow w-full border leading-tight rounded mb-3 px-3 py-2 outline-none" name="condition_id">
+                                            <option value="1">No Action</option>
+                                            <option value="2">Applied</option>
+                                            <option value="3">Accepted</option>
+                                            <option value="4">Refused</option>
+                                            <option value="5">Hired</option>
+                                        </select>                                      
+                                    </div>
+                                    <div class="md:flex md:items-center mb-3 max-w-lg">
+                                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
+                                            Aplication Date
+                                          </label>
+                                          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" name="date" type="text" placeholder=" dd / mm / YYYY">
+                                        </div>
+                                        <div class="w-full md:w-1/2 px-3">
+                                          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="time">
+                                            Time
+                                          </label>
+                                          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time" name="time" type="text" placeholder="hh : mm : PM">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <div class="md:flex md:items-center mb-3 mt-2">
+                                        <div class="w-full px-3 max-w-lg">
+                                          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="company">
+                                            Company
+                                          </label>
+                                          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="company" name="company" type="text" placeholder="Company Name">
+                                        </div>
+                                    </div>
+                                    <div class="md:flex md:items-center mb-3">
+                                        <div class="w-full px-3 max-w-lg">
+                                          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="location">
+                                            Location
+                                          </label>
+                                          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="location" name="location" type="text" placeholder="Location">
+                                        </div>
+                                    </div>
+                                    <div class="md:flex md:items-center mb-3">
+                                        <div class="w-full px-3">
+                                          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="post_title">
+                                            Post Title
+                                          </label>
+                                          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="post_title" name="post_title" type="text" placeholder="Title">
+                                        </div>
+                                    </div>
+                                    <div class="md:flex md:items-center mb-3">
+                                        <div class="w-full px-3">
+                                          <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="link">
+                                            Link
+                                          </label>
+                                          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="link" name="link" type="text" placeholder="URL">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                                
+                        <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                            
+                            <div class="grid grid-cols-1">
+                                <div class="p-6">
+                                    <div class="flex items-center">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Contact Person</div>
+                                        
+                                    </div>
+
+                                    <div class="ml-12">
+                                        <div class="md:flex md:items-center mb-3 mt-2">
+                                            <div class="w-full px-3 max-w-lg">
+                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="contactPerson">
+                                                Name
+                                              </label>
+                                              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="contactPerson" name="contactPerson" type="text" placeholder="Full Name">
+                                            </div>
+                                        </div>
+                                        <div class="md:flex md:items-center mb-3 max-w-lg">
+                                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
+                                                Email
+                                              </label>
+                                              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" name="email" type="email" placeholder="@">
+                                            </div>
+                                            <div class="w-full md:w-1/2 px-3">
+                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="time">
+                                                Phone
+                                              </label>
+                                              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time"  name="phone" type="tel" placeholder="phone number">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1">
+                                <div class="p-6">
+                                    <div class="flex items-center">
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Description</div>
+                                    </div>
+
+                                    <div class="ml-12">
+                                        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4" name="description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1">
+                                <div class="p-6">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z"/></svg>
+                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Sent Files</div>
+                                    </div>
+
+                                    <div class="ml-12">
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="sent_files" name="sent_files" type="text" placeholder="The files you sent : CV, letter etc">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1">
+                                <div class="p-6">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.155 8.64c-.909 1.519-2.327 3.067-4.097 3.004-.413.706-.852 1.677-1.339 2.803l-1.312.553c.936-2.343 2.231-4.961 3.698-6.994-.67.529-1.746 1.637-2.662 2.783-1.098-1.828-.3-3.691.973-5.179.021.641.359 1.196.601 1.475-.087-.53-.114-1.489.195-2.351.718-.732 1.364-1.271 2.113-1.76-.083.478.08 1.026.262 1.361.024-.49.224-1.43.521-1.84.924-.727 2.332-1.373 3.892-1.495-.081.973-.436 2.575-1.024 3.604-.515.404-1.221.68-1.791.833.493.089 1.031.077 1.494-.001-.269.743-.552 1.428-.998 2.276-.679.468-1.578.732-2.203.825.46.187 1.272.245 1.677.103zm-13.841 3.805l.645.781 4.773-2.791-.668-.768-4.75 2.778zm6.96-.238l-.668-.767-4.805 2.808.645.781 4.828-2.822zm4.679.007c-.421.203-.851.341-1.286.398-.12.231-.246.494-.377.773l.298.342c.623.692.459 1.704-.376 2.239-.773.497-5.341 3.376-6.386 4.035-.074-.721-.358-1.391-.826-1.948-.469-.557-6.115-7.376-7.523-9.178-.469-.6-.575-1.245-.295-1.816.268-.549.842-.918 1.43-.918.919 0 1.408.655 1.549 1.215.16.641-.035 1.231-.623 1.685l1.329 1.624 7.796-4.446c1.422-1.051 1.822-2.991.93-4.513-.618-1.053-1.759-1.706-2.978-1.706-1.188 0-.793-.016-9.565 4.475-1.234.591-2.05 1.787-2.05 3.202 0 .87.308 1.756.889 2.487 1.427 1.794 7.561 9.185 7.616 9.257.371.493.427 1.119.15 1.673-.277.555-.812.886-1.429.886-.919 0-1.408-.655-1.549-1.216-.156-.629.012-1.208.604-1.654l-1.277-1.545c-.822.665-1.277 1.496-1.377 2.442-.232 2.205 1.525 3.993 3.613 3.993.596 0 1.311-.177 1.841-.51l9.427-5.946c.957-.664 1.492-1.781 1.492-2.897 0-.745-.24-1.454-.688-2.003l-.359-.43zm-7.933-10.062c.188-.087.398-.134.609-.134.532 0 .997.281 1.243.752.312.596.226 1.469-.548 1.912l-5.097 2.888c-.051-1.089-.579-2.081-1.455-2.732l5.248-2.686zm2.097 13.383l.361-.905.249-.609-3.449 2.017.645.781 2.194-1.284z"/></svg>
+                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Motivation Letter</div>
+                                    </div>
+
+                                    <div class="ml-12">
+                                        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4" name="motivation_letter"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1">
+                                <div class="p-6">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 13h-4v-1h4v1zm2.318-4.288l3.301 3.299-4.369.989 1.068-4.288zm11.682-5.062l-7.268 7.353-3.401-3.402 7.267-7.352 3.402 3.401zm-6 8.916v.977c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h14.056l1.977-2h-18.033v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.843l-2 2.023z"/></svg>
+                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Notes</div>
+                                    </div>
+
+                                    <div class="ml-12">
+                                        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4" name="comment"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mt-5" type="button">
+                            Save
+                        </button>
+                       
+                    </form> 
+
+                </div>
+            </div>
+        </div>
+        <script type="application/javascript" defer src="/js/date.js"></script>
+        <script type="application/javascript" defer src="/js/time.js"></script>
+    </app-layout>
+
+</template>
+
+<script>
+    import AppLayout from '@/Layouts/AppLayout'
+
+    export default {
+        components: {
+            AppLayout,
+        },
+            	
+        
+    }
+</script>
+
+<form class="w-full max-w-lg">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+        First Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+      <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+    </div>
+    <div class="w-full md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+        Last Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        Password
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
+      <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-2">
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+        City
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
+    </div>
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+        State
+      </label>
+      <div class="relative">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+          <option>New Mexico</option>
+          <option>Missouri</option>
+          <option>Texas</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+        Zip
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
+    </div>
+  </div>
+</form>

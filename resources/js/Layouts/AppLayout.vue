@@ -20,6 +20,9 @@
                             <jet-nav-link :href="route('applications.index')" :active="route().current('applications.index')">
                                 Applications
                             </jet-nav-link>
+                            <jet-nav-link :href="route('applications.create')" :active="route().current('applications.create')">
+                                Add New Application
+                            </jet-nav-link>
                         </div>
                     </div>
 
