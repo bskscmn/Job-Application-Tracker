@@ -3654,9 +3654,248 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Applications/MAMP/htdocs/jobApplications/resources/js/Pages/Applications/Edit.vue: Unexpected token, expected \"]\" (198:18)\n\n\u001b[0m \u001b[90m 196 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 | \u001b[39m    \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 198 | \u001b[39m    props\u001b[33m:\u001b[39m {[\u001b[32m'app'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'errors'\u001b[39m]\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 200 | \u001b[39m    filters\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 201 | \u001b[39m         moment\u001b[33m:\u001b[39m \u001b[36mfunction\u001b[39m (date) {\u001b[0m\n    at Parser._raise (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:799:17)\n    at Parser.raiseWithData (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:792:17)\n    at Parser.raise (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:786:17)\n    at Parser.unexpected (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9089:16)\n    at Parser.expect (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9075:28)\n    at Parser.parsePropertyName (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10995:12)\n    at Parser.parsePropertyDefinition (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10885:22)\n    at Parser.parseObjectLike (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10802:25)\n    at Parser.parseExprAtom (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10332:23)\n    at Parser.parseExprSubscripts (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9976:23)\n    at Parser.parseUpdate (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9956:21)\n    at Parser.parseMaybeUnary (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9945:17)\n    at Parser.parseExprOps (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9815:23)\n    at Parser.parseMaybeConditional (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseMaybeAssign (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9752:21)\n    at /Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:39\n    at Parser.allowInAnd (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11448:12)\n    at Parser.parseMaybeAssignAllowIn (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:17)\n    at Parser.parseObjectProperty (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10961:101)\n    at Parser.parseObjPropValue (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10986:100)\n    at Parser.parsePropertyDefinition (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10910:10)\n    at Parser.parseObjectLike (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10802:25)\n    at Parser.parseExprAtom (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10332:23)\n    at Parser.parseExprSubscripts (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9976:23)\n    at Parser.parseUpdate (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9956:21)\n    at Parser.parseMaybeUnary (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9945:17)\n    at Parser.parseExprOps (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9815:23)\n    at Parser.parseMaybeConditional (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseMaybeAssign (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9752:21)\n    at /Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:39\n    at Parser.allowInAnd (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11442:16)\n    at Parser.parseMaybeAssignAllowIn (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:17)\n    at Parser.parseExportDefaultExpression (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:12801:24)\n    at Parser.parseExport (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:12711:31)\n    at Parser.parseStatementContent (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11683:27)\n    at Parser.parseStatement (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11577:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: ['app'],
+  data: function data() {
+    return {
+      appData: this.app,
+      appDate: this.app.app_date,
+      appTime: this.app.app_date,
+      form: {
+        options: [{
+          text: 'No Action',
+          value: '1'
+        }, {
+          text: 'Applied',
+          value: '2'
+        }, {
+          text: 'Accepted',
+          value: '3'
+        }, {
+          text: 'Refused',
+          value: '4'
+        }, {
+          text: 'Hired',
+          value: '5'
+        }]
+      }
+    };
+  },
+  methods: {
+    submit: function submit() {
+      this.$inertia.patch('/application/update/', this.form);
+    },
+    getFormatedDate: function getFormatedDate(date) {
+      return moment(date).format('DD / MM / YYYY');
+    },
+    getFormatedTime: function getFormatedTime(date) {
+      return moment(date).format('h : mm : A');
+    }
+  },
+  mounted: function mounted() {
+    console.log(this.app);
+    this.appDate = this.getFormatedDate(this.appDate);
+    this.appTime = this.getFormatedTime(this.appTime);
+  }
+});
 
 /***/ }),
 
@@ -3737,11 +3976,6 @@ __webpack_require__.r(__webpack_exports__);
     return {
       appList: this.apps
     };
-  },
-  filters: {
-    moment: function moment(date) {
-      return moment__WEBPACK_IMPORTED_MODULE_0___default()(date).format('Do MMMM YYYY, h:mm A');
-    }
   },
   mounted: function mounted() {
     console.log(this.appList);
@@ -3916,21 +4150,6 @@ __webpack_require__.r(__webpack_exports__);
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: ['app'],
-  filters: {
-    moment: function (_moment) {
-      function moment(_x) {
-        return _moment.apply(this, arguments);
-      }
-
-      moment.toString = function () {
-        return _moment.toString();
-      };
-
-      return moment;
-    }(function (date) {
-      return moment(date).format('Do MMMM YYYY, h:mm A');
-    })
-  },
   mounted: function mounted() {//console.log(this.app);
   }
 });
@@ -49342,8 +49561,8 @@ var render = function() {
                                         {
                                           name: "model",
                                           rawName: "v-model",
-                                          value: _vm.appData.date,
-                                          expression: "appData.date"
+                                          value: _vm.appDate,
+                                          expression: "appDate"
                                         }
                                       ],
                                       staticClass:
@@ -49353,17 +49572,13 @@ var render = function() {
                                         type: "text",
                                         placeholder: " dd / mm / YYYY"
                                       },
-                                      domProps: { value: _vm.appData.date },
+                                      domProps: { value: _vm.appDate },
                                       on: {
                                         input: function($event) {
                                           if ($event.target.composing) {
                                             return
                                           }
-                                          _vm.$set(
-                                            _vm.appData,
-                                            "date",
-                                            $event.target.value
-                                          )
+                                          _vm.appDate = $event.target.value
                                         }
                                       }
                                     })
@@ -49393,8 +49608,8 @@ var render = function() {
                                         {
                                           name: "model",
                                           rawName: "v-model",
-                                          value: _vm.appData.time,
-                                          expression: "appData.time"
+                                          value: _vm.appTime,
+                                          expression: "appTime"
                                         }
                                       ],
                                       staticClass:
@@ -49404,17 +49619,13 @@ var render = function() {
                                         type: "text",
                                         placeholder: "hh : mm : PM"
                                       },
-                                      domProps: { value: _vm.appData.time },
+                                      domProps: { value: _vm.appTime },
                                       on: {
                                         input: function($event) {
                                           if ($event.target.composing) {
                                             return
                                           }
-                                          _vm.$set(
-                                            _vm.appData,
-                                            "time",
-                                            $event.target.value
-                                          )
+                                          _vm.appTime = $event.target.value
                                         }
                                       }
                                     })
@@ -49478,17 +49689,7 @@ var render = function() {
                                           )
                                         }
                                       }
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.errors.company
-                                      ? _c(
-                                          "div",
-                                          {
-                                            staticClass: "text-red-700 text-sm"
-                                          },
-                                          [_vm._v(_vm._s(_vm.errors.company))]
-                                        )
-                                      : _vm._e()
+                                    })
                                   ]
                                 )
                               ]
@@ -49599,15 +49800,7 @@ var render = function() {
                                         )
                                       }
                                     }
-                                  }),
-                                  _vm._v(" "),
-                                  _vm.errors.post_title
-                                    ? _c(
-                                        "div",
-                                        { staticClass: "text-red-700 text-sm" },
-                                        [_vm._v(_vm._s(_vm.errors.post_title))]
-                                      )
-                                    : _vm._e()
+                                  })
                                 ])
                               ]
                             ),
@@ -50281,7 +50474,9 @@ var render = function() {
                           app.app_date !== null
                             ? _c("span", [
                                 _c("b", [
-                                  _vm._v(_vm._s(_vm._f("moment")(app.app_date)))
+                                  _vm._v(
+                                    _vm._s(_vm._f("toDateTime")(app.app_date))
+                                  )
                                 ])
                               ])
                             : _vm._e()
@@ -50463,7 +50658,7 @@ var render = function() {
                           ? _c("span", [
                               _c("b", [
                                 _vm._v(
-                                  _vm._s(_vm._f("moment")(_vm.app.app_date))
+                                  _vm._s(_vm._f("toDateTime")(_vm.app.app_date))
                                 )
                               ])
                             ])
@@ -66930,7 +67125,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var laravel_jetstream__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(laravel_jetstream__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var portal_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! portal-vue */ "./node_modules/portal-vue/dist/portal-vue.common.js");
 /* harmony import */ var portal_vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(portal_vue__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -66944,6 +67142,21 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.mixin({
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(laravel_jetstream__WEBPACK_IMPORTED_MODULE_2__["InertiaForm"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(portal_vue__WEBPACK_IMPORTED_MODULE_3___default.a);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('toDate', function (value) {
+  if (value) {
+    return moment__WEBPACK_IMPORTED_MODULE_4___default()(String(value)).format('DD / MM / YYYY');
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('toTime', function (value) {
+  if (value) {
+    return moment__WEBPACK_IMPORTED_MODULE_4___default()(String(value)).format('h : mm : A');
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('toDateTime', function (value) {
+  if (value) {
+    return moment__WEBPACK_IMPORTED_MODULE_4___default()(String(value)).format('Do MMMM YYYY, h:mm A');
+  }
+});
 var app = document.getElementById('app');
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   render: function render(h) {

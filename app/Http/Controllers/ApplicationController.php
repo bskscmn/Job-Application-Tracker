@@ -53,4 +53,27 @@ class ApplicationController extends Controller
 
         return Redirect::route('/applications');
     }
+
+    public function edit(int $id) {
+
+    	$app = Application::where('id', $id)->with('condition')->first();
+
+    	return Inertia::render('Applications/Edit',[
+    		'app' => $app,
+    		'errors' => null
+    	]);
+    }
+
+    public function update(Request $request)
+    {
+    	
+
+        $d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
+        $request['app_date'] = $d->format('Y-m-d H:i:s');
+
+        var_dump($request);
+
+
+        //return Redirect::route('/application/{$id}');
+    }
 }

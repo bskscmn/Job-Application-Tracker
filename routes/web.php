@@ -25,9 +25,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 	})->name('dashboard');
 
     Route::get('/applications', 'App\Http\Controllers\ApplicationController@index')->name('applications.index');
+
     Route::get('/application/create', 'App\Http\Controllers\ApplicationController@create')->name('applications.create');
     Route::post('/application/store', 'App\Http\Controllers\ApplicationController@store')->name('applications.store');
+
   	Route::get('/application/{id}', 'App\Http\Controllers\ApplicationController@show')->name('applications.show');
+
+  	Route::get('/application/edit/{id}', 'App\Http\Controllers\ApplicationController@edit')->name('applications.edit');
+  	Route::patch('/application/update/{id}', 'App\Http\Controllers\ApplicationController@update')->name('applications.update');
 
 });
 
