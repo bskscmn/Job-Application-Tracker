@@ -2785,30 +2785,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2832,6 +2808,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/DropdownLink */ "./resources/js/Jetstream/DropdownLink.vue");
 /* harmony import */ var _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/NavLink */ "./resources/js/Jetstream/NavLink.vue");
 /* harmony import */ var _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/ResponsiveNavLink */ "./resources/js/Jetstream/ResponsiveNavLink.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3663,6 +3649,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Applications/MAMP/htdocs/jobApplications/resources/js/Pages/Applications/Edit.vue: Unexpected token, expected \"]\" (198:18)\n\n\u001b[0m \u001b[90m 196 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 197 | \u001b[39m    \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 198 | \u001b[39m    props\u001b[33m:\u001b[39m {[\u001b[32m'app'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'errors'\u001b[39m]\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 199 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 200 | \u001b[39m    filters\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 201 | \u001b[39m         moment\u001b[33m:\u001b[39m \u001b[36mfunction\u001b[39m (date) {\u001b[0m\n    at Parser._raise (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:799:17)\n    at Parser.raiseWithData (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:792:17)\n    at Parser.raise (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:786:17)\n    at Parser.unexpected (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9089:16)\n    at Parser.expect (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9075:28)\n    at Parser.parsePropertyName (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10995:12)\n    at Parser.parsePropertyDefinition (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10885:22)\n    at Parser.parseObjectLike (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10802:25)\n    at Parser.parseExprAtom (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10332:23)\n    at Parser.parseExprSubscripts (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9976:23)\n    at Parser.parseUpdate (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9956:21)\n    at Parser.parseMaybeUnary (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9945:17)\n    at Parser.parseExprOps (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9815:23)\n    at Parser.parseMaybeConditional (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseMaybeAssign (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9752:21)\n    at /Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:39\n    at Parser.allowInAnd (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11448:12)\n    at Parser.parseMaybeAssignAllowIn (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:17)\n    at Parser.parseObjectProperty (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10961:101)\n    at Parser.parseObjPropValue (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10986:100)\n    at Parser.parsePropertyDefinition (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10910:10)\n    at Parser.parseObjectLike (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10802:25)\n    at Parser.parseExprAtom (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:10332:23)\n    at Parser.parseExprSubscripts (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9976:23)\n    at Parser.parseUpdate (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9956:21)\n    at Parser.parseMaybeUnary (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9945:17)\n    at Parser.parseExprOps (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9815:23)\n    at Parser.parseMaybeConditional (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseMaybeAssign (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9752:21)\n    at /Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:39\n    at Parser.allowInAnd (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11442:16)\n    at Parser.parseMaybeAssignAllowIn (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:9718:17)\n    at Parser.parseExportDefaultExpression (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:12801:24)\n    at Parser.parseExport (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:12711:31)\n    at Parser.parseStatementContent (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11683:27)\n    at Parser.parseStatement (/Applications/MAMP/htdocs/jobApplications/node_modules/@babel/parser/lib/index.js:11577:17)");
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Applications/Index.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Applications/Index.vue?vue&type=script&lang=js& ***!
@@ -3675,6 +3672,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
 //
 //
 //
@@ -45256,36 +45254,77 @@ var render = function() {
   return _c(
     "svg",
     {
+      staticClass: "w-32 h-32",
       attrs: {
-        viewBox: "0 0 317 48",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
+        version: "1.0",
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 150.000000 150.000000",
+        preserveAspectRatio: "xMidYMid meet"
       }
     },
     [
-      _c("path", {
-        attrs: {
-          d:
-            "M74.09 30.04V13h-4.14v21H82.1v-3.96h-8.01zM95.379 19v1.77c-1.08-1.35-2.7-2.19-4.89-2.19-3.99 0-7.29 3.45-7.29 7.92s3.3 7.92 7.29 7.92c2.19 0 3.81-.84 4.89-2.19V34h3.87V19h-3.87zm-4.17 11.73c-2.37 0-4.14-1.71-4.14-4.23 0-2.52 1.77-4.23 4.14-4.23 2.4 0 4.17 1.71 4.17 4.23 0 2.52-1.77 4.23-4.17 4.23zM106.628 21.58V19h-3.87v15h3.87v-7.17c0-3.15 2.55-4.05 4.56-3.81V18.7c-1.89 0-3.78.84-4.56 2.88zM124.295 19v1.77c-1.08-1.35-2.7-2.19-4.89-2.19-3.99 0-7.29 3.45-7.29 7.92s3.3 7.92 7.29 7.92c2.19 0 3.81-.84 4.89-2.19V34h3.87V19h-3.87zm-4.17 11.73c-2.37 0-4.14-1.71-4.14-4.23 0-2.52 1.77-4.23 4.14-4.23 2.4 0 4.17 1.71 4.17 4.23 0 2.52-1.77 4.23-4.17 4.23zM141.544 19l-3.66 10.5-3.63-10.5h-4.26l5.7 15h4.41l5.7-15h-4.26zM150.354 28.09h11.31c.09-.51.15-1.02.15-1.59 0-4.41-3.15-7.92-7.59-7.92-4.71 0-7.92 3.45-7.92 7.92s3.18 7.92 8.22 7.92c2.88 0 5.13-1.17 6.54-3.21l-3.12-1.8c-.66.87-1.86 1.5-3.36 1.5-2.04 0-3.69-.84-4.23-2.82zm-.06-3c.45-1.92 1.86-3.03 3.93-3.03 1.62 0 3.24.87 3.72 3.03h-7.65zM164.516 34h3.87V12.1h-3.87V34zM185.248 34.36c3.69 0 6.9-2.01 6.9-6.3V13h-2.1v15.06c0 3.03-2.07 4.26-4.8 4.26-2.19 0-3.93-.78-4.62-2.61l-1.77 1.05c1.05 2.43 3.57 3.6 6.39 3.6zM203.124 18.64c-4.65 0-7.83 3.45-7.83 7.86 0 4.53 3.24 7.86 7.98 7.86 3.03 0 5.34-1.41 6.6-3.45l-1.74-1.02c-.81 1.44-2.46 2.55-4.83 2.55-3.18 0-5.55-1.89-5.97-4.95h13.17c.03-.3.06-.63.06-.93 0-4.11-2.85-7.92-7.44-7.92zm0 1.92c2.58 0 4.98 1.71 5.4 5.01h-11.19c.39-2.94 2.64-5.01 5.79-5.01zM221.224 20.92V19h-4.32v-4.2l-1.98.6V19h-3.15v1.92h3.15v9.09c0 3.6 2.25 4.59 6.3 3.99v-1.74c-2.91.12-4.32.33-4.32-2.25v-9.09h4.32zM225.176 22.93c0-1.62 1.59-2.37 3.15-2.37 1.44 0 2.97.57 3.6 2.1l1.65-.96c-.87-1.86-2.79-3.06-5.25-3.06-3 0-5.13 1.89-5.13 4.29 0 5.52 8.76 3.39 8.76 7.11 0 1.77-1.68 2.4-3.45 2.4-2.01 0-3.57-.99-4.11-2.52l-1.68.99c.75 1.92 2.79 3.45 5.79 3.45 3.21 0 5.43-1.77 5.43-4.32 0-5.52-8.76-3.39-8.76-7.11zM244.603 20.92V19h-4.32v-4.2l-1.98.6V19h-3.15v1.92h3.15v9.09c0 3.6 2.25 4.59 6.3 3.99v-1.74c-2.91.12-4.32.33-4.32-2.25v-9.09h4.32zM249.883 21.49V19h-1.98v15h1.98v-8.34c0-3.72 2.34-4.98 4.74-4.98v-1.92c-1.92 0-3.69.63-4.74 2.73zM263.358 18.64c-4.65 0-7.83 3.45-7.83 7.86 0 4.53 3.24 7.86 7.98 7.86 3.03 0 5.34-1.41 6.6-3.45l-1.74-1.02c-.81 1.44-2.46 2.55-4.83 2.55-3.18 0-5.55-1.89-5.97-4.95h13.17c.03-.3.06-.63.06-.93 0-4.11-2.85-7.92-7.44-7.92zm0 1.92c2.58 0 4.98 1.71 5.4 5.01h-11.19c.39-2.94 2.64-5.01 5.79-5.01zM286.848 19v2.94c-1.26-2.01-3.39-3.3-6.06-3.3-4.23 0-7.74 3.42-7.74 7.86s3.51 7.86 7.74 7.86c2.67 0 4.8-1.29 6.06-3.3V34h1.98V19h-1.98zm-5.91 13.44c-3.33 0-5.91-2.61-5.91-5.94 0-3.33 2.58-5.94 5.91-5.94s5.91 2.61 5.91 5.94c0 3.33-2.58 5.94-5.91 5.94zM309.01 18.64c-1.92 0-3.75.87-4.86 2.73-.84-1.74-2.46-2.73-4.56-2.73-1.8 0-3.42.72-4.59 2.55V19h-1.98v15H295v-8.31c0-3.72 2.16-5.13 4.32-5.13 2.13 0 3.51 1.41 3.51 4.08V34h1.98v-8.31c0-3.72 1.86-5.13 4.17-5.13 2.13 0 3.66 1.41 3.66 4.08V34h1.98v-9.36c0-3.75-2.31-6-5.61-6z",
-          fill: "#000"
-        }
-      }),
-      _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-          fill: "#6875F5"
-        }
-      }),
-      _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-          fill: "#6875F5"
-        }
-      })
+      _c(
+        "g",
+        {
+          attrs: {
+            transform:
+              "translate(0.000000,150.000000) scale(0.100000,-0.100000)",
+            fill: "#000000",
+            stroke: "none"
+          }
+        },
+        [
+          _c("path", {
+            attrs: {
+              d:
+                "M600 1484 c-297 -64 -524 -292 -584 -586 -40 -193 1 -402 111 -563\n\t        268 -395 817 -449 1152 -114 335 335 281 884 -114 1152 -159 109 -378 152\n\t        -565 111z m246 -15 c328 -45 580 -301 624 -633 15 -108 1 -226 -39 -336 -114\n\t        -312 -439 -512 -762 -471 -339 44 -592 295 -640 635 -45 322 159 653 472 767\n\t        122 45 221 56 345 38z",
+              fill: "#64bce5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M308 1313 c-15 -16 -32 -41 -37 -56 -25 -67 -2 -195 40 -217 10 -6\n\t        36 -10 59 -10 l41 0 -7 -47 c-4 -27 -28 -121 -55 -211 -27 -90 -54 -193 -60\n\t        -229 -24 -136 11 -306 73 -358 l30 -25 374 0 375 0 24 24 c60 60 58 218 -3\n\t        267 -14 10 -40 19 -59 19 l-35 0 7 47 c4 26 17 83 30 127 13 45 22 82 20 84\n\t        -7 7 -105 -189 -105 -210 0 -13 -3 -33 -6 -45 l-6 -23 -313 0 -314 0 -26 -32\n\t        -27 -33 6 75 c6 78 18 131 81 340 31 101 39 146 43 233 4 103 -1 134 -34 220\n\t        -6 16 18 17 323 17 305 0 331 -1 346 -18 24 -26 47 -98 49 -153 1 -27 4 -49 5\n\t        -49 1 0 12 19 24 42 25 49 21 95 -16 169 -41 81 -32 79 -453 79 l-368 0 -26\n\t        -27z m67 -53 c3 -5 -2 -10 -12 -10 -11 0 -25 -6 -32 -12 -11 -11 -11 -9 -2 10\n\t        12 23 35 29 46 12z m5 -71 c0 -5 -7 -9 -15 -9 -15 0 -20 12 -9 23 8 8 24 -1\n\t        24 -14z m-10 -58 c0 -37 -32 -55 -44 -25 -10 27 -7 34 19 34 14 0 25 -4 25 -9z\n\t        m60 -28 c0 -7 -6 -13 -14 -13 -9 0 -12 8 -8 26 3 19 7 22 13 12 5 -7 9 -19 9\n\t        -25z m-12 -718 c18 -38 15 -45 -18 -45 -32 0 -38 16 -20 51 14 26 25 24 38 -6z\n\t        m722 6 c15 -28 12 -124 -4 -146 -12 -17 -33 -19 -327 -19 -173 -1 -323 0 -335\n\t        2 -19 3 -20 7 -10 43 7 26 7 54 0 89 l-11 50 338 0 c324 0 339 -1 349 -19z\n\t        m-710 -110 c0 -10 -7 -24 -16 -32 -20 -16 -48 -1 -52 30 -3 18 1 21 32 21 29\n\t        0 36 -4 36 -19z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M1284 1196 c-4 -10 -17 -22 -30 -26 -13 -5 -32 -26 -42 -47 -10 -21\n\t        -67 -126 -126 -235 -70 -129 -111 -215 -118 -252 -11 -50 -15 -57 -45 -67 -39\n\t        -13 -67 3 -60 33 10 35 -15 30 -59 -13 -50 -49 -58 -38 -23 38 11 25 18 47 15\n\t        51 -10 10 -50 -15 -108 -67 -31 -28 -59 -51 -62 -51 -17 0 -2 36 25 61 32 30\n\t        32 36 -2 19 -10 -6 -26 -25 -35 -42 -14 -27 -14 -32 -1 -45 12 -13 23 -7 83\n\t        46 37 34 72 61 76 61 5 0 -1 -18 -12 -40 -21 -42 -27 -90 -10 -90 6 0 31 19\n\t        57 42 35 33 44 38 39 22 -6 -20 14 -54 32 -54 35 0 86 29 131 73 41 40 74 91\n\t        146 227 119 222 111 210 121 185 6 -14 -4 -41 -34 -98 -38 -69 -47 -107 -22\n\t        -92 14 9 100 176 100 194 -1 9 -7 27 -14 41 -10 17 -11 30 -4 43 7 13 6 23 -1\n\t        30 -7 7 -7 16 0 30 8 13 8 22 0 30 -7 7 -12 5 -17 -7z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M560 1115 c0 -12 18 -15 100 -15 82 0 100 3 100 15 0 12 -18 15 -100\n\t        15 -82 0 -100 -3 -100 -15z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M550 1005 c0 -13 32 -15 229 -15 194 0 230 2 235 15 5 13 -25 15\n\t        -229 15 -202 0 -235 -2 -235 -15z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M537 913 c-4 -3 -7 -12 -7 -20 0 -11 42 -13 227 -11 208 3 228 5 231\n\t        21 3 16 -13 17 -221 17 -123 0 -227 -3 -230 -7z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M730 745 c0 -12 18 -15 100 -15 82 0 100 3 100 15 0 12 -18 15 -100\n\t        15 -82 0 -100 -3 -100 -15z"
+            }
+          })
+        ]
+      )
     ]
   )
 }
@@ -45314,28 +45353,77 @@ var render = function() {
   return _c(
     "svg",
     {
+      staticClass: "w-16 h-16",
       attrs: {
-        viewBox: "0 0 48 48",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
+        version: "1.0",
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 150.000000 150.000000",
+        preserveAspectRatio: "xMidYMid meet"
       }
     },
     [
-      _c("path", {
-        attrs: {
-          d:
-            "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-          fill: "#6875F5"
-        }
-      }),
-      _vm._v(" "),
-      _c("path", {
-        attrs: {
-          d:
-            "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-          fill: "#6875F5"
-        }
-      })
+      _c(
+        "g",
+        {
+          attrs: {
+            transform:
+              "translate(0.000000,150.000000) scale(0.100000,-0.100000)",
+            fill: "#000000",
+            stroke: "none"
+          }
+        },
+        [
+          _c("path", {
+            attrs: {
+              d:
+                "M600 1484 c-297 -64 -524 -292 -584 -586 -40 -193 1 -402 111 -563\n        268 -395 817 -449 1152 -114 335 335 281 884 -114 1152 -159 109 -378 152\n        -565 111z m246 -15 c328 -45 580 -301 624 -633 15 -108 1 -226 -39 -336 -114\n        -312 -439 -512 -762 -471 -339 44 -592 295 -640 635 -45 322 159 653 472 767\n        122 45 221 56 345 38z",
+              fill: "#64bce5"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M308 1313 c-15 -16 -32 -41 -37 -56 -25 -67 -2 -195 40 -217 10 -6\n        36 -10 59 -10 l41 0 -7 -47 c-4 -27 -28 -121 -55 -211 -27 -90 -54 -193 -60\n        -229 -24 -136 11 -306 73 -358 l30 -25 374 0 375 0 24 24 c60 60 58 218 -3\n        267 -14 10 -40 19 -59 19 l-35 0 7 47 c4 26 17 83 30 127 13 45 22 82 20 84\n        -7 7 -105 -189 -105 -210 0 -13 -3 -33 -6 -45 l-6 -23 -313 0 -314 0 -26 -32\n        -27 -33 6 75 c6 78 18 131 81 340 31 101 39 146 43 233 4 103 -1 134 -34 220\n        -6 16 18 17 323 17 305 0 331 -1 346 -18 24 -26 47 -98 49 -153 1 -27 4 -49 5\n        -49 1 0 12 19 24 42 25 49 21 95 -16 169 -41 81 -32 79 -453 79 l-368 0 -26\n        -27z m67 -53 c3 -5 -2 -10 -12 -10 -11 0 -25 -6 -32 -12 -11 -11 -11 -9 -2 10\n        12 23 35 29 46 12z m5 -71 c0 -5 -7 -9 -15 -9 -15 0 -20 12 -9 23 8 8 24 -1\n        24 -14z m-10 -58 c0 -37 -32 -55 -44 -25 -10 27 -7 34 19 34 14 0 25 -4 25 -9z\n        m60 -28 c0 -7 -6 -13 -14 -13 -9 0 -12 8 -8 26 3 19 7 22 13 12 5 -7 9 -19 9\n        -25z m-12 -718 c18 -38 15 -45 -18 -45 -32 0 -38 16 -20 51 14 26 25 24 38 -6z\n        m722 6 c15 -28 12 -124 -4 -146 -12 -17 -33 -19 -327 -19 -173 -1 -323 0 -335\n        2 -19 3 -20 7 -10 43 7 26 7 54 0 89 l-11 50 338 0 c324 0 339 -1 349 -19z\n        m-710 -110 c0 -10 -7 -24 -16 -32 -20 -16 -48 -1 -52 30 -3 18 1 21 32 21 29\n        0 36 -4 36 -19z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M1284 1196 c-4 -10 -17 -22 -30 -26 -13 -5 -32 -26 -42 -47 -10 -21\n        -67 -126 -126 -235 -70 -129 -111 -215 -118 -252 -11 -50 -15 -57 -45 -67 -39\n        -13 -67 3 -60 33 10 35 -15 30 -59 -13 -50 -49 -58 -38 -23 38 11 25 18 47 15\n        51 -10 10 -50 -15 -108 -67 -31 -28 -59 -51 -62 -51 -17 0 -2 36 25 61 32 30\n        32 36 -2 19 -10 -6 -26 -25 -35 -42 -14 -27 -14 -32 -1 -45 12 -13 23 -7 83\n        46 37 34 72 61 76 61 5 0 -1 -18 -12 -40 -21 -42 -27 -90 -10 -90 6 0 31 19\n        57 42 35 33 44 38 39 22 -6 -20 14 -54 32 -54 35 0 86 29 131 73 41 40 74 91\n        146 227 119 222 111 210 121 185 6 -14 -4 -41 -34 -98 -38 -69 -47 -107 -22\n        -92 14 9 100 176 100 194 -1 9 -7 27 -14 41 -10 17 -11 30 -4 43 7 13 6 23 -1\n        30 -7 7 -7 16 0 30 8 13 8 22 0 30 -7 7 -12 5 -17 -7z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M560 1115 c0 -12 18 -15 100 -15 82 0 100 3 100 15 0 12 -18 15 -100\n        15 -82 0 -100 -3 -100 -15z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M550 1005 c0 -13 32 -15 229 -15 194 0 230 2 235 15 5 13 -25 15\n        -229 15 -202 0 -235 -2 -235 -15z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M537 913 c-4 -3 -7 -12 -7 -20 0 -11 42 -13 227 -11 208 3 228 5 231\n        21 3 16 -13 17 -221 17 -123 0 -227 -3 -230 -7z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M730 745 c0 -12 18 -15 100 -15 82 0 100 3 100 15 0 12 -18 15 -100\n        15 -82 0 -100 -3 -100 -15z"
+            }
+          })
+        ]
+      )
     ]
   )
 }
@@ -46375,14 +46463,12 @@ var render = function() {
         ),
         _vm._v(" "),
         _c("div", { staticClass: "mt-8 text-2xl" }, [
-          _vm._v(
-            "\n            Welcome to your Jetstream application!\n        "
-          )
+          _vm._v("\n            Welcome to Job Application Tracker!\n        ")
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "mt-6 text-gray-500" }, [
           _vm._v(
-            "\n            Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed\n            to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe\n            you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel\n            ecosystem to be a breath of fresh air. We hope you love it.\n        "
+            "\n            You can easily create and edit your job application. \n        "
           )
         ])
       ]
@@ -46425,11 +46511,11 @@ var render = function() {
           _c("div", { staticClass: "ml-12" }, [
             _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
               _vm._v(
-                "\n                    Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end.\n                "
+                "\n\n                    You can add new application to your list with the information:\n\n                    Status, Aplication Date, Time, Company, Location, Post Title, Link, Contact Person, Description, The files you sent , Motivation Letter, Notes\n                "
               )
             ]),
             _vm._v(" "),
-            _c("a", { attrs: { href: "https://laravel.com/docs" } }, [
+            _c("a", { attrs: { href: "/application/create" } }, [
               _c(
                 "div",
                 {
@@ -46437,7 +46523,7 @@ var render = function() {
                     "mt-3 flex items-center text-sm font-semibold text-indigo-700"
                 },
                 [
-                  _c("div", [_vm._v("Explore the documentation")]),
+                  _c("div", [_vm._v("Go to page")]),
                   _vm._v(" "),
                   _c("div", { staticClass: "ml-1 text-indigo-500" }, [
                     _c(
@@ -46504,11 +46590,11 @@ var render = function() {
             _c("div", { staticClass: "ml-12" }, [
               _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
                 _vm._v(
-                  "\n                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.\n                "
+                  "\n                    See all of your applications and edit easily.\n                "
                 )
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "https://laracasts.com" } }, [
+              _c("a", { attrs: { href: "/applications" } }, [
                 _c(
                   "div",
                   {
@@ -46516,7 +46602,7 @@ var render = function() {
                       "mt-3 flex items-center text-sm font-semibold text-indigo-700"
                   },
                   [
-                    _c("div", [_vm._v("Start watching Laracasts")]),
+                    _c("div", [_vm._v("Go to page")]),
                     _vm._v(" "),
                     _c("div", { staticClass: "ml-1 text-indigo-500" }, [
                       _c(
@@ -46542,76 +46628,7 @@ var render = function() {
               ])
             ])
           ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-6 border-t border-gray-200" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(2)
-          ]),
-          _vm._v(" "),
-          _vm._m(3)
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-6 border-t border-gray-200 md:border-l" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-              },
-              [_vm._v("Authentication")]
-            )
-          ]),
-          _vm._v(" "),
-          _vm._m(4)
-        ])
+        )
       ]
     )
   ])
@@ -46625,8 +46642,8 @@ var staticRenderFns = [
       "div",
       { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
       [
-        _c("a", { attrs: { href: "https://laravel.com/docs" } }, [
-          _vm._v("Documentation")
+        _c("a", { attrs: { href: "/application/create" } }, [
+          _vm._v("Add New Job Application")
         ])
       ]
     )
@@ -46639,49 +46656,11 @@ var staticRenderFns = [
       "div",
       { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
       [
-        _c("a", { attrs: { href: "https://laracasts.com" } }, [
-          _vm._v("Laracasts")
+        _c("a", { attrs: { href: "/applications" } }, [
+          _vm._v("Display and Edit Your Applications")
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
-      [
-        _c("a", { attrs: { href: "https://tailwindcss.com/" } }, [
-          _vm._v("Tailwind")
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
-      _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
-        _vm._v(
-          "\n                    Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.\n                "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-12" }, [
-      _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
-        _vm._v(
-          "\n                    Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application.\n                "
-        )
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -47399,12 +47378,51 @@ var render = function() {
       _vm._v(" "),
       _c("main", [_vm._t("default")], 2),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       _c("portal-target", { attrs: { name: "modal", multiple: "" } })
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "footer",
+      { staticClass: "bg-gray-700 shadow text-gray-200 p-2 text-sm" },
+      [
+        _c("div", { staticClass: "grid grid-cols-6 gap-4" }, [
+          _c("div", { staticClass: "col-span-6 sm:col-span-4 md:col-span-4 " }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-span-6 sm:col-span-4 md:col-span-2 md:text-right"
+            },
+            [
+              _vm._v("Developer: "),
+              _c(
+                "a",
+                {
+                  staticClass: "underline",
+                  attrs: {
+                    href: "http://www.basaksecmen.com",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v(" Başak Seçmen")]
+              )
+            ]
+          )
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -49135,6 +49153,1048 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Applications/Edit.vue?vue&type=template&id=395c323d&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Applications/Edit.vue?vue&type=template&id=395c323d& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "app-layout",
+    {
+      scopedSlots: _vm._u([
+        {
+          key: "header",
+          fn: function() {
+            return [
+              _c(
+                "h2",
+                {
+                  staticClass:
+                    "font-semibold text-xl text-gray-800 leading-tight"
+                },
+                [_vm._v("\n            Edit\n        ")]
+              )
+            ]
+          },
+          proxy: true
+        }
+      ])
+    },
+    [
+      _vm._v(" "),
+      _c("div", { staticClass: "py-12" }, [
+        _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-white overflow-hidden shadow-xl sm:rounded-lg p-6"
+            },
+            [
+              _c(
+                "form",
+                {
+                  staticClass: "w-full",
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.submit($event)
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "container mx-auto p-4 divide-y divide-gray-200"
+                        },
+                        [
+                          _c("div", { staticClass: "mt-2" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "w-full md:w-1/3 px-3 mb-6 md:mb-0"
+                              },
+                              [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                    attrs: { for: "condition_id" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        Status\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.appData.condition_id,
+                                        expression: "appData.condition_id"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow w-full border rounded mb-3 px-3 py-2 outline-none",
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.appData,
+                                          "condition_id",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  _vm._l(_vm.form.options, function(option) {
+                                    return _c(
+                                      "option",
+                                      {
+                                        domProps: {
+                                          value: option.value,
+                                          selected:
+                                            option.value ==
+                                            _vm.appData.condition_id
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            " +
+                                            _vm._s(option.text) +
+                                            "\n                                        "
+                                        )
+                                      ]
+                                    )
+                                  }),
+                                  0
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "md:flex md:items-center mb-3 max-w-lg"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "w-full md:w-1/2 px-3 mb-6 md:mb-0"
+                                  },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "date" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Aplication Date\n                                      "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.date,
+                                          expression: "appData.date"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "date",
+                                        type: "text",
+                                        placeholder: " dd / mm / YYYY"
+                                      },
+                                      domProps: { value: _vm.appData.date },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "date",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "w-full md:w-1/2 px-3" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "time" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Time\n                                      "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.time,
+                                          expression: "appData.time"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "time",
+                                        type: "text",
+                                        placeholder: "hh : mm : PM"
+                                      },
+                                      domProps: { value: _vm.appData.time },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "time",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "mt-2" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "md:flex md:items-center mb-3 mt-2"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "w-full px-3 max-w-lg" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "company" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Company *\n                                      "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.company,
+                                          expression: "appData.company"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "company",
+                                        type: "text",
+                                        placeholder: "Company Name"
+                                      },
+                                      domProps: { value: _vm.appData.company },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "company",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _vm.errors.company
+                                      ? _c(
+                                          "div",
+                                          {
+                                            staticClass: "text-red-700 text-sm"
+                                          },
+                                          [_vm._v(_vm._s(_vm.errors.company))]
+                                        )
+                                      : _vm._e()
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "md:flex md:items-center mb-3" },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "w-full px-3 max-w-lg" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "location" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Location\n                                      "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.location,
+                                          expression: "appData.location"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "location",
+                                        type: "text",
+                                        placeholder: "Location"
+                                      },
+                                      domProps: { value: _vm.appData.location },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "location",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "md:flex md:items-center mb-3" },
+                              [
+                                _c("div", { staticClass: "w-full px-3" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                      attrs: { for: "post_title" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Post Title *\n                                      "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.appData.post_title,
+                                        expression: "appData.post_title"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      id: "post_title",
+                                      type: "text",
+                                      placeholder: "Title"
+                                    },
+                                    domProps: { value: _vm.appData.post_title },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.appData,
+                                          "post_title",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.errors.post_title
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-700 text-sm" },
+                                        [_vm._v(_vm._s(_vm.errors.post_title))]
+                                      )
+                                    : _vm._e()
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "md:flex md:items-center mb-3" },
+                              [
+                                _c("div", { staticClass: "w-full px-3" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                      attrs: { for: "link" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Link\n                                      "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.appData.link,
+                                        expression: "appData.link"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      id: "link",
+                                      type: "text",
+                                      placeholder: "URL"
+                                    },
+                                    domProps: { value: _vm.appData.link },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.appData,
+                                          "link",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg"
+                    },
+                    [
+                      _c("div", { staticClass: "grid grid-cols-1" }, [
+                        _c("div", { staticClass: "p-6" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "w-8 h-8 text-gray-500",
+                                attrs: {
+                                  fill: "none",
+                                  stroke: "currentColor",
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  viewBox: "0 0 24 24"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-4 text-lg leading-7 text-gray-900 font-semibold"
+                              },
+                              [_vm._v("Contact Person")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-12" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "md:flex md:items-center mb-3 mt-2"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "w-full px-3 max-w-lg" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "contactPerson" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Name\n                                          "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.contactPerson,
+                                          expression: "appData.contactPerson"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "contactPerson",
+                                        type: "text",
+                                        placeholder: "Full Name"
+                                      },
+                                      domProps: {
+                                        value: _vm.appData.contactPerson
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "contactPerson",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "md:flex md:items-center mb-3 max-w-lg"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "w-full md:w-1/2 px-3 mb-6 md:mb-0"
+                                  },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "date" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Email\n                                          "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.email,
+                                          expression: "appData.email"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "date",
+                                        type: "email",
+                                        placeholder: "@"
+                                      },
+                                      domProps: { value: _vm.appData.email },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "email",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "w-full md:w-1/2 px-3" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block tracking-wide text-gray-700 text-xs font-bold mb-2",
+                                        attrs: { for: "time" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Phone\n                                          "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.appData.phone,
+                                          expression: "appData.phone"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                      attrs: {
+                                        id: "time",
+                                        type: "tel",
+                                        placeholder: "phone number"
+                                      },
+                                      domProps: { value: _vm.appData.phone },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.appData,
+                                            "phone",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "grid grid-cols-1" }, [
+                        _c("div", { staticClass: "p-6" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  width: "24",
+                                  height: "24",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  "fill-rule": "evenodd",
+                                  "clip-rule": "evenodd"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-4 text-lg leading-7 text-gray-900 font-semibold"
+                              },
+                              [_vm._v("Description")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-12" }, [
+                            _c("textarea", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.appData.description,
+                                  expression: "appData.description"
+                                }
+                              ],
+                              staticClass:
+                                "w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none",
+                              attrs: { rows: "4" },
+                              domProps: { value: _vm.appData.description },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.appData,
+                                    "description",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "grid grid-cols-1" }, [
+                        _c("div", { staticClass: "p-6" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "24",
+                                  height: "24",
+                                  viewBox: "0 0 24 24"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-4 text-lg leading-7 text-gray-900 font-semibold"
+                              },
+                              [_vm._v("Sent Files")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-12" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.appData.sent_files,
+                                  expression: "appData.sent_files"
+                                }
+                              ],
+                              staticClass:
+                                "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                              attrs: {
+                                id: "sent_files",
+                                type: "text",
+                                placeholder:
+                                  "The files you sent : CV, letter etc"
+                              },
+                              domProps: { value: _vm.appData.sent_files },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.appData,
+                                    "sent_files",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "grid grid-cols-1" }, [
+                        _c("div", { staticClass: "p-6" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "24",
+                                  height: "24",
+                                  viewBox: "0 0 24 24"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M21.155 8.64c-.909 1.519-2.327 3.067-4.097 3.004-.413.706-.852 1.677-1.339 2.803l-1.312.553c.936-2.343 2.231-4.961 3.698-6.994-.67.529-1.746 1.637-2.662 2.783-1.098-1.828-.3-3.691.973-5.179.021.641.359 1.196.601 1.475-.087-.53-.114-1.489.195-2.351.718-.732 1.364-1.271 2.113-1.76-.083.478.08 1.026.262 1.361.024-.49.224-1.43.521-1.84.924-.727 2.332-1.373 3.892-1.495-.081.973-.436 2.575-1.024 3.604-.515.404-1.221.68-1.791.833.493.089 1.031.077 1.494-.001-.269.743-.552 1.428-.998 2.276-.679.468-1.578.732-2.203.825.46.187 1.272.245 1.677.103zm-13.841 3.805l.645.781 4.773-2.791-.668-.768-4.75 2.778zm6.96-.238l-.668-.767-4.805 2.808.645.781 4.828-2.822zm4.679.007c-.421.203-.851.341-1.286.398-.12.231-.246.494-.377.773l.298.342c.623.692.459 1.704-.376 2.239-.773.497-5.341 3.376-6.386 4.035-.074-.721-.358-1.391-.826-1.948-.469-.557-6.115-7.376-7.523-9.178-.469-.6-.575-1.245-.295-1.816.268-.549.842-.918 1.43-.918.919 0 1.408.655 1.549 1.215.16.641-.035 1.231-.623 1.685l1.329 1.624 7.796-4.446c1.422-1.051 1.822-2.991.93-4.513-.618-1.053-1.759-1.706-2.978-1.706-1.188 0-.793-.016-9.565 4.475-1.234.591-2.05 1.787-2.05 3.202 0 .87.308 1.756.889 2.487 1.427 1.794 7.561 9.185 7.616 9.257.371.493.427 1.119.15 1.673-.277.555-.812.886-1.429.886-.919 0-1.408-.655-1.549-1.216-.156-.629.012-1.208.604-1.654l-1.277-1.545c-.822.665-1.277 1.496-1.377 2.442-.232 2.205 1.525 3.993 3.613 3.993.596 0 1.311-.177 1.841-.51l9.427-5.946c.957-.664 1.492-1.781 1.492-2.897 0-.745-.24-1.454-.688-2.003l-.359-.43zm-7.933-10.062c.188-.087.398-.134.609-.134.532 0 .997.281 1.243.752.312.596.226 1.469-.548 1.912l-5.097 2.888c-.051-1.089-.579-2.081-1.455-2.732l5.248-2.686zm2.097 13.383l.361-.905.249-.609-3.449 2.017.645.781 2.194-1.284z"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-4 text-lg leading-7 text-gray-900 font-semibold"
+                              },
+                              [_vm._v("Motivation Letter")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-12" }, [
+                            _c("textarea", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.appData.motivation_letter,
+                                  expression: "appData.motivation_letter"
+                                }
+                              ],
+                              staticClass:
+                                "w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none",
+                              attrs: { rows: "4" },
+                              domProps: {
+                                value: _vm.appData.motivation_letter
+                              },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.appData,
+                                    "motivation_letter",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "grid grid-cols-1" }, [
+                        _c("div", { staticClass: "p-6" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  width: "24",
+                                  height: "24",
+                                  viewBox: "0 0 24 24"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M10 13h-4v-1h4v1zm2.318-4.288l3.301 3.299-4.369.989 1.068-4.288zm11.682-5.062l-7.268 7.353-3.401-3.402 7.267-7.352 3.402 3.401zm-6 8.916v.977c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h14.056l1.977-2h-18.033v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.843l-2 2.023z"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-4 text-lg leading-7 text-gray-900 font-semibold"
+                              },
+                              [_vm._v("Notes")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-12" }, [
+                            _c("textarea", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.appData.comment,
+                                  expression: "appData.comment"
+                                }
+                              ],
+                              staticClass:
+                                "w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none",
+                              attrs: { rows: "4" },
+                              domProps: { value: _vm.appData.comment },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.appData,
+                                    "comment",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mt-5",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Save\n                    "
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("script", {
+        attrs: { type: "application/javascript", defer: "", src: "/js/date.js" }
+      }),
+      _vm._v(" "),
+      _c("script", {
+        attrs: { type: "application/javascript", defer: "", src: "/js/time.js" }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Applications/Index.vue?vue&type=template&id=33e1cf2f&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Applications/Index.vue?vue&type=template&id=33e1cf2f& ***!
@@ -49313,6 +50373,16 @@ var render = function() {
                         attrs: { href: "application/" + app.id }
                       },
                       [_vm._v("Details")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
+                        attrs: { href: "application/edit/" + app.id }
+                      },
+                      [_vm._v("Edit")]
                     )
                   ])
                 ])
@@ -49904,7 +50974,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Dashboard\n        ")]
+                [_vm._v("\n            Job Application Tracker\n        ")]
               )
             ]
           },
@@ -64902,6 +65972,8 @@ var map = {
 	"./API/Index.vue": "./resources/js/Pages/API/Index.vue",
 	"./Applications/Create": "./resources/js/Pages/Applications/Create.vue",
 	"./Applications/Create.vue": "./resources/js/Pages/Applications/Create.vue",
+	"./Applications/Edit": "./resources/js/Pages/Applications/Edit.vue",
+	"./Applications/Edit.vue": "./resources/js/Pages/Applications/Edit.vue",
 	"./Applications/Index": "./resources/js/Pages/Applications/Index.vue",
 	"./Applications/Index.vue": "./resources/js/Pages/Applications/Index.vue",
 	"./Applications/Show": "./resources/js/Pages/Applications/Show.vue",
@@ -65086,15 +66158,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************!*\
   !*** ./resources/js/Pages/Applications/Create.vue ***!
   \****************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Create_vue_vue_type_template_id_700c616f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Create.vue?vue&type=template&id=700c616f& */ "./resources/js/Pages/Applications/Create.vue?vue&type=template&id=700c616f&");
 /* harmony import */ var _Create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Create.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Applications/Create.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -65124,7 +66195,7 @@ component.options.__file = "resources/js/Pages/Applications/Create.vue"
 /*!*****************************************************************************!*\
   !*** ./resources/js/Pages/Applications/Create.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65147,6 +66218,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Create_vue_vue_type_template_id_700c616f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Create_vue_vue_type_template_id_700c616f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Applications/Edit.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/Pages/Applications/Edit.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Edit_vue_vue_type_template_id_395c323d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Edit.vue?vue&type=template&id=395c323d& */ "./resources/js/Pages/Applications/Edit.vue?vue&type=template&id=395c323d&");
+/* harmony import */ var _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Edit.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Edit_vue_vue_type_template_id_395c323d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Edit_vue_vue_type_template_id_395c323d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Applications/Edit.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Edit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Applications/Edit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Applications/Edit.vue?vue&type=template&id=395c323d&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Applications/Edit.vue?vue&type=template&id=395c323d& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_395c323d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Edit.vue?vue&type=template&id=395c323d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Applications/Edit.vue?vue&type=template&id=395c323d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_395c323d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_template_id_395c323d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

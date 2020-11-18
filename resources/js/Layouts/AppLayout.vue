@@ -210,6 +210,16 @@
             <slot></slot>
         </main>
 
+        <footer class="bg-gray-700 shadow text-gray-200 p-2 text-sm">
+
+            <div class="grid grid-cols-6 gap-4">
+              <div class="col-span-6 sm:col-span-4 md:col-span-4 "></div>
+              <div class="col-span-6 sm:col-span-4 md:col-span-2 md:text-right">Developer: <a href="http://www.basaksecmen.com" target="_blank" class="underline"> Başak Seçmen</a></div>
+              
+            </div>
+            
+        </footer>
+
         <!-- Modal Portal -->
         <portal-target name="modal" multiple>
         </portal-target>
