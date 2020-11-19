@@ -68,10 +68,10 @@ class ApplicationController extends Controller
     {
     	
 
-        $d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
-        $request['app_date'] = $d->format('Y-m-d H:i:s');
+        //$d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
+        //$request['app_date'] = $d->format('Y-m-d H:i:s');
 
-        var_dump($request);
+        dd($request);
 
 
         //return Redirect::route('/application/{$id}');

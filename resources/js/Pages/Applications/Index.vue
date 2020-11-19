@@ -43,7 +43,7 @@
                 			<div><b>Company:</b> {{app.company}} </div>
                 			<div class="mb-4"><b>Post:</b> {{app.post_title}}</div>
                 			<a :href="'application/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Details</a> 
-                			<a :href="'application/edit/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Edit</a>
+                			<a :href="'/application/edit/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Edit</a>
                 		</div>
                 	</div>
                 </div>

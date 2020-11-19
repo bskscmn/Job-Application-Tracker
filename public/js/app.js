@@ -3848,6 +3848,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -3881,7 +3885,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      this.$inertia.patch('/application/update/', this.form);
+      this.appData.date = this.appDate;
+      this.appData.time = this.appTime;
+      this.$inertia.patch('/application/update/' + this.appData.id, [this.appData]);
     },
     getFormatedDate: function getFormatedDate(date) {
       return moment(date).format('DD / MM / YYYY');
@@ -3892,8 +3898,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     console.log(this.app);
-    this.appDate = this.getFormatedDate(this.appDate);
-    this.appTime = this.getFormatedTime(this.appTime);
+
+    if (this.appDate) {
+      this.appDate = this.getFormatedDate(this.appDate);
+      this.appTime = this.getFormatedTime(this.appTime);
+    }
   }
 });
 
@@ -3994,6 +4003,9 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
 //
 //
 //
@@ -49101,7 +49113,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Description")]
+                              [_vm._v("Job Description")]
                             )
                           ]),
                           _vm._v(" "),
@@ -49411,8 +49423,20 @@ var render = function() {
     },
     [
       _vm._v(" "),
-      _c("div", { staticClass: "py-12" }, [
+      _c("div", { staticClass: "py-8" }, [
         _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+          _c("div", { staticClass: "mb-2 text-right" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
+                attrs: { href: "/applications" }
+              },
+              [_vm._v("Back")]
+            )
+          ]),
+          _vm._v(" "),
           _c(
             "div",
             {
@@ -50115,7 +50139,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Description")]
+                              [_vm._v("Job Description")]
                             )
                           ]),
                           _vm._v(" "),
@@ -50575,7 +50599,7 @@ var render = function() {
                       {
                         staticClass:
                           "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
-                        attrs: { href: "application/edit/" + app.id }
+                        attrs: { href: "/application/edit/" + app.id }
                       },
                       [_vm._v("Edit")]
                     )
@@ -50636,8 +50660,30 @@ var render = function() {
     },
     [
       _vm._v(" "),
-      _c("div", { staticClass: "py-12" }, [
+      _c("div", { staticClass: "py-8" }, [
         _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+          _c("div", { staticClass: "mb-2 text-right" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
+                attrs: { href: "/application/edit/" + _vm.app.id }
+              },
+              [_vm._v("Edit")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
+                attrs: { href: "/applications" }
+              },
+              [_vm._v("Back")]
+            )
+          ]),
+          _vm._v(" "),
           _c(
             "div",
             { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
@@ -50943,7 +50989,7 @@ var render = function() {
                                   staticClass:
                                     "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                                 },
-                                [_vm._v("Description")]
+                                [_vm._v("Job Description")]
                               )
                             ]),
                             _vm._v(" "),

@@ -6,8 +6,12 @@
             </h2>
         </template>
 
-        <div class="py-12">
+        <div class="py-8">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="mb-2 text-right">
+                    <a :href="'/applications'" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Back</a>
+                </div>
+
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
 
                     <form @submit.prevent="submit" class="w-full">
@@ -122,7 +126,7 @@
                                 <div class="p-6">
                                     <div class="flex items-center">
                                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
-                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Description</div>
+                                        <div class="ml-4 text-lg leading-7 text-gray-900 font-semibold">Job Description</div>
                                     </div>
 
                                     <div class="ml-12">
@@ -216,7 +220,9 @@
         },
         methods: {
             submit() {
-              this.$inertia.patch('/application/update/', this.form)
+                this.appData.date = this.appDate;
+                this.appData.time = this.appTime;
+                this.$inertia.patch('/application/update/'+this.appData.id, [this.appData])
             },
             getFormatedDate(date) {
                 return moment(date).format('DD / MM / YYYY');
@@ -227,8 +233,11 @@
         },
         mounted() {
             console.log(this.app);
-            this.appDate = this.getFormatedDate(this.appDate);
-            this.appTime = this.getFormatedTime(this.appTime);
+            if(this.appDate){
+                this.appDate = this.getFormatedDate(this.appDate);
+                this.appTime = this.getFormatedTime(this.appTime);
+            }
+                
         },
         
         
