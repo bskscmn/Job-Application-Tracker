@@ -222,7 +222,7 @@
             submit() {
                 this.appData.date = this.appDate;
                 this.appData.time = this.appTime;
-                this.$inertia.patch('/application/update/'+this.appData.id, [this.appData])
+                this.$inertia.patch('/application/update/'+this.appData.id, this.appData)
             },
             getFormatedDate(date) {
                 return moment(date).format('DD / MM / YYYY');

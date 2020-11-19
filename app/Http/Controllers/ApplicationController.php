@@ -67,13 +67,18 @@ class ApplicationController extends Controller
     public function update(Request $request)
     {
     	
+    	if($request['date'] && $request['time']){
+    		$d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
+        	$request['app_date'] = $d->format('Y-m-d H:i:s');
+    	}
+        
 
-        //$d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
-        //$request['app_date'] = $d->format('Y-m-d H:i:s');
+        //dd($request['app_date']);
 
-        dd($request);
+        $application = Application::where('id', $request->id)->first();
+        $application->update($request->all());
 
 
-        //return Redirect::route('/application/{$id}');
+        return Redirect::route('applications.show',$request->id);
     }
 }

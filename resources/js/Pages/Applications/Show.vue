@@ -75,10 +75,10 @@
                                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                                 {{app.contactPerson}}
                                             </div>
-                                            <div class="inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 p-1 "><b>email:</b> 
+                                            <div class="inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "><b>email:</b> 
                                                 {{app.email}} 
                                             </div>
-                                            <div class="inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 p-1 "><b>phone:</b> 
+                                            <div class="inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "><b>phone:</b> 
                                                 {{app.phone}} 
                                             </div>
                                         </div>

@@ -3887,7 +3887,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       this.appData.date = this.appDate;
       this.appData.time = this.appTime;
-      this.$inertia.patch('/application/update/' + this.appData.id, [this.appData]);
+      this.$inertia.patch('/application/update/' + this.appData.id, this.appData);
     },
     getFormatedDate: function getFormatedDate(date) {
       return moment(date).format('DD / MM / YYYY');
@@ -50589,7 +50589,7 @@ var render = function() {
                       {
                         staticClass:
                           "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
-                        attrs: { href: "application/" + app.id }
+                        attrs: { href: "/application/" + app.id }
                       },
                       [_vm._v("Details")]
                     ),
@@ -50928,7 +50928,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 p-1 "
+                                    "inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "
                                 },
                                 [
                                   _c("b", [_vm._v("email:")]),
@@ -50944,7 +50944,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 p-1 "
+                                    "inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "
                                 },
                                 [
                                   _c("b", [_vm._v("phone:")]),
