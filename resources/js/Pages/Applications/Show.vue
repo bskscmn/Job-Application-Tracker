@@ -151,24 +151,18 @@
                                <input class="absolute opacity-0" id="tab-multi-one" type="checkbox" name="tabs">
                                <label class="block p-5 leading-normal cursor-pointer text-red-800" for="tab-multi-one">Delete Application</label>
                                <div class="tab-content overflow-hidden border-l-2  border-red-300 leading-normal">
-                                  <p class="p-5">
-                                    This action is irreversible. <br/>
-                                    Delete this item?<br/>
-
+                                    <p class="p-5">
+                                        This action is irreversible. <br/>
+                                        Delete this item?<br/>
+                                    </p>
                                     <form @submit.prevent="submit" method="POST">
-                                        
-                                        <button type="submit" class="mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900">Delete</button>
+                                        <button type="submit" class="m-5 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900">Delete</button>
                                     </form>
-
-                                  </p>
                                </div>
                             </div>
                          </div>
                         </div>
                     </div>
-
-                    
-
 
                 </div>
             </div>
@@ -186,14 +180,11 @@
         
         props: ['app'],
 
-        data() {
-            return {
-              appData: this.app,
-            }
-        },
         methods: {
             submit() {
-                this.$inertia.delete('/application/delete/'+this.app.id)
+                if(confirm("Do you really want to delete?")){
+                    this.$inertia.delete('/application/delete/'+this.app.id)
+                }
             }
         },
 

@@ -4175,26 +4175,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: ['app'],
-  data: function data() {
-    return {
-      appData: this.app
-    };
-  },
   methods: {
     submit: function submit() {
-      this.$inertia["delete"]('/application/delete/' + this.app.id);
+      if (confirm("Do you really want to delete?")) {
+        this.$inertia["delete"]('/application/delete/' + this.app.id);
+      }
     }
   },
   mounted: function mounted() {//console.log(this.app);
@@ -51240,14 +51231,15 @@ var render = function() {
                             [
                               _c("p", { staticClass: "p-5" }, [
                                 _vm._v(
-                                  "\n                                This action is irreversible. "
+                                  "\n                                    This action is irreversible. "
                                 ),
                                 _c("br"),
                                 _vm._v(
-                                  "\n                                Delete this item?"
+                                  "\n                                    Delete this item?"
                                 ),
                                 _c("br")
                               ]),
+                              _vm._v(" "),
                               _c(
                                 "form",
                                 {
@@ -51264,15 +51256,13 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900",
+                                        "m-5 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900",
                                       attrs: { type: "submit" }
                                     },
                                     [_vm._v("Delete")]
                                   )
                                 ]
-                              ),
-                              _vm._v(" "),
-                              _c("p")
+                              )
                             ]
                           )
                         ]
