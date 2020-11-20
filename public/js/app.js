@@ -4156,12 +4156,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: ['app'],
+  data: function data() {
+    return {};
+  },
   mounted: function mounted() {//console.log(this.app);
   }
 });
@@ -50662,12 +50685,12 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "py-8" }, [
         _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
-          _c("div", { staticClass: "mb-2 text-right" }, [
+          _c("div", { staticClass: "mb-3 text-right" }, [
             _c(
               "a",
               {
                 staticClass:
-                  "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
+                  "bg-indigo-500 text-white px-3 py-2  rounded hover:bg-indigo-700",
                 attrs: { href: "/application/edit/" + _vm.app.id }
               },
               [_vm._v("Edit")]
@@ -50677,7 +50700,7 @@ var render = function() {
               "a",
               {
                 staticClass:
-                  "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
+                  "bg-indigo-500 text-white px-3 py-2 rounded hover:bg-indigo-700",
                 attrs: { href: "/applications" }
               },
               [_vm._v("Back")]
@@ -50913,7 +50936,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "mt-2 text-gray-600 dark:text-gray-400 text-sm"
+                                    "m-2 text-gray-600 dark:text-gray-400 text-sm"
                                 },
                                 [
                                   _vm._v(
@@ -51169,6 +51192,64 @@ var render = function() {
                         ])
                       ]
                     )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "w-full  mx-left p-8" }, [
+                    _c("div", { staticClass: "shadow-md" }, [
+                      _c(
+                        "div",
+                        { staticClass: "tab w-full overflow-hidden border-t" },
+                        [
+                          _c("input", {
+                            staticClass: "absolute opacity-0",
+                            attrs: {
+                              id: "tab-multi-one",
+                              type: "checkbox",
+                              name: "tabs"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "block p-5 leading-normal cursor-pointer text-red-800",
+                              attrs: { for: "tab-multi-one" }
+                            },
+                            [_vm._v("Delete Application")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "tab-content overflow-hidden border-l-2  border-red-300 leading-normal"
+                            },
+                            [
+                              _c("p", { staticClass: "p-5" }, [
+                                _vm._v(
+                                  "\n                                This action is irreversible. "
+                                ),
+                                _c("br"),
+                                _vm._v(
+                                  "\n                                Delete this item?"
+                                ),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700"
+                                  },
+                                  [_vm._v("Delete")]
+                                )
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ])
                   ])
                 ]
               )

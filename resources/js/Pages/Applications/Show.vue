@@ -8,9 +8,9 @@
 
         <div class="py-8">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="mb-2 text-right">
-                    <a :href="'/application/edit/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Edit</a>
-                    <a :href="'/applications'" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Back</a>
+                <div class="mb-3 text-right">
+                    <a :href="'/application/edit/'+app.id" class="bg-indigo-500 text-white px-3 py-2  rounded hover:bg-indigo-700">Edit</a>
+                    <a :href="'/applications'" class="bg-indigo-500 text-white px-3 py-2 rounded hover:bg-indigo-700">Back</a>
                 </div>
 
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -72,7 +72,7 @@
                                         </div>
 
                                         <div class="ml-12">
-                                            <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                            <div class="m-2 text-gray-600 dark:text-gray-400 text-sm">
                                                 {{app.contactPerson}}
                                             </div>
                                             <div class="inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "><b>email:</b> 
@@ -143,8 +143,28 @@
                             </div>
                             
                         </div>
-
+                    
+                        <!-- Delete Application -->
+                        <div class="w-full  mx-left p-8">
+                         <div class="shadow-md">
+                            <div class="tab w-full overflow-hidden border-t">
+                               <input class="absolute opacity-0" id="tab-multi-one" type="checkbox" name="tabs">
+                               <label class="block p-5 leading-normal cursor-pointer text-red-800" for="tab-multi-one">Delete Application</label>
+                               <div class="tab-content overflow-hidden border-l-2  border-red-300 leading-normal">
+                                  <p class="p-5">
+                                    This action is irreversible. <br/>
+                                    Delete this item?<br/>
+                                    <button class="mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700">Delete</button>
+                                  </p>
+                               </div>
+                            </div>
+                         </div>
+                        </div>
                     </div>
+
+                    
+
+
                 </div>
             </div>
         </div>
@@ -160,6 +180,11 @@
         },
         
         props: ['app'],
+
+        data() {
+            return {
+            }
+        },
 
         mounted() {
         	//console.log(this.app);
