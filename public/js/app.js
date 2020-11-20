@@ -4176,6 +4176,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -4183,7 +4188,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ['app'],
   data: function data() {
-    return {};
+    return {
+      appData: this.app
+    };
+  },
+  methods: {
+    submit: function submit() {
+      this.$inertia["delete"]('/application/delete/' + this.app.id);
+    }
   },
   mounted: function mounted() {//console.log(this.app);
   }
@@ -47002,7 +47014,7 @@ var render = function() {
                     "jet-nav-link",
                     {
                       attrs: {
-                        href: _vm.route("applications.create"),
+                        href: _vm.route("application.create"),
                         active: _vm.route().current("applications.create")
                       }
                     },
@@ -51234,17 +51246,33 @@ var render = function() {
                                 _vm._v(
                                   "\n                                Delete this item?"
                                 ),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700"
-                                  },
-                                  [_vm._v("Delete")]
-                                )
-                              ])
+                                _c("br")
+                              ]),
+                              _c(
+                                "form",
+                                {
+                                  attrs: { method: "POST" },
+                                  on: {
+                                    submit: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.submit($event)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900",
+                                      attrs: { type: "submit" }
+                                    },
+                                    [_vm._v("Delete")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("p")
                             ]
                           )
                         ]

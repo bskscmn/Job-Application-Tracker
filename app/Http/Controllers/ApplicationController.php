@@ -46,12 +46,13 @@ class ApplicationController extends Controller
     	$user = auth()->user();
         $request['user_id'] = $user->id;
 
-        $d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
-        $request['app_date'] = $d->format('Y-m-d H:i:s');
-
+        if($request['date'] && $request['time']){
+	        $d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
+	        $request['app_date'] = $d->format('Y-m-d H:i:s');
+	    }
         Application::create($request->all());
 
-        return Redirect::route('/applications');
+        return Redirect::route('applications.index');
     }
 
     public function edit(int $id) {
@@ -80,5 +81,14 @@ class ApplicationController extends Controller
 
 
         return Redirect::route('applications.show',$request->id);
+    }
+
+
+    public function destroy(Request $request)
+    {
+        $application = Application::find($request->id);
+        $application->delete();
+        
+        return redirect('/applications')->with('success', 'Application deleted successfully');
     }
 }

@@ -154,7 +154,12 @@
                                   <p class="p-5">
                                     This action is irreversible. <br/>
                                     Delete this item?<br/>
-                                    <button class="mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700">Delete</button>
+
+                                    <form @submit.prevent="submit" method="POST">
+                                        
+                                        <button type="submit" class="mt-4 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900">Delete</button>
+                                    </form>
+
                                   </p>
                                </div>
                             </div>
@@ -183,6 +188,12 @@
 
         data() {
             return {
+              appData: this.app,
+            }
+        },
+        methods: {
+            submit() {
+                this.$inertia.delete('/application/delete/'+this.app.id)
             }
         },
 
