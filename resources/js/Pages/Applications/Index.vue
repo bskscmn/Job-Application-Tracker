@@ -13,7 +13,7 @@
                 		<div class="px-5 py-2 bg-indigo-800 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
 						    <span class="font-semibold text-center flex-auto">You dont have any job application in your list.</span>
 						</div>
-						</div>
+					</div>
                 	<div v-for="app in this.appList" v-bind:key="app.id">
                 		<div class="p-3 shadow-xl">
                 			
@@ -46,6 +46,7 @@
                 			<a :href="'/application/edit/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Edit</a>
                 		</div>
                 	</div>
+
                 </div>
             </div>
         </div>
@@ -68,6 +69,7 @@
         		appList: this.apps
         	}
         },
+        
 
         mounted() {
         	console.log(this.appList);

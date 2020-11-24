@@ -51,8 +51,7 @@
                                             Company *
                                           </label>
                                           <input v-model="appData.company" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="company" type="text" placeholder="Company Name">
-                                          <!--<div v-if="errors.company" class="text-red-700 text-sm">{{ errors.company }}</div>-->
-                                          
+                                          <div v-if="$page.errors.company" class="text-red-700 text-sm">{{ $page.errors.company[0] }}</div>
                                         </div>
                                     </div>
                                     <div class="md:flex md:items-center mb-3">
@@ -69,7 +68,7 @@
                                             Post Title *
                                           </label>
                                           <input v-model="appData.post_title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="post_title" type="text" placeholder="Title">
-                                          <!--<div v-if="errors.post_title" class="text-red-700 text-sm">{{ errors.post_title }}</div>-->
+                                          <div v-if="$page.errors.post_title" class="text-red-700 text-sm">{{ $page.errors.post_title[0] }}</div>
                                         </div>
                                     </div>
                                     <div class="md:flex md:items-center mb-3">
@@ -232,7 +231,6 @@
             }
         },
         mounted() {
-            console.log(this.app);
             if(this.appDate){
                 this.appDate = this.getFormatedDate(this.appDate);
                 this.appTime = this.getFormatedTime(this.appTime);

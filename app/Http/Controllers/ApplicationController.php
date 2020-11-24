@@ -15,7 +15,7 @@ class ApplicationController extends Controller
 
     	$user = auth()->user();
 
-    	$apps = Application::where('user_id', $user->id)->with('condition')->get();
+    	$apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->get();
 
     	return Inertia::render('Applications/Index',[
     		'apps' => $apps
@@ -52,35 +52,35 @@ class ApplicationController extends Controller
 	    }
         Application::create($request->all());
 
-        return Redirect::route('applications.index');
+        return Redirect::route('applications.index')->with('success', 'New application is added succesfully.');
     }
 
-    public function edit(int $id) {
+    public function edit(int $id,Request $request) {
 
     	$app = Application::where('id', $id)->with('condition')->first();
 
     	return Inertia::render('Applications/Edit',[
     		'app' => $app,
-    		'errors' => null
     	]);
     }
 
     public function update(Request $request)
     {
+    	$validator = Validator::make($request->all(), [
+            'company' => 'required|max:255',
+            'post_title' => 'required',
+        ])->validate();
     	
     	if($request['date'] && $request['time']){
     		$d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
         	$request['app_date'] = $d->format('Y-m-d H:i:s');
     	}
         
-
-        //dd($request['app_date']);
-
         $application = Application::where('id', $request->id)->first();
         $application->update($request->all());
 
 
-        return Redirect::route('applications.show',$request->id);
+        return Redirect::route('application.show',$request->id)->with('success', 'Application updated.');
     }
 
 
@@ -88,7 +88,7 @@ class ApplicationController extends Controller
     {
         $application = Application::find($request->id);
         $application->delete();
-        
+
         return redirect('/applications')->with('success', 'Application deleted successfully');
     }
 }

@@ -3036,6 +3036,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -3601,9 +3604,7 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  props: {
-    errors: Object
-  },
+  props: [],
   data: function data() {
     return {
       form: {
@@ -3851,7 +3852,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -3897,8 +3897,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    console.log(this.app);
-
     if (this.appDate) {
       this.appDate = this.getFormatedDate(this.appDate);
       this.appTime = this.getFormatedTime(this.appTime);
@@ -3920,6 +3918,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
 //
 //
 //
@@ -47633,7 +47632,27 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("main", [_vm._t("default")], 2),
+      _c(
+        "main",
+        [
+          _vm.$page.flash.success
+            ? _c(
+                "div",
+                { staticClass: "bg-green-200 shadow text-green-500 p-3" },
+                [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.$page.flash.success) +
+                      "\n        "
+                  )
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm._t("default")
+        ],
+        2
+      ),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
@@ -48697,13 +48716,19 @@ var render = function() {
                                       }
                                     }),
                                     _vm._v(" "),
-                                    _vm.errors.company
+                                    _vm.$page.errors.company
                                       ? _c(
                                           "div",
                                           {
                                             staticClass: "text-red-700 text-sm"
                                           },
-                                          [_vm._v(_vm._s(_vm.errors.company))]
+                                          [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm.$page.errors.company[0]
+                                              )
+                                            )
+                                          ]
                                         )
                                       : _vm._e()
                                   ]
@@ -48818,11 +48843,17 @@ var render = function() {
                                     }
                                   }),
                                   _vm._v(" "),
-                                  _vm.errors.post_title
+                                  _vm.$page.errors.post_title
                                     ? _c(
                                         "div",
                                         { staticClass: "text-red-700 text-sm" },
-                                        [_vm._v(_vm._s(_vm.errors.post_title))]
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.$page.errors.post_title[0]
+                                            )
+                                          )
+                                        ]
                                       )
                                     : _vm._e()
                                 ])
@@ -49739,7 +49770,23 @@ var render = function() {
                                           )
                                         }
                                       }
-                                    })
+                                    }),
+                                    _vm._v(" "),
+                                    _vm.$page.errors.company
+                                      ? _c(
+                                          "div",
+                                          {
+                                            staticClass: "text-red-700 text-sm"
+                                          },
+                                          [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm.$page.errors.company[0]
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      : _vm._e()
                                   ]
                                 )
                               ]
@@ -49850,7 +49897,21 @@ var render = function() {
                                         )
                                       }
                                     }
-                                  })
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.post_title
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-700 text-sm" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.$page.errors.post_title[0]
+                                            )
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
                                 ])
                               ]
                             ),

@@ -207,6 +207,9 @@
 
         <!-- Page Content -->
         <main>
+            <div class="bg-green-200 shadow text-green-500 p-3" v-if="$page.flash.success">
+                {{ $page.flash.success }}
+            </div>
             <slot></slot>
         </main>
 
