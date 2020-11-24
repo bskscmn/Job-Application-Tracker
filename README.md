@@ -1,8 +1,4 @@
-<p align="center">
 <img src="./logo.png">
-</p>
-
-
 
 ## About Job Application Tracker
 

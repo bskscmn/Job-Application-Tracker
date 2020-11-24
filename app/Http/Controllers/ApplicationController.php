@@ -11,15 +11,33 @@ use DateTime;
 
 class ApplicationController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
 
-    	$user = auth()->user();
+        $user = auth()->user();
 
-    	$apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
+        if( $request['search'] != null) {
 
-    	return Inertia::render('Applications/Index',[
-    		'apps' => $apps
-    	]);
+            $q = $request['search'];
+
+            $apps = Application::where('user_id', $user->id)
+                ->where('company','LIKE','%'.$q.'%')
+                ->orWhere('contactPerson','LIKE','%'.$q.'%')
+                ->orWhere('email','LIKE','%'.$q.'%')
+                ->orWhere('phone','LIKE','%'.$q.'%')
+                ->orWhere('post_title','LIKE','%'.$q.'%')
+                ->orWhere('post_title','LIKE','%'.$q.'%')
+                ->orWhere('location','LIKE','%'.$q.'%')
+                ->orWhere('description','LIKE','%'.$q.'%')
+                ->orderBy('id', 'DESC')->with('condition')->paginate(5);
+            return Inertia::render('Applications/Index',['apps' => $apps]);
+        }else{
+            $apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
+            return Inertia::render('Applications/Index',['apps' => $apps]);
+        }
+
+    	
+
+        	
     }
 
     public function show(int $id) {
