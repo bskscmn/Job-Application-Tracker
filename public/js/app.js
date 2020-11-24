@@ -3973,6 +3973,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3984,6 +3992,13 @@ __webpack_require__.r(__webpack_exports__);
     return {
       appList: this.apps
     };
+  },
+  methods: {
+    decoder: function decoder(str) {
+      var textArea = document.createElement('textarea');
+      textArea.innerHTML = str;
+      return textArea.value;
+    }
   },
   mounted: function mounted() {
     console.log(this.appList);
@@ -50573,24 +50588,24 @@ var render = function() {
                   ])
                 : _vm._e(),
               _vm._v(" "),
-              _vm._l(this.appList, function(app) {
-                return _c("div", { key: app.id }, [
+              _vm._l(this.appList.data, function(app) {
+                return _c("div", { key: "app-" + app.id }, [
                   _c("div", { staticClass: "p-3 shadow-xl" }, [
                     _c(
                       "div",
                       { staticClass: "flex justify-between items-center" },
                       [
                         _c("div", { staticClass: "text-sm text-teal-800" }, [
-                          _vm._v("Application Date: "),
                           app.app_date !== null
                             ? _c("span", [
+                                _vm._v("Application Date: "),
                                 _c("b", [
                                   _vm._v(
                                     _vm._s(_vm._f("toDateTime")(app.app_date))
                                   )
                                 ])
                               ])
-                            : _vm._e()
+                            : _c("span", [_vm._v("Application Date is empty!")])
                         ]),
                         _vm._v(" "),
                         app.condition_id === 1
@@ -50692,7 +50707,32 @@ var render = function() {
                     )
                   ])
                 ])
-              })
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mt-2" },
+                _vm._l(this.appList.links, function(link) {
+                  return link.url
+                    ? _c(
+                        "inertia-link",
+                        {
+                          key: "p-" + link.label,
+                          staticClass: "text-indigo-700 p-5",
+                          attrs: { href: link.url }
+                        },
+                        [
+                          _c(
+                            "span",
+                            { class: { "text-red-800": link.active } },
+                            [_vm._v(_vm._s(_vm.decoder(link.label)))]
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                }),
+                1
+              )
             ],
             2
           )

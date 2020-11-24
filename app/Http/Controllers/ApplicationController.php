@@ -15,7 +15,7 @@ class ApplicationController extends Controller
 
     	$user = auth()->user();
 
-    	$apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->get();
+    	$apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
 
     	return Inertia::render('Applications/Index',[
     		'apps' => $apps

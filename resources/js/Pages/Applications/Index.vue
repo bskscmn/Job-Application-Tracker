@@ -14,11 +14,14 @@
 						    <span class="font-semibold text-center flex-auto">You dont have any job application in your list.</span>
 						</div>
 					</div>
-                	<div v-for="app in this.appList" v-bind:key="app.id">
+                	<div v-for="app in this.appList.data" v-bind:key="'app-'+app.id" >
                 		<div class="p-3 shadow-xl">
                 			
                 			<div class="flex justify-between items-center">
-                				<div class="text-sm text-teal-800">Application Date: <span v-if="app.app_date !== null"><b>{{ app.app_date | toDateTime }}</b></span> </div>
+                				<div class="text-sm text-teal-800">
+                                    <span v-if="app.app_date !== null">Application Date: <b>{{ app.app_date | toDateTime }}</b></span> 
+                                    <span v-else>Application Date is empty!</span> 
+                                </div>
 
                 				<div v-if="app.condition_id === 1">
 								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{ app.condition.condition }}</span>
@@ -47,6 +50,11 @@
                 		</div>
                 	</div>
 
+                    <div class="mt-2">
+                        <inertia-link v-if="link.url" v-for="link in this.appList.links" v-bind:key="'p-'+link.label" :href="link.url" class="text-indigo-700 p-5" >
+                            <span v-bind:class="{'text-red-800' : link.active}">{{ decoder(link.label) }}</span>
+                        </inertia-link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +77,14 @@
         		appList: this.apps
         	}
         },
-        
+        methods: {
+            
+            decoder (str) {
+                var textArea = document.createElement('textarea');
+              textArea.innerHTML = str;
+              return textArea.value;
+            }
+        },
 
         mounted() {
         	console.log(this.appList);
