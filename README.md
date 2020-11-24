@@ -1,3 +1,9 @@
+<p align="center">
+![Alt text](./logo.svg)
+<img src="./logo.svg">
+</p>
+
+
 
 ## About Job Application Tracker
 
