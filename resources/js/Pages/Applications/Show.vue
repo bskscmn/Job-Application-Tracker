@@ -44,7 +44,6 @@
                             </div>
             			</div>
                         
-
                         <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
 
                             <div class="mt-2 px-6">
@@ -60,7 +59,6 @@
                                 {{app.post_title}}
                             </div>
 
-                        
                             <div class="grid grid-cols-1">
                                 <div class="p-6">
                                     <div class="flex items-center">
@@ -152,7 +150,6 @@
                                 </div>
                             </div>
                         </div>
-                            
                     
                         <!-- Delete Application -->
                         <div class="w-full  mx-left py-8">
@@ -172,8 +169,8 @@
                             </div>
                          </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -199,7 +196,6 @@
         },
 
         mounted() {
-        	//console.log(this.app);
         }     	
         
     }

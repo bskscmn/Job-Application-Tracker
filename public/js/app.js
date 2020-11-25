@@ -3600,10 +3600,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -3665,10 +3661,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-//
-//
-//
-//
 //
 //
 //
@@ -4009,11 +4001,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4039,9 +4026,7 @@ __webpack_require__.r(__webpack_exports__);
       return textArea.value;
     }
   },
-  mounted: function mounted() {
-    console.log(this.appList);
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -4235,9 +4220,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -4251,8 +4233,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  mounted: function mounted() {//console.log(this.app);
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),

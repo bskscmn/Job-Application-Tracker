@@ -19,13 +19,8 @@
                           </button>
                         </div>
                     </div>
-
-            </form>
+                </form>
             </div>
-
-            
-
-
         </template>
 
         <div class="py-12">
@@ -103,7 +98,6 @@
         	}
         },
         methods: {
-
             submit() {
               this.$inertia.get('/applications', this.form)
             },
@@ -116,7 +110,6 @@
         },
 
         mounted() {
-        	console.log(this.appList);
         }     	
         
     }

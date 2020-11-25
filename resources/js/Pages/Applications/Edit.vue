@@ -15,7 +15,7 @@
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
 
                     <form @submit.prevent="submit" class="w-full">
-                        
+
                         <div class="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">    
                             <div class="container mx-auto p-4 divide-y divide-gray-200">
                                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -186,14 +186,10 @@
                 </div>
             </div>
         </div>
+        
         <script type="application/javascript" defer src="/js/date.js"></script>
         <script type="application/javascript" defer src="/js/time.js"></script>
     </app-layout>
-
-
-
-
-
 </template>
 
 <script>
@@ -206,7 +202,6 @@
         
         props: ['app'],
 
-       
         data() {
             return {
               appData: this.app,

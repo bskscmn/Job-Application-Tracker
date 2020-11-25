@@ -33,9 +33,6 @@ class ApplicationController extends Controller
             $apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
             return Inertia::render('Applications/Index',['apps' => $apps]);
         }
-
-    	
-
         	
     }
 
