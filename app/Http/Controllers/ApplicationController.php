@@ -25,7 +25,6 @@ class ApplicationController extends Controller
                 ->orWhere('email','LIKE','%'.$q.'%')
                 ->orWhere('phone','LIKE','%'.$q.'%')
                 ->orWhere('post_title','LIKE','%'.$q.'%')
-                ->orWhere('post_title','LIKE','%'.$q.'%')
                 ->orWhere('location','LIKE','%'.$q.'%')
                 ->orWhere('description','LIKE','%'.$q.'%')
                 ->orderBy('id', 'DESC')->with('condition')->paginate(5);
