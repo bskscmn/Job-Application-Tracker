@@ -72,7 +72,7 @@
                 		</div>
                 	</div>
 
-                    <div class="mt-2">
+                    <div class="mt-6">Pages:
                         <inertia-link v-if="link.url" v-for="link in this.appList.links" v-bind:key="'p-'+link.label" :href="link.url" class="text-indigo-700 p-5" >
                             <span v-bind:class="{'text-red-800' : link.active}">{{ decoder(link.label) }}</span>
                         </inertia-link>
