@@ -4,6 +4,7 @@
 
 This application is developped for job applicants to help tracking their job applications.
 
+For demo page: [http://jobapplications.basaksecmen.com/](http://jobapplications.basaksecmen.com/)
 
 ### Technologies
 
