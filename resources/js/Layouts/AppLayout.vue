@@ -127,6 +127,12 @@
                     <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                         Dashboard
                     </jet-responsive-nav-link>
+                    <jet-responsive-nav-link :href="route('applications.index')" :active="route().current('applications.index')">
+                        Applications
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link :href="route('application.create')" :active="route().current('applications.create')">
+                        Add New Application
+                    </jet-responsive-nav-link>
                 </div>
 
                 <!-- Responsive Settings Options -->
