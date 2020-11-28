@@ -230,28 +230,3 @@
         
     }
 </script>
-
-<style>
-    input[data-v-4bd11526] {
-        min-width: 0 !important;
-        border:0 !important;
-    }
-    .year-month-wrapper[data-v-4bd11526] {
-        background-color: #6875f5;
-    }
-    .nav-l[data-v-4bd11526], .nav-r[data-v-4bd11526] {
-        background-color: #4555f3;
-    }
-    .nav-l[data-v-4bd11526]:hover, .nav-r[data-v-4bd11526]:hover {
-        background-color: #1021ca;
-    }
-    .days[data-v-4bd11526] {
-        color: #4555f3;
-    }
-    .activePort[data-v-4bd11526] {
-        background-color: #6875f5;
-    }
-    .okButton[data-v-4bd11526] {
-        color: #4555f3;
-    }
-</style>

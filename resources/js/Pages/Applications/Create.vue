@@ -30,7 +30,7 @@
                                       <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
                                         Aplication Date - Time
                                       </label>
-                                      <Datetime format="DD-MM-YYYY H:i" class="shadow appearance-none border rounded w-full  py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="form.app_date"></Datetime>
+                                      <Datetime format="DD-MM-YYYY H:i" class="shadow appearance-none border rounded w-full  py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="form.app_date" readonly></Datetime>
                                     </div>
                                 </div>
                             </div>
@@ -225,28 +225,5 @@
         },
     }
 </script>
-<style>
-    input[data-v-4bd11526] {
-        min-width: 0 !important;
-        border:0 !important;
-    }
-    .year-month-wrapper[data-v-4bd11526] {
-        background-color: #6875f5;
-    }
-    .nav-l[data-v-4bd11526], .nav-r[data-v-4bd11526] {
-        background-color: #4555f3;
-    }
-    .nav-l[data-v-4bd11526]:hover, .nav-r[data-v-4bd11526]:hover {
-        background-color: #1021ca;
-    }
-    .days[data-v-4bd11526] {
-        color: #4555f3;
-    }
-    .activePort[data-v-4bd11526] {
-        background-color: #6875f5;
-    }
-    .okButton[data-v-4bd11526] {
-        color: #4555f3;
-    }
-</style>
+
 
