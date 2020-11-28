@@ -52,6 +52,7 @@ class ApplicationController extends Controller
 
     public function store(Request $request)
     {
+        
     	$validator = Validator::make($request->all(), [
             'company' => 'required|max:255',
             'post_title' => 'required',
@@ -60,8 +61,8 @@ class ApplicationController extends Controller
     	$user = auth()->user();
         $request['user_id'] = $user->id;
 
-        if($request['date'] && $request['time']){
-	        $d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
+        if($request['app_date']){
+	        $d = DateTime::createFromFormat('d-m-Y H:i', $request['app_date']);
 	        $request['app_date'] = $d->format('Y-m-d H:i:s');
 	    }
         Application::create($request->all());
@@ -85,10 +86,10 @@ class ApplicationController extends Controller
             'post_title' => 'required',
         ])->validate();
     	
-    	if($request['date'] && $request['time']){
-    		$d = DateTime::createFromFormat('d / m / Y H : i : A', $request['date'].' '.$request['time']);
-        	$request['app_date'] = $d->format('Y-m-d H:i:s');
-    	}
+    	if($request['app_date']){
+            $d = DateTime::createFromFormat('d-m-Y H:i', $request['app_date']);
+            $request['app_date'] = $d->format('Y-m-d H:i:s');
+        }
         
         $application = Application::where('id', $request->id)->first();
         $application->update($request->all());

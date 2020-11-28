@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // to eliminate the error during migration :
+        // => 1071 Specified key was too long; max key length is 767 bytes
+        Schema::defaultStringLength(191); 
+        
+        /* 
+        *
+        * uncomment this for share hosting:
+        *
+
+        $this->app->bind('path.public', function() {
+            return base_path().'/../public_html/jobapplications.basaksecmen.com';
+        });
+        */
     }
 }

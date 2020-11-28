@@ -5,6 +5,7 @@ import Vue from 'vue';
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
+
 import moment from 'moment';
 
 Vue.mixin({ methods: { route } });
@@ -29,7 +30,6 @@ Vue.filter('toDateTime', function (value) {
         return moment(String(value)).format('Do MMMM YYYY, h:mm A')
     }
 });
-
 
 const app = document.getElementById('app');
 

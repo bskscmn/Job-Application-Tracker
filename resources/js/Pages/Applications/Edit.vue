@@ -16,31 +16,25 @@
 
                     <form @submit.prevent="submit" class="w-full">
 
-                        <div class="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">    
-                            <div class="container mx-auto p-4 divide-y divide-gray-200">
-                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                    <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="condition_id">
-                                        Status
-                                    </label>
-                               
-                                    <select v-model="appData.condition_id" class="shadow w-full border rounded mb-3 px-3 py-2 outline-none">
-                                        <option v-for="option in form.options" v-bind:value="option.value" :selected="option.value == appData.condition_id">
-                                            {{ option.text }}
-                                        </option>
-                                    </select>                                      
-                                </div>
-                                <div class="md:flex md:items-center mb-3 max-w-lg">
-                                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
-                                        Aplication Date
-                                      </label>
-                                      <input v-model="appDate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date"  type="text" placeholder=" dd / mm / YYYY">
-                                    </div>
+                        <div class="mt-4 bg-white dark:bg-gray-800  shadow sm:rounded-lg">    
+                            <div class="container mx-auto p-4 ">
+                                <div class="md:flex md:items-center mb-3 ">
                                     <div class="w-full md:w-1/2 px-3">
-                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="time">
-                                        Time
+                                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="condition_id">
+                                            Status
+                                        </label>
+                                   
+                                        <select v-model="appData.condition_id" class="shadow w-full border rounded mb-3 px-3 py-2 outline-none">
+                                            <option v-for="option in form.options" v-bind:value="option.value" :selected="option.value == appData.condition_id">
+                                                {{ option.text }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="w-full md:w-1/2 px-3 mb-3 ">
+                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
+                                        Aplication Date - Time
                                       </label>
-                                      <input v-model="appTime" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time" type="text" placeholder="hh : mm : PM">
+                                      <Datetime format="DD-MM-YYYY H:i" class="shadow appearance-none border rounded w-full  py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="appDateTime" readonly></Datetime>
                                     </div>
                                 </div>
                             </div>
@@ -120,16 +114,16 @@
                                         </div>
                                         <div class="md:flex md:items-center mb-3 max-w-lg">
                                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
+                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
                                                 Email
                                               </label>
-                                              <input v-model="appData.email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="email" placeholder="@">
+                                              <input v-model="appData.email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="@">
                                             </div>
                                             <div class="w-full md:w-1/2 px-3">
-                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="time">
+                                              <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="phone">
                                                 Phone
                                               </label>
-                                              <input v-model="appData.phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time" type="tel" placeholder="phone number">
+                                              <input v-model="appData.phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="phone number">
                                             </div>
                                         </div>
                                         
@@ -186,18 +180,17 @@
                 </div>
             </div>
         </div>
-        
-        <script type="application/javascript" defer src="/js/date.js"></script>
-        <script type="application/javascript" defer src="/js/time.js"></script>
     </app-layout>
 </template>
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
+    import Datetime from 'vuejs-datetimepicker';
 
     export default {
         components: {
             AppLayout,
+            Datetime,
         },
         
         props: ['app'],
@@ -205,8 +198,7 @@
         data() {
             return {
               appData: this.app,
-              appDate: this.app.app_date,
-              appTime: this.app.app_date,
+              appDateTime: this.app.app_date,
               form: {
                 options: [
                   { text: 'No Action', value: '1' },
@@ -220,21 +212,17 @@
         },
         methods: {
             submit() {
-                this.appData.date = this.appDate;
-                this.appData.time = this.appTime;
+                this.appData.app_date = this.appDateTime;
                 this.$inertia.patch('/application/update/'+this.appData.id, this.appData)
             },
             getFormatedDate(date) {
-                return moment(date).format('DD / MM / YYYY');
+                return moment(date).format('DD-MM-YYYY H:mm');
             },
-            getFormatedTime(date) {
-                return moment(date).format('h : mm : A');
-            }
+            
         },
         mounted() {
-            if(this.appDate){
-                this.appDate = this.getFormatedDate(this.appDate);
-                this.appTime = this.getFormatedTime(this.appTime);
+            if(this.appDateTime){
+                this.appDateTime = this.getFormatedDate(this.appDateTime);
             }
                 
         },
@@ -243,3 +231,27 @@
     }
 </script>
 
+<style>
+    input[data-v-4bd11526] {
+        min-width: 0 !important;
+        border:0 !important;
+    }
+    .year-month-wrapper[data-v-4bd11526] {
+        background-color: #6875f5;
+    }
+    .nav-l[data-v-4bd11526], .nav-r[data-v-4bd11526] {
+        background-color: #4555f3;
+    }
+    .nav-l[data-v-4bd11526]:hover, .nav-r[data-v-4bd11526]:hover {
+        background-color: #1021ca;
+    }
+    .days[data-v-4bd11526] {
+        color: #4555f3;
+    }
+    .activePort[data-v-4bd11526] {
+        background-color: #6875f5;
+    }
+    .okButton[data-v-4bd11526] {
+        color: #4555f3;
+    }
+</style>
