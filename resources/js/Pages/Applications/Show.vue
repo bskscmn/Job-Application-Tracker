@@ -102,7 +102,7 @@
 
                                     <div class="ml-12">
                                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                            {{app.description}}
+                                            <p v-html="nl2br(app.description)"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
 
                                     <div class="ml-12">
                                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                            {{app.motivation_letter}}
+                                            <p v-html="nl2br(app.motivation_letter)"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@
 
                                     <div class="ml-12">
                                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                            {{app.comment}}
+                                            <p v-html="nl2br(app.comment)"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -188,6 +188,16 @@
         props: ['app'],
 
         methods: {
+            nl2br (str, replaceMode, isXhtml) {
+              var breakTag = (isXhtml) ? '<br />' : '<br>';
+              var replaceStr = (replaceMode) ? '$1'+ breakTag : '$1'+ breakTag +'$2';
+              return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, replaceStr);
+            },
+            br2nl (str, replaceMode) {   
+              var replaceStr = (replaceMode) ? "\n" : '';
+              // Includes <br>, <BR>, <br />, </br>
+              return str.replace(/<\s*\/?br\s*[\/]?>/gi, replaceStr);
+            },
             submit() {
                 if(confirm("Do you really want to delete?")){
                     this.$inertia.delete('/application/delete/'+this.app.id)

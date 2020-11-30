@@ -23,9 +23,9 @@ class CreateApplicationsTable extends Migration
             $table->string('post_title');
             $table->string('link');
             $table->string('location');
-            $table->string('description');
+            $table->longText('description');
             $table->string('sent_files');
-            $table->string('motivation_letter');
+            $table->longText('motivation_letter');
             $table->timestamps();
         });
     }

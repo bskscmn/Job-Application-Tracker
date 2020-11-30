@@ -15,7 +15,7 @@ class AddColumnToApplications extends Migration
     {
         Schema::table('applications', function (Blueprint $table) {
             $table->dateTime('app_date')->nullable();
-            $table->string('comment')->nullable();
+            $table->longText('comment')->nullable();
             $table->string('company')->nullable()->change();
             $table->string('contactPerson')->nullable()->change();
             $table->string('email')->nullable()->change();
@@ -23,9 +23,9 @@ class AddColumnToApplications extends Migration
             $table->string('post_title')->nullable()->change();
             $table->string('link')->nullable()->change();
             $table->string('location')->nullable()->change();
-            $table->string('description')->nullable()->change();
+            $table->longText('description')->nullable()->change();
             $table->string('sent_files')->nullable()->change();
-            $table->string('motivation_letter')->nullable()->change();
+            $table->longText('motivation_letter')->nullable()->change();
         });
     }
 
