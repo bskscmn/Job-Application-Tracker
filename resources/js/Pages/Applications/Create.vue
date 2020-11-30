@@ -17,7 +17,7 @@
                                 <div class="md:flex md:items-center mb-3 ">
                                     <div class="w-full md:w-1/2 px-3">
                                         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="condition_id">
-                                            Status
+                                            Status 
                                         </label>
                                    
                                         <select v-model="form.condition_id" class="shadow w-full border rounded mb-3 px-3 py-2 outline-none">

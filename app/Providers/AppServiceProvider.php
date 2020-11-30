@@ -37,5 +37,18 @@ class AppServiceProvider extends ServiceProvider
             return base_path().'/../public_html/jobapplications.basaksecmen.com';
         });
         */
+
+        Inertia::share([
+            // ...
+            'locale' => function () {
+                return app()->getLocale();
+            },
+            'language' => function () {
+                return translations(
+                    resource_path('lang/'. app()->getLocale() .'.json')
+                );
+            },
+            // ...
+        ]);
     }
 }
