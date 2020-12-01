@@ -41,35 +41,35 @@
                                 </div>
 
                 				<div v-if="app.condition_id === 1">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{ app.condition.condition }}</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
 								</div>
 								<div v-else-if="app.condition_id === 2">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">{{ app.condition.condition }}</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">{{  __(app.condition.condition) }}</span>
 								</div>
 								<div v-else-if="app.condition_id === 3">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">{{ app.condition.condition }}</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">{{  __(app.condition.condition) }}</span>
 								</div>
 								<div v-else-if="app.condition_id === 4">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">{{ app.condition.condition }}</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">{{  __(app.condition.condition) }}</span>
 								</div>
 								<div v-else-if="app.condition_id === 5">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white">{{ app.condition.condition }}</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white">{{  __(app.condition.condition) }}</span>
 								</div>
 								<div v-else>
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">No Action</span>
+								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
 								</div>
                 				
                 			</div>
-                			<div><b>Company:</b> {{app.company}} </div>
-                			<div class="mb-4"><b>Post:</b> {{app.post_title}}</div>
-                			<a :href="'/application/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Details</a> 
-                			<a :href="'/application/edit/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">Edit</a>
+                			<div><b>{{ __('Company') }}:</b> {{app.company}} </div>
+                			<div class="mb-4"><b>{{ __('Post Title') }}:</b> {{app.post_title}}</div>
+                			<a :href="'/application/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">{{ __('Details') }}</a> 
+                			<a :href="'/application/edit/'+app.id" class="bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700">{{ __('Edit') }}</a>
                 		</div>
                 	</div>
 
                     <div class="mt-6">Pages:
                         <inertia-link v-if="link.url" v-for="link in this.appList.links" v-bind:key="'p-'+link.label" :href="link.url" class="text-indigo-700 p-5" >
-                            <span v-bind:class="{'text-red-800' : link.active}">{{ decoder(link.label) }}</span>
+                            <span v-bind:class="{'text-red-800' : link.active}">{{ __(decoder(link.label)) }}</span>
                         </inertia-link>
                     </div>
                 </div>
@@ -110,6 +110,7 @@
         },
 
         mounted() {
+
         }     	
         
     }
