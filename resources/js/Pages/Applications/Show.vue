@@ -18,7 +18,7 @@
 
             			<div class="flex justify-between items-center">
                             <div class="text-sm text-teal-800">
-                                {{ __('Application Date') }}: <span v-if="app.app_date !== null"><b>{{ app.app_date | toDateTime }}</b></span> </div>
+                                {{ __('Application Date') }}: <span v-if="app.app_date !== null"><b>{{ [app.app_date, get_locale] | toDateTime }}</b></span> </div>
 
                             <div v-if="app.condition_id === 1">
                               <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
@@ -187,6 +187,15 @@
         },
         
         props: ['app'],
+
+        computed: {
+            get_locale() {
+                if(this.$page.locale == 'fr') {
+                    return 'fr';
+                }
+                return 'en'
+            },
+        },
 
         methods: {
             nl2br (str, replaceMode, isXhtml) {

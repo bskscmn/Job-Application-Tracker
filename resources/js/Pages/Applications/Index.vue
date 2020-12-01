@@ -36,7 +36,7 @@
                 			
                 			<div class="flex justify-between items-center">
                 				<div class="text-sm text-teal-800">
-                                    <span v-if="app.app_date !== null">Application Date: <b>{{ [app.app_date, 'fr']| toDateTime }}</b></span> 
+                                    <span v-if="app.app_date !== null">Application Date: <b>{{ [app.app_date, get_locale]| toDateTime }}</b></span> 
                                     <span v-else>Application Date is empty!</span> 
                                 </div>
 
@@ -97,6 +97,16 @@
                 },
         	}
         },
+
+        computed: {
+            get_locale() {
+                if(this.$page.locale == 'fr') {
+                    return 'fr';
+                }
+                return 'en'
+            },
+        },
+
         methods: {
             submit() {
               this.$inertia.get('/applications', this.form)
