@@ -35,8 +35,8 @@
                 		<div class="p-3 shadow-xl">
                 			<div class="flex justify-between items-center">
                 				<div class="text-sm text-teal-800">
-                                    <span v-if="app.app_date !== null">Application Date: <b>{{ [app.app_date, get_locale]| toDateTime }}</b></span> 
-                                    <span v-else>Application Date is empty!</span> 
+                                    <span v-if="app.app_date !== null">{{ __('Application Date') }}: <b>{{ [app.app_date, get_locale]| toDateTime }}</b></span> 
+                                    <span v-else>{{ __('Application Date is empty!') }}</span> 
                                 </div>
 
                 				<div v-if="app.condition_id == 1">
@@ -119,7 +119,6 @@
         },
 
         mounted() {
-            console.log(this.appList.data);
         }     	
         
     }
