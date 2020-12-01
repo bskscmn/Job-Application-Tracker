@@ -20,20 +20,20 @@
                             <div class="text-sm text-teal-800">
                                 {{ __('Application Date') }}: <span v-if="app.app_date !== null"><b>{{ [app.app_date, get_locale] | toDateTime }}</b></span> </div>
 
-                            <div v-if="app.condition_id === 1">
+                            <div v-if="app.condition_id == 1">
                               <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
                             </div>
-                            <div v-else-if="app.condition_id === 2">
+                            <div v-else-if="app.condition_id == 2">
                               <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">{{  __(app.condition.condition) }}</span>
                             </div>
-                            <div v-else-if="app.condition_id === 3">
+                            <div v-else-if="app.condition_id == 3">
                               <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">{{  __(app.condition.condition) }}</span>
                             </div>
-                            <div v-else-if="app.condition_id === 4">
+                            <div v-else-if="app.condition_id == 4">
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">{
                                     { app.condition.condition }}</span>
                             </div>
-                            <div v-else-if="app.condition_id === 5">
+                            <div v-else-if="app.condition_id == 5">
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white">
                                     {{  __(app.condition.condition) }}
                                 </span>
