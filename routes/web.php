@@ -17,12 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+  
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
+  Route::get('/language/{language}', function ($language) {
+      Session()->put('locale', $language);
+   
+      return redirect()->back();
+  })->name('language');
+
+
     Route::get('/dashboard', function () {
 	    return Inertia\Inertia::render('Dashboard');
-	})->name('dashboard');
+	  })->name('dashboard');
 
     Route::get('/applications', 'App\Http\Controllers\ApplicationController@index')->name('applications.index');
 

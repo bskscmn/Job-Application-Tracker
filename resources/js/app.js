@@ -9,6 +9,8 @@ import PortalVue from 'portal-vue';
 import moment from 'moment';
 
 Vue.mixin({ methods: { route } });
+Vue.mixin(require('./base'))
+
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);

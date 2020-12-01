@@ -15,16 +15,19 @@
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
-                                Dashboard
+                                {{ __('Dashboard') }}
                             </jet-nav-link>
                             <jet-nav-link :href="route('applications.index')" :active="route().current('applications.index')">
-                                Applications
+                                {{ __('Applications') }}
                             </jet-nav-link>
                             <jet-nav-link :href="route('application.create')" :active="route().current('applications.create')">
-                                Add New Application
+                                {{ __('Add New Application') }}
                             </jet-nav-link>
+                            
                         </div>
                     </div>
+
+
 
                     <!-- Settings Dropdown -->
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -49,15 +52,15 @@
                                 <template #content>
                                     <!-- Account Management -->
                                     <div class="block px-4 py-2 text-xs text-gray-400">
-                                        Manage Account
+                                        {{ __('Manage Account') }}
                                     </div>
 
                                     <jet-dropdown-link :href="route('profile.show')">
-                                        Profile
+                                        {{ __('Profile') }}
                                     </jet-dropdown-link>
 
                                     <jet-dropdown-link :href="route('api-tokens.index')" v-if="$page.jetstream.hasApiFeatures">
-                                        API Tokens
+                                        {{ __('API Tokens') }}
                                     </jet-dropdown-link>
 
                                     <div class="border-t border-gray-100"></div>
@@ -101,13 +104,17 @@
                                     <!-- Authentication -->
                                     <form @submit.prevent="logout">
                                         <jet-dropdown-link as="button">
-                                            Logout
+                                            {{ __('Logout') }}
                                         </jet-dropdown-link>
                                     </form>
                                 </template>
                             </jet-dropdown>
                         </div>
+
+                        <language-selector />
                     </div>
+
+                    
 
                     <!-- Hamburger -->
                     <div class="-mr-2 flex items-center sm:hidden">
@@ -125,14 +132,15 @@
             <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                 <div class="pt-2 pb-3 space-y-1">
                     <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
-                        Dashboard
+                        {{ __('Dashboard') }}
                     </jet-responsive-nav-link>
                     <jet-responsive-nav-link :href="route('applications.index')" :active="route().current('applications.index')">
-                        Applications
+                        {{ __('Applications') }}
                     </jet-responsive-nav-link>
                     <jet-responsive-nav-link :href="route('application.create')" :active="route().current('applications.create')">
-                        Add New Application
+                        {{ __('Add New Application') }}
                     </jet-responsive-nav-link>
+                    <language-selector />
                 </div>
 
                 <!-- Responsive Settings Options -->
@@ -150,17 +158,17 @@
 
                     <div class="mt-3 space-y-1">
                         <jet-responsive-nav-link :href="route('profile.show')" :active="route().current('profile.show')">
-                            Profile
+                            {{ __('Profile') }}
                         </jet-responsive-nav-link>
 
                         <jet-responsive-nav-link :href="route('api-tokens.index')" :active="route().current('api-tokens.index')" v-if="$page.jetstream.hasApiFeatures">
-                            API Tokens
+                            {{ __('API Tokens') }}
                         </jet-responsive-nav-link>
 
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Logout
+                                {{ __('Logout') }}
                             </jet-responsive-nav-link>
                         </form>
 
@@ -223,10 +231,8 @@
 
             <div class="grid grid-cols-6 gap-4">
               <div class="col-span-6 sm:col-span-4 md:col-span-4 "></div>
-              <div class="col-span-6 sm:col-span-4 md:col-span-2 md:text-right">Developer: <a href="http://www.basaksecmen.com" target="_blank" class="underline"> Başak Seçmen</a></div>
-              
+              <div class="col-span-6 sm:col-span-4 md:col-span-2 md:text-right">{{ __('Developer') }}: <a href="http://www.basaksecmen.com" target="_blank" class="underline"> Başak Seçmen</a></div>
             </div>
-            
         </footer>
 
         <!-- Modal Portal -->
@@ -241,7 +247,8 @@
     import JetDropdownLink from '@/Jetstream/DropdownLink'
     import JetNavLink from '@/Jetstream/NavLink'
     import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink'
-
+    import LanguageSelector from '@/Shared/LanguageSelector'
+ 
     export default {
         components: {
             JetApplicationMark,
@@ -249,6 +256,7 @@
             JetDropdownLink,
             JetNavLink,
             JetResponsiveNavLink,
+            LanguageSelector,
         },
 
         data() {

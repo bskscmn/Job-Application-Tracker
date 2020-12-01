@@ -2785,10 +2785,80 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     JetApplicationLogo: _Jetstream_ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    selected_language: function selected_language() {
+      if (this.$page.locale == 'fr') {
+        return 'fr';
+      }
+
+      return 'en';
+    }
   }
 });
 
@@ -2808,6 +2878,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/DropdownLink */ "./resources/js/Jetstream/DropdownLink.vue");
 /* harmony import */ var _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/NavLink */ "./resources/js/Jetstream/NavLink.vue");
 /* harmony import */ var _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/ResponsiveNavLink */ "./resources/js/Jetstream/ResponsiveNavLink.vue");
+/* harmony import */ var _Shared_LanguageSelector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Shared/LanguageSelector */ "./resources/js/Shared/LanguageSelector.vue");
 //
 //
 //
@@ -3045,6 +3116,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -3056,7 +3134,8 @@ __webpack_require__.r(__webpack_exports__);
     JetDropdown: _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_1__["default"],
     JetDropdownLink: _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_2__["default"],
     JetNavLink: _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_3__["default"],
-    JetResponsiveNavLink: _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"]
+    JetResponsiveNavLink: _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"],
+    LanguageSelector: _Shared_LanguageSelector__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
   data: function data() {
     return {
@@ -3643,9 +3722,32 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    translate: function translate() {
+      if (this.$page.locale == 'fr') {
+        this.form.options = [{
+          text: 'Aucune action',
+          value: '1'
+        }, {
+          text: 'Appliqué',
+          value: '2'
+        }, {
+          text: 'Accepté',
+          value: '3'
+        }, {
+          text: 'Refus',
+          value: '4'
+        }, {
+          text: 'Recruté',
+          value: '5'
+        }];
+      }
+    },
     submit: function submit() {
       this.$inertia.post('/application/store', this.form);
     }
+  },
+  mounted: function mounted() {
+    this.translate();
   }
 });
 
@@ -3880,18 +3982,40 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    submit: function submit() {
-      this.appData.app_date = this.appDateTime;
-      this.$inertia.patch('/application/update/' + this.appData.id, this.appData);
+    translate: function translate() {
+      if (this.$page.locale == 'fr') {
+        this.form.options = [{
+          text: 'Aucune action',
+          value: '1'
+        }, {
+          text: 'Appliqué',
+          value: '2'
+        }, {
+          text: 'Accepté',
+          value: '3'
+        }, {
+          text: 'Refus',
+          value: '4'
+        }, {
+          text: 'Recruté',
+          value: '5'
+        }];
+      }
     },
     getFormatedDate: function getFormatedDate(date) {
       return moment(date).format('DD-MM-YYYY H:mm');
+    },
+    submit: function submit() {
+      this.appData.app_date = this.appDateTime;
+      this.$inertia.patch('/application/update/' + this.appData.id, this.appData);
     }
   },
   mounted: function mounted() {
     if (this.appDateTime) {
       this.appDateTime = this.getFormatedDate(this.appDateTime);
     }
+
+    this.translate();
   }
 });
 
@@ -4029,6 +4153,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
 //
 //
 //
@@ -5054,6 +5179,39 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function () {
         _this2.photoPreview = null;
       });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Shared/LanguageSelector.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Shared/LanguageSelector.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    selectable_locale: function selectable_locale() {
+      if (this.$page.locale == 'fr') {
+        return 'en';
+      }
+
+      return 'fr';
+    },
+    classes: function classes() {
+      return 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-red-900 hover:text-red-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out';
     }
   }
 });
@@ -49137,7 +49295,13 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Nevermind\n            ")]
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.__("Nevermind")) +
+                        "\n            "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
@@ -49938,177 +50102,389 @@ var render = function() {
         ),
         _vm._v(" "),
         _c("div", { staticClass: "mt-8 text-2xl" }, [
-          _vm._v("\n            Welcome to Job Application Tracker!\n        ")
+          _vm._v("\n            " + _vm._s(_vm.__("Welcome")) + " !\n        ")
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "mt-6 text-gray-500" }, [
-          _vm._v(
-            "\n            You can easily create and edit your job application. \n        "
-          )
+          _vm.selected_language == "fr"
+            ? _c("div", [
+                _vm._v(
+                  "\n                Vous pouvez facilement créer et modifier votre demande d'emploi.\n            "
+                )
+              ])
+            : _c("div", [
+                _vm._v(
+                  "\n                You can easily create and edit your job application. \n            "
+                )
+              ])
         ])
       ]
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2"
-      },
-      [
-        _c("div", { staticClass: "p-6" }, [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c(
-              "svg",
-              {
-                staticClass: "w-8 h-8 text-gray-400",
-                attrs: {
-                  fill: "none",
-                  stroke: "currentColor",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round",
-                  "stroke-width": "2",
-                  viewBox: "0 0 24 24"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(0)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "ml-12" }, [
-            _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
-              _vm._v(
-                "\n\n                    You can add new application to your list with the information:\n\n                    Status, Aplication Date, Time, Company, Location, Post Title, Link, Contact Person, Description, The files you sent , Motivation Letter, Notes\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "/application/create" } }, [
+    _vm.selected_language == "fr"
+      ? _c("div", [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2"
+            },
+            [
+              _c("div", { staticClass: "p-6" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "w-8 h-8 text-gray-400",
+                      attrs: {
+                        fill: "none",
+                        stroke: "currentColor",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                        "stroke-width": "2",
+                        viewBox: "0 0 24 24"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(0)
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ml-12" }, [
+                  _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                    _vm._v(
+                      "\n\n                        Vous pouvez ajouter une nouvelle demande à votre liste avec ces informations : \n\n                        Statut, date de la demande, heure, société, lieu, titre du poste, lien, personne de contact, description, les fichiers que vous avez envoyés, lettre de motivation, notes\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "/application/create" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mt-3 flex items-center text-sm font-semibold text-indigo-700"
+                      },
+                      [
+                        _c("div", [_vm._v("Aller à la page")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-1 text-indigo-500" }, [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "w-4 h-4",
+                              attrs: {
+                                viewBox: "0 0 20 20",
+                                fill: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "fill-rule": "evenodd",
+                                  d:
+                                    "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
+                                  "clip-rule": "evenodd"
+                                }
+                              })
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
               _c(
                 "div",
                 {
                   staticClass:
-                    "mt-3 flex items-center text-sm font-semibold text-indigo-700"
+                    "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
                 },
                 [
-                  _c("div", [_vm._v("Go to page")]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "ml-1 text-indigo-500" }, [
+                  _c("div", { staticClass: "flex items-center" }, [
                     _c(
                       "svg",
                       {
-                        staticClass: "w-4 h-4",
-                        attrs: { viewBox: "0 0 20 20", fill: "currentColor" }
+                        staticClass: "w-8 h-8 text-gray-400",
+                        attrs: {
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          viewBox: "0 0 24 24"
+                        }
                       },
                       [
                         _c("path", {
                           attrs: {
-                            "fill-rule": "evenodd",
                             d:
-                              "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
-                            "clip-rule": "evenodd"
+                              "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
                           }
+                        }),
+                        _c("path", {
+                          attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
                         })
                       ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
-          },
-          [
-            _c("div", { staticClass: "flex items-center" }, [
-              _c(
-                "svg",
-                {
-                  staticClass: "w-8 h-8 text-gray-400",
-                  attrs: {
-                    fill: "none",
-                    stroke: "currentColor",
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "2",
-                    viewBox: "0 0 24 24"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      d:
-                        "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                    }
-                  }),
-                  _c("path", {
-                    attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "ml-12" }, [
-              _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
-                _vm._v(
-                  "\n                    See all of your applications and edit easily.\n                "
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/applications" } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "mt-3 flex items-center text-sm font-semibold text-indigo-700"
-                  },
-                  [
-                    _c("div", [_vm._v("Go to page")]),
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "ml-1 text-indigo-500" }, [
+                    _vm._m(1)
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "ml-12" }, [
+                    _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                      _vm._v(
+                        "\n                        Consultez toutes vos demandes et modifiez-les facilement.\n                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "/applications" } }, [
                       _c(
-                        "svg",
+                        "div",
                         {
-                          staticClass: "w-4 h-4",
-                          attrs: { viewBox: "0 0 20 20", fill: "currentColor" }
+                          staticClass:
+                            "mt-3 flex items-center text-sm font-semibold text-indigo-700"
                         },
                         [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
-                              "clip-rule": "evenodd"
-                            }
-                          })
+                          _c("div", [_vm._v("Aller à la page")]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-1 text-indigo-500" }, [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "w-4 h-4",
+                                attrs: {
+                                  viewBox: "0 0 20 20",
+                                  fill: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ])
                         ]
                       )
                     ])
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+                  ])
+                ]
+              )
+            ]
+          )
+        ])
+      : _c("div", [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2"
+            },
+            [
+              _c("div", { staticClass: "p-6" }, [
+                _c("div", { staticClass: "flex items-center" }, [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "w-8 h-8 text-gray-400",
+                      attrs: {
+                        fill: "none",
+                        stroke: "currentColor",
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                        "stroke-width": "2",
+                        viewBox: "0 0 24 24"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(2)
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "ml-12" }, [
+                  _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                    _vm._v(
+                      "\n\n                        You can add new application to your list with the information:\n\n                        Status, Aplication Date, Time, Company, Location, Post Title, Link, Contact Person, Description, The files you sent , Motivation Letter, Notes\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "/application/create" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mt-3 flex items-center text-sm font-semibold text-indigo-700"
+                      },
+                      [
+                        _c("div", [_vm._v("Go to page")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-1 text-indigo-500" }, [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "w-4 h-4",
+                              attrs: {
+                                viewBox: "0 0 20 20",
+                                fill: "currentColor"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "fill-rule": "evenodd",
+                                  d:
+                                    "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
+                                  "clip-rule": "evenodd"
+                                }
+                              })
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
+                },
+                [
+                  _c("div", { staticClass: "flex items-center" }, [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "w-8 h-8 text-gray-400",
+                        attrs: {
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          viewBox: "0 0 24 24"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                          }
+                        }),
+                        _c("path", {
+                          attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(3)
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "ml-12" }, [
+                    _c("div", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                      _vm._v(
+                        "\n                        See all of your applications and edit easily.\n                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "/applications" } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mt-3 flex items-center text-sm font-semibold text-indigo-700"
+                        },
+                        [
+                          _c("div", [_vm._v("Go to page")]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-1 text-indigo-500" }, [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "w-4 h-4",
+                                attrs: {
+                                  viewBox: "0 0 20 20",
+                                  fill: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      [
+        _c("a", { attrs: { href: "/application/create" } }, [
+          _vm._v("Ajouter une nouvelle candidature")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "ml-4 text-lg text-gray-600 leading-7 font-semibold" },
+      [
+        _c("a", { attrs: { href: "/applications" } }, [
+          _vm._v("Afficher et modifier vos candidatures")
+        ])
+      ]
+    )
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -50199,7 +50575,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            Dashboard\n                        "
+                        "\n                            " +
+                          _vm._s(_vm.__("Dashboard")) +
+                          "\n                        "
                       )
                     ]
                   ),
@@ -50214,7 +50592,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            Applications\n                        "
+                        "\n                            " +
+                          _vm._s(_vm.__("Applications")) +
+                          "\n                        "
                       )
                     ]
                   ),
@@ -50229,7 +50609,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                            Add New Application\n                        "
+                        "\n                            " +
+                          _vm._s(_vm.__("Add New Application")) +
+                          "\n                        "
                       )
                     ]
                   )
@@ -50323,7 +50705,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Manage Account\n                                "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Manage Account")) +
+                                      "\n                                "
                                   )
                                 ]
                               ),
@@ -50333,7 +50717,9 @@ var render = function() {
                                 { attrs: { href: _vm.route("profile.show") } },
                                 [
                                   _vm._v(
-                                    "\n                                    Profile\n                                "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Profile")) +
+                                      "\n                                "
                                   )
                                 ]
                               ),
@@ -50348,7 +50734,9 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                    API Tokens\n                                "
+                                        "\n                                    " +
+                                          _vm._s(_vm.__("API Tokens")) +
+                                          "\n                                "
                                       )
                                     ]
                                   )
@@ -50518,7 +50906,9 @@ var render = function() {
                                     { attrs: { as: "button" } },
                                     [
                                       _vm._v(
-                                        "\n                                        Logout\n                                    "
+                                        "\n                                        " +
+                                          _vm._s(_vm.__("Logout")) +
+                                          "\n                                    "
                                       )
                                     ]
                                   )
@@ -50533,8 +50923,11 @@ var render = function() {
                     })
                   ],
                   1
-                )
-              ]
+                ),
+                _vm._v(" "),
+                _c("language-selector")
+              ],
+              1
             ),
             _vm._v(" "),
             _c("div", { staticClass: "-mr-2 flex items-center sm:hidden" }, [
@@ -50616,7 +51009,13 @@ var render = function() {
                       active: _vm.route().current("dashboard")
                     }
                   },
-                  [_vm._v("\n                    Dashboard\n                ")]
+                  [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(_vm.__("Dashboard")) +
+                        "\n                "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
@@ -50629,7 +51028,9 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                    Applications\n                "
+                      "\n                    " +
+                        _vm._s(_vm.__("Applications")) +
+                        "\n                "
                     )
                   ]
                 ),
@@ -50644,10 +51045,14 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                    Add New Application\n                "
+                      "\n                    " +
+                        _vm._s(_vm.__("Add New Application")) +
+                        "\n                "
                     )
                   ]
-                )
+                ),
+                _vm._v(" "),
+                _c("language-selector")
               ],
               1
             ),
@@ -50693,7 +51098,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                        Profile\n                    "
+                        "\n                        " +
+                          _vm._s(_vm.__("Profile")) +
+                          "\n                    "
                       )
                     ]
                   ),
@@ -50709,7 +51116,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                        API Tokens\n                    "
+                            "\n                        " +
+                              _vm._s(_vm.__("API Tokens")) +
+                              "\n                    "
                           )
                         ]
                       )
@@ -50732,7 +51141,9 @@ var render = function() {
                         { attrs: { as: "button" } },
                         [
                           _vm._v(
-                            "\n                            Logout\n                        "
+                            "\n                            " +
+                              _vm._s(_vm.__("Logout")) +
+                              "\n                        "
                           )
                         ]
                       )
@@ -50903,51 +51314,46 @@ var render = function() {
         2
       ),
       _vm._v(" "),
-      _vm._m(0),
+      _c(
+        "footer",
+        { staticClass: "bg-gray-700 shadow text-gray-200 p-2 text-sm" },
+        [
+          _c("div", { staticClass: "grid grid-cols-6 gap-4" }, [
+            _c("div", {
+              staticClass: "col-span-6 sm:col-span-4 md:col-span-4 "
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-span-6 sm:col-span-4 md:col-span-2 md:text-right"
+              },
+              [
+                _vm._v(_vm._s(_vm.__("Developer")) + ": "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "underline",
+                    attrs: {
+                      href: "http://www.basaksecmen.com",
+                      target: "_blank"
+                    }
+                  },
+                  [_vm._v(" Başak Seçmen")]
+                )
+              ]
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c("portal-target", { attrs: { name: "modal", multiple: "" } })
     ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "footer",
-      { staticClass: "bg-gray-700 shadow text-gray-200 p-2 text-sm" },
-      [
-        _c("div", { staticClass: "grid grid-cols-6 gap-4" }, [
-          _c("div", { staticClass: "col-span-6 sm:col-span-4 md:col-span-4 " }),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-span-6 sm:col-span-4 md:col-span-2 md:text-right"
-            },
-            [
-              _vm._v("Developer: "),
-              _c(
-                "a",
-                {
-                  staticClass: "underline",
-                  attrs: {
-                    href: "http://www.basaksecmen.com",
-                    target: "_blank"
-                  }
-                },
-                [_vm._v(" Başak Seçmen")]
-              )
-            ]
-          )
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -51674,7 +52080,13 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            New Application\n        ")]
+                [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.__("New Application")) +
+                      " \n        "
+                  )
+                ]
               )
             ]
           },
@@ -51727,7 +52139,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                        Status \n                                    "
+                                    "\n                                        " +
+                                      _vm._s(_vm.__("Status")) +
+                                      "  \n                                    "
                                   )
                                 ]
                               ),
@@ -51798,7 +52212,11 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                    Aplication Date - Time\n                                  "
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.__("Aplication Date - Time")
+                                        ) +
+                                        " \n                                  "
                                     )
                                   ]
                                 ),
@@ -51849,7 +52267,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Company *\n                                  "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Company")) +
+                                      "  *\n                                  "
                                   )
                                 ]
                               ),
@@ -51868,7 +52288,7 @@ var render = function() {
                                 attrs: {
                                   id: "company",
                                   type: "text",
-                                  placeholder: "Company Name"
+                                  placeholder: _vm.__("Company Name")
                                 },
                                 domProps: { value: _vm.form.company },
                                 on: {
@@ -51914,7 +52334,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Location\n                                  "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Location")) +
+                                      " \n                                  "
                                   )
                                 ]
                               ),
@@ -51933,7 +52355,7 @@ var render = function() {
                                 attrs: {
                                   id: "location",
                                   type: "text",
-                                  placeholder: "Location"
+                                  placeholder: _vm.__("Location")
                                 },
                                 domProps: { value: _vm.form.location },
                                 on: {
@@ -51967,7 +52389,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Post Title *\n                                  "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Post Title")) +
+                                      "  *\n                                  "
                                   )
                                 ]
                               ),
@@ -51986,7 +52410,7 @@ var render = function() {
                                 attrs: {
                                   id: "post_title",
                                   type: "text",
-                                  placeholder: "Title"
+                                  placeholder: _vm.__("Title")
                                 },
                                 domProps: { value: _vm.form.post_title },
                                 on: {
@@ -52064,7 +52488,7 @@ var render = function() {
                               attrs: {
                                 id: "link",
                                 type: "text",
-                                placeholder: "Post URL"
+                                placeholder: _vm.__("Post URL")
                               },
                               domProps: { value: _vm.form.link },
                               on: {
@@ -52114,7 +52538,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Job Description")]
+                              [_vm._v(_vm._s(_vm.__("Job Description")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -52181,7 +52605,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Contact Person")]
+                              [_vm._v(_vm._s(_vm.__("Contact Person")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -52205,7 +52629,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                            Name\n                                          "
+                                          "\n                                           " +
+                                            _vm._s(_vm.__(" Name")) +
+                                            "\n                                          "
                                         )
                                       ]
                                     ),
@@ -52224,7 +52650,7 @@ var render = function() {
                                       attrs: {
                                         id: "contactPerson",
                                         type: "text",
-                                        placeholder: "Full Name"
+                                        placeholder: _vm.__("Full Name")
                                       },
                                       domProps: {
                                         value: _vm.form.contactPerson
@@ -52270,7 +52696,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                            Email\n                                          "
+                                          "\n                                            " +
+                                            _vm._s(_vm.__("Email")) +
+                                            "\n                                          "
                                         )
                                       ]
                                     ),
@@ -52321,7 +52749,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                            Phone\n                                          "
+                                          "\n                                            " +
+                                            _vm._s(_vm.__("Phone")) +
+                                            "\n                                          "
                                         )
                                       ]
                                     ),
@@ -52340,7 +52770,7 @@ var render = function() {
                                       attrs: {
                                         id: "phone",
                                         type: "tel",
-                                        placeholder: "phone number"
+                                        placeholder: _vm.__("phone number")
                                       },
                                       domProps: { value: _vm.form.phone },
                                       on: {
@@ -52402,7 +52832,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Sent Files")]
+                              [_vm._v(_vm._s(_vm.__("Sent Files")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -52421,8 +52851,9 @@ var render = function() {
                               attrs: {
                                 id: "sent_files",
                                 type: "text",
-                                placeholder:
-                                  "The files you sent : CV, letter etc"
+                                placeholder: _vm.__(
+                                  "The files you sent : CV, motivation letter etc."
+                                )
                               },
                               domProps: { value: _vm.form.sent_files },
                               on: {
@@ -52471,7 +52902,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Motivation Letter")]
+                              [_vm._v(_vm._s(_vm.__("Motivation Letter")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -52535,7 +52966,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Notes")]
+                              [_vm._v(_vm._s(_vm.__("Notes")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -52581,7 +53012,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                        Save\n                    "
+                        "\n                        " +
+                          _vm._s(_vm.__("Save")) +
+                          "\n                    "
                       )
                     ]
                   )
@@ -52630,7 +53063,11 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Edit\n        ")]
+                [
+                  _vm._v(
+                    "\n            " + _vm._s(_vm.__("Edit")) + "\n        "
+                  )
+                ]
               )
             ]
           },
@@ -52650,7 +53087,7 @@ var render = function() {
                   "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
                 attrs: { href: "/applications" }
               },
-              [_vm._v("Back")]
+              [_vm._v(_vm._s(_vm.__("Back")))]
             )
           ]),
           _vm._v(" "),
@@ -52695,7 +53132,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                        Status\n                                    "
+                                    "\n                                        " +
+                                      _vm._s(_vm.__("Status")) +
+                                      " \n                                    "
                                   )
                                 ]
                               ),
@@ -52773,7 +53212,11 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                    Aplication Date - Time\n                                  "
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.__("Aplication Date - Time")
+                                        ) +
+                                        " \n                                  "
                                     )
                                   ]
                                 ),
@@ -52824,7 +53267,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Company *\n                                  "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Company")) +
+                                      " *\n                                  "
                                   )
                                 ]
                               ),
@@ -52843,7 +53288,7 @@ var render = function() {
                                 attrs: {
                                   id: "company",
                                   type: "text",
-                                  placeholder: "Company Name"
+                                  placeholder: _vm.__("Company Name")
                                 },
                                 domProps: { value: _vm.appData.company },
                                 on: {
@@ -52889,7 +53334,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Location\n                                  "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Location")) +
+                                      " \n                                  "
                                   )
                                 ]
                               ),
@@ -52908,7 +53355,7 @@ var render = function() {
                                 attrs: {
                                   id: "location",
                                   type: "text",
-                                  placeholder: "Location"
+                                  placeholder: _vm.__("Location")
                                 },
                                 domProps: { value: _vm.appData.location },
                                 on: {
@@ -52942,7 +53389,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    Post Title *\n                                  "
+                                    "\n                                    " +
+                                      _vm._s(_vm.__("Post Title")) +
+                                      " *\n                                  "
                                   )
                                 ]
                               ),
@@ -52961,7 +53410,7 @@ var render = function() {
                                 attrs: {
                                   id: "post_title",
                                   type: "text",
-                                  placeholder: "Title"
+                                  placeholder: _vm.__("Title")
                                 },
                                 domProps: { value: _vm.appData.post_title },
                                 on: {
@@ -53039,7 +53488,7 @@ var render = function() {
                               attrs: {
                                 id: "link",
                                 type: "text",
-                                placeholder: "Post URL"
+                                placeholder: _vm.__("Post URL")
                               },
                               domProps: { value: _vm.appData.link },
                               on: {
@@ -53089,7 +53538,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Job Description")]
+                              [_vm._v(_vm._s(_vm.__("Job Description")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -53156,7 +53605,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Contact Person")]
+                              [_vm._v(_vm._s(_vm.__("Contact Person")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -53180,7 +53629,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                            Name\n                                          "
+                                          "\n                                            " +
+                                            _vm._s(_vm.__(" Name")) +
+                                            "\n                                          "
                                         )
                                       ]
                                     ),
@@ -53199,7 +53650,7 @@ var render = function() {
                                       attrs: {
                                         id: "contactPerson",
                                         type: "text",
-                                        placeholder: "Full Name"
+                                        placeholder: _vm.__("Full Name")
                                       },
                                       domProps: {
                                         value: _vm.appData.contactPerson
@@ -53245,7 +53696,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                            Email\n                                          "
+                                          "\n                                            " +
+                                            _vm._s(_vm.__("Email")) +
+                                            "\n                                          "
                                         )
                                       ]
                                     ),
@@ -53296,7 +53749,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n                                            Phone\n                                          "
+                                          "\n                                            " +
+                                            _vm._s(_vm.__("Phone")) +
+                                            "\n                                          "
                                         )
                                       ]
                                     ),
@@ -53315,7 +53770,7 @@ var render = function() {
                                       attrs: {
                                         id: "phone",
                                         type: "tel",
-                                        placeholder: "phone number"
+                                        placeholder: _vm.__("phone number")
                                       },
                                       domProps: { value: _vm.appData.phone },
                                       on: {
@@ -53377,7 +53832,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Sent Files")]
+                              [_vm._v(_vm._s(_vm.__("Sent Files")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -53396,8 +53851,9 @@ var render = function() {
                               attrs: {
                                 id: "sent_files",
                                 type: "text",
-                                placeholder:
-                                  "The files you sent : CV, letter etc"
+                                placeholder: _vm.__(
+                                  "The files you sent : CV, motivation letter etc."
+                                )
                               },
                               domProps: { value: _vm.appData.sent_files },
                               on: {
@@ -53446,7 +53902,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Motivation Letter")]
+                              [_vm._v(_vm._s(_vm.__("Motivation Letter")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -53512,7 +53968,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Notes")]
+                              [_vm._v(_vm._s(_vm.__("Notes")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -53558,7 +54014,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                        Save\n                    "
+                        "\n                        " +
+                          _vm._s(_vm.__("Save")) +
+                          "\n                    "
                       )
                     ]
                   )
@@ -53776,7 +54234,11 @@ var render = function() {
                                   staticClass:
                                     "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
                                 },
-                                [_vm._v(_vm._s(app.condition.condition))]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.__(app.condition.condition))
+                                  )
+                                ]
                               )
                             ])
                           : app.condition_id === 2
@@ -53787,7 +54249,11 @@ var render = function() {
                                   staticClass:
                                     "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
                                 },
-                                [_vm._v(_vm._s(app.condition.condition))]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.__(app.condition.condition))
+                                  )
+                                ]
                               )
                             ])
                           : app.condition_id === 3
@@ -53798,7 +54264,11 @@ var render = function() {
                                   staticClass:
                                     "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
                                 },
-                                [_vm._v(_vm._s(app.condition.condition))]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.__(app.condition.condition))
+                                  )
+                                ]
                               )
                             ])
                           : app.condition_id === 4
@@ -53809,7 +54279,11 @@ var render = function() {
                                   staticClass:
                                     "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800"
                                 },
-                                [_vm._v(_vm._s(app.condition.condition))]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.__(app.condition.condition))
+                                  )
+                                ]
                               )
                             ])
                           : app.condition_id === 5
@@ -53820,7 +54294,11 @@ var render = function() {
                                   staticClass:
                                     "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white"
                                 },
-                                [_vm._v(_vm._s(app.condition.condition))]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.__(app.condition.condition))
+                                  )
+                                ]
                               )
                             ])
                           : _c("div", [
@@ -53830,19 +54308,23 @@ var render = function() {
                                   staticClass:
                                     "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
                                 },
-                                [_vm._v("No Action")]
+                                [
+                                  _vm._v(
+                                    _vm._s(_vm.__(app.condition.condition))
+                                  )
+                                ]
                               )
                             ])
                       ]
                     ),
                     _vm._v(" "),
                     _c("div", [
-                      _c("b", [_vm._v("Company:")]),
+                      _c("b", [_vm._v(_vm._s(_vm.__("Company")) + ":")]),
                       _vm._v(" " + _vm._s(app.company) + " ")
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "mb-4" }, [
-                      _c("b", [_vm._v("Post:")]),
+                      _c("b", [_vm._v(_vm._s(_vm.__("Post Title")) + ":")]),
                       _vm._v(" " + _vm._s(app.post_title))
                     ]),
                     _vm._v(" "),
@@ -53853,7 +54335,7 @@ var render = function() {
                           "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
                         attrs: { href: "/application/" + app.id }
                       },
-                      [_vm._v("Details")]
+                      [_vm._v(_vm._s(_vm.__("Details")))]
                     ),
                     _vm._v(" "),
                     _c(
@@ -53863,7 +54345,7 @@ var render = function() {
                           "bg-indigo-500 text-white px-2 py-1  rounded hover:bg-indigo-700",
                         attrs: { href: "/application/edit/" + app.id }
                       },
-                      [_vm._v("Edit")]
+                      [_vm._v(_vm._s(_vm.__("Edit")))]
                     )
                   ])
                 ])
@@ -53887,7 +54369,7 @@ var render = function() {
                             _c(
                               "span",
                               { class: { "text-red-800": link.active } },
-                              [_vm._v(_vm._s(_vm.decoder(link.label)))]
+                              [_vm._v(_vm._s(_vm.__(_vm.decoder(link.label))))]
                             )
                           ]
                         )
@@ -53940,7 +54422,13 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Application\n        ")]
+                [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.__("Application")) +
+                      " \n        "
+                  )
+                ]
               )
             ]
           },
@@ -53960,7 +54448,7 @@ var render = function() {
                   "bg-indigo-500 text-white px-3 py-2  rounded hover:bg-indigo-700",
                 attrs: { href: "/application/edit/" + _vm.app.id }
               },
-              [_vm._v("Edit")]
+              [_vm._v(_vm._s(_vm.__("Edit")))]
             ),
             _vm._v(" "),
             _c(
@@ -53970,7 +54458,7 @@ var render = function() {
                   "bg-indigo-500 text-white px-3 py-2 rounded hover:bg-indigo-700",
                 attrs: { href: "/applications" }
               },
-              [_vm._v("Back")]
+              [_vm._v(_vm._s(_vm.__("Back")))]
             )
           ]),
           _vm._v(" "),
@@ -53989,7 +54477,11 @@ var render = function() {
                     { staticClass: "flex justify-between items-center" },
                     [
                       _c("div", { staticClass: "text-sm text-teal-800" }, [
-                        _vm._v("Application Date: "),
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(_vm.__("Application Date")) +
+                            ": "
+                        ),
                         _vm.app.app_date !== null
                           ? _c("span", [
                               _c("b", [
@@ -54009,7 +54501,11 @@ var render = function() {
                                 staticClass:
                                   "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800"
                               },
-                              [_vm._v(_vm._s(_vm.app.condition.condition))]
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.__(_vm.app.condition.condition))
+                                )
+                              ]
                             )
                           ])
                         : _vm.app.condition_id === 2
@@ -54020,7 +54516,11 @@ var render = function() {
                                 staticClass:
                                   "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
                               },
-                              [_vm._v(_vm._s(_vm.app.condition.condition))]
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.__(_vm.app.condition.condition))
+                                )
+                              ]
                             )
                           ])
                         : _vm.app.condition_id === 3
@@ -54031,7 +54531,11 @@ var render = function() {
                                 staticClass:
                                   "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
                               },
-                              [_vm._v(_vm._s(_vm.app.condition.condition))]
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.__(_vm.app.condition.condition))
+                                )
+                              ]
                             )
                           ])
                         : _vm.app.condition_id === 4
@@ -54060,7 +54564,9 @@ var render = function() {
                               [
                                 _vm._v(
                                   "\n                                " +
-                                    _vm._s(_vm.app.condition.condition) +
+                                    _vm._s(
+                                      _vm.__(_vm.app.condition.condition)
+                                    ) +
                                     "\n                            "
                                 )
                               ]
@@ -54076,7 +54582,9 @@ var render = function() {
                               [
                                 _vm._v(
                                   "\n                                " +
-                                    _vm._s(_vm.app.condition.condition) +
+                                    _vm._s(
+                                      _vm.__(_vm.app.condition.condition)
+                                    ) +
                                     "\n                            "
                                 )
                               ]
@@ -54099,7 +54607,7 @@ var render = function() {
                             staticClass:
                               "text-lg leading-7 text-gray-900 font-semibold"
                           },
-                          [_vm._v("Company:")]
+                          [_vm._v(_vm._s(_vm.__("Company")) + ":")]
                         ),
                         _vm._v(
                           " \n                            " +
@@ -54115,7 +54623,7 @@ var render = function() {
                             staticClass:
                               "text-lg leading-7 text-gray-900 font-semibold"
                           },
-                          [_vm._v("Location:")]
+                          [_vm._v(_vm._s(_vm.__("Location")) + ":")]
                         ),
                         _vm._v(
                           " \n                            " +
@@ -54131,7 +54639,7 @@ var render = function() {
                             staticClass:
                               "text-lg leading-7 text-gray-900 font-semibold"
                           },
-                          [_vm._v("Post Title:")]
+                          [_vm._v(_vm._s(_vm.__("Post Title")) + ":")]
                         ),
                         _vm._v(
                           " \n                            " +
@@ -54177,7 +54685,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Link: ")]
+                              [_vm._v(_vm._s(_vm.__("Link")) + ": ")]
                             ),
                             _vm._v(" "),
                             _c(
@@ -54225,7 +54733,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Contact Person:")]
+                              [_vm._v(_vm._s(_vm.__("Contact Person")) + ":")]
                             )
                           ]),
                           _vm._v(" "),
@@ -54252,7 +54760,9 @@ var render = function() {
                                   "inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "
                               },
                               [
-                                _c("b", [_vm._v("email:")]),
+                                _c("b", [
+                                  _vm._v(_vm._s(_vm.__("Email")) + ":")
+                                ]),
                                 _vm._v(
                                   " \n                                        " +
                                     _vm._s(_vm.app.email) +
@@ -54268,7 +54778,9 @@ var render = function() {
                                   "inline-block text-gray-700 text-sm text-center bg-gray-100 rounded-full border-b border-r border-gray-600 px-3 py-1 "
                               },
                               [
-                                _c("b", [_vm._v("phone:")]),
+                                _c("b", [
+                                  _vm._v(_vm._s(_vm.__("Phone")) + ":")
+                                ]),
                                 _vm._v(
                                   " \n                                        " +
                                     _vm._s(_vm.app.phone) +
@@ -54310,7 +54822,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Job Description")]
+                              [_vm._v(_vm._s(_vm.__("Job Description")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -54364,7 +54876,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Sent Files")]
+                              [_vm._v(_vm._s(_vm.__("Sent Files")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -54416,7 +54928,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Motivation Letter")]
+                              [_vm._v(_vm._s(_vm.__("Motivation Letter")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -54470,7 +54982,7 @@ var render = function() {
                                 staticClass:
                                   "ml-4 text-lg leading-7 text-gray-900 font-semibold"
                               },
-                              [_vm._v("Notes")]
+                              [_vm._v(_vm._s(_vm.__("Notes")))]
                             )
                           ]),
                           _vm._v(" "),
@@ -54519,7 +55031,7 @@ var render = function() {
                                 "block p-5 leading-normal cursor-pointer text-red-800",
                               attrs: { for: "tab-multi-one" }
                             },
-                            [_vm._v("Delete Application")]
+                            [_vm._v(_vm._s(_vm.__("Delete Application")))]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54531,13 +55043,18 @@ var render = function() {
                             [
                               _c("p", { staticClass: "p-5" }, [
                                 _vm._v(
-                                  "\n                                    This action is irreversible. "
+                                  "\n                                    " +
+                                    _vm._s(
+                                      _vm.__("This action is irreversible")
+                                    ) +
+                                    "."
                                 ),
                                 _c("br"),
                                 _vm._v(
-                                  "\n                                    Delete this item?"
-                                ),
-                                _c("br")
+                                  "\n                                    " +
+                                    _vm._s(_vm.__("Delete this item")) +
+                                    "?\n                                "
+                                )
                               ]),
                               _vm._v(" "),
                               _c(
@@ -54559,7 +55076,7 @@ var render = function() {
                                         "m-5 px-5 py-3 rounded text-white bg-red-800 hover:bg-red-700 border-red-900",
                                       attrs: { type: "submit" }
                                     },
-                                    [_vm._v("Delete")]
+                                    [_vm._v(_vm._s(_vm.__("Delete")))]
                                   )
                                 ]
                               )
@@ -54614,7 +55131,13 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Job Application Tracker\n        ")]
+                [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.__("Job Application Tracker")) +
+                      "\n        "
+                  )
+                ]
               )
             ]
           },
@@ -54664,14 +55187,22 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Delete Account\n    ")]
+          return [
+            _vm._v("\n        " + _vm._s(_vm.__("Delete Account")) + "\n    ")
+          ]
         },
         proxy: true
       },
       {
         key: "description",
         fn: function() {
-          return [_vm._v("\n        Permanently delete your account.\n    ")]
+          return [
+            _vm._v(
+              "\n        " +
+                _vm._s(_vm.__("Permanently delete your account.")) +
+                "\n    "
+            )
+          ]
         },
         proxy: true
       },
@@ -54681,7 +55212,13 @@ var render = function() {
           return [
             _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
               _vm._v(
-                "\n            Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.\n        "
+                "\n            " +
+                  _vm._s(
+                    _vm.__(
+                      "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain."
+                    )
+                  ) +
+                  "\n        "
               )
             ]),
             _vm._v(" "),
@@ -54698,7 +55235,13 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Delete Account\n            ")]
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.__("Delete Account")) +
+                        "\n            "
+                    )
+                  ]
                 )
               ],
               1
@@ -54716,7 +55259,11 @@ var render = function() {
                   key: "title",
                   fn: function() {
                     return [
-                      _vm._v("\n                Delete Account\n            ")
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(_vm.__("Delete Account")) +
+                          "\n            "
+                      )
                     ]
                   },
                   proxy: true
@@ -54726,7 +55273,13 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.\n\n                "
+                        "\n                " +
+                          _vm._s(
+                            _vm.__(
+                              "Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account."
+                            )
+                          ) +
+                          "\n\n                "
                       ),
                       _c(
                         "div",
@@ -54791,7 +55344,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Nevermind\n                "
+                            "\n                    " +
+                              _vm._s(_vm.__("Nevermind")) +
+                              "\n                "
                           )
                         ]
                       ),
@@ -54810,7 +55365,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Delete Account\n                "
+                            "\n                    " +
+                              _vm._s(_vm.__("Delete Account")) +
+                              "\n                "
                           )
                         ]
                       )
@@ -54854,7 +55411,9 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Browser Sessions\n    ")]
+          return [
+            _vm._v("\n        " + _vm._s(_vm.__("Browser Sessions")) + "\n    ")
+          ]
         },
         proxy: true
       },
@@ -54863,7 +55422,13 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Manage and logout your active sessions on other browsers and devices.\n    "
+              "\n        " +
+                _vm._s(
+                  _vm.__(
+                    "Manage and logout your active sessions on other browsers and devices."
+                  )
+                ) +
+                "\n    "
             )
           ]
         },
@@ -54875,7 +55440,13 @@ var render = function() {
           return [
             _c("div", { staticClass: "max-w-xl text-sm text-gray-600" }, [
               _vm._v(
-                "\n            If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.\n        "
+                "\n            " +
+                  _vm._s(
+                    _vm.__(
+                      "If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password."
+                    )
+                  ) +
+                  "\n        "
               )
             ]),
             _vm._v(" "),
@@ -55011,7 +55582,9 @@ var render = function() {
                   },
                   [
                     _vm._v(
-                      "\n                Logout Other Browser Sessions\n            "
+                      "\n                " +
+                        _vm._s(_vm.__("Logout Other Browser Sessions")) +
+                        "\n            "
                     )
                   ]
                 ),
@@ -55022,7 +55595,13 @@ var render = function() {
                     staticClass: "ml-3",
                     attrs: { on: _vm.form.recentlySuccessful }
                   },
-                  [_vm._v("\n                Done.\n            ")]
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.__("Done.")) +
+                        "\n            "
+                    )
+                  ]
                 )
               ],
               1
@@ -55041,7 +55620,9 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Logout Other Browser Sessions\n            "
+                        "\n                " +
+                          _vm._s(_vm.__("Logout Other Browser Sessions")) +
+                          "\n            "
                       )
                     ]
                   },
@@ -55052,7 +55633,13 @@ var render = function() {
                   fn: function() {
                     return [
                       _vm._v(
-                        "\n                Please enter your password to confirm you would like to logout of your other browser sessions across all of your devices.\n\n                "
+                        "\n                " +
+                          _vm._s(
+                            _vm.__(
+                              "Please enter your password to confirm you would like to logout of your other browser sessions across all of your devices."
+                            )
+                          ) +
+                          "\n\n                "
                       ),
                       _c(
                         "div",
@@ -55117,7 +55704,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Nevermind\n                "
+                            "\n                    " +
+                              _vm._s(_vm.__("Nevermind")) +
+                              "\n                "
                           )
                         ]
                       ),
@@ -55136,7 +55725,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Logout Other Browser Sessions\n                "
+                            "\n                    " +
+                              _vm._s(_vm.__("Logout Other Browser Sessions")) +
+                              "\n                "
                           )
                         ]
                       )
@@ -55189,7 +55780,11 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Profile\n        ")]
+                [
+                  _vm._v(
+                    "\n            " + _vm._s(_vm.__("Profile")) + "\n        "
+                  )
+                ]
               )
             ]
           },
@@ -55270,7 +55865,13 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Two Factor Authentication\n    ")]
+          return [
+            _vm._v(
+              "\n        " +
+                _vm._s(_vm.__("Two Factor Authentication")) +
+                "\n    "
+            )
+          ]
         },
         proxy: true
       },
@@ -55279,7 +55880,13 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Add additional security to your account using two factor authentication.\n    "
+              "\n        " +
+                _vm._s(
+                  _vm.__(
+                    "Add additional security to your account using two factor authentication."
+                  )
+                ) +
+                "\n    "
             )
           ]
         },
@@ -55292,19 +55899,35 @@ var render = function() {
             _vm.twoFactorEnabled
               ? _c("h3", { staticClass: "text-lg font-medium text-gray-900" }, [
                   _vm._v(
-                    "\n            You have enabled two factor authentication.\n        "
+                    "\n            " +
+                      _vm._s(
+                        _vm.__("You have enabled two factor authentication.")
+                      ) +
+                      "\n        "
                   )
                 ])
               : _c("h3", { staticClass: "text-lg font-medium text-gray-900" }, [
                   _vm._v(
-                    "\n            You have not enabled two factor authentication.\n        "
+                    "\n            " +
+                      _vm._s(
+                        _vm.__(
+                          "You have not enabled two factor authentication."
+                        )
+                      ) +
+                      "\n        "
                   )
                 ]),
             _vm._v(" "),
             _c("div", { staticClass: "mt-3 max-w-xl text-sm text-gray-600" }, [
               _c("p", [
                 _vm._v(
-                  "\n                When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.\n            "
+                  "\n                " +
+                    _vm._s(
+                      _vm.__(
+                        "When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application."
+                      )
+                    ) +
+                    "\n            "
                 )
               ])
             ]),
@@ -55321,7 +55944,13 @@ var render = function() {
                           [
                             _c("p", { staticClass: "font-semibold" }, [
                               _vm._v(
-                                "\n                        Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application.\n                    "
+                                "\n                        " +
+                                  _vm._s(
+                                    _vm.__(
+                                      "Two factor authentication is now enabled. Scan the following QR code using your phone's authenticator application."
+                                    )
+                                  ) +
+                                  "\n                    "
                               )
                             ])
                           ]
@@ -55344,7 +55973,13 @@ var render = function() {
                           [
                             _c("p", { staticClass: "font-semibold" }, [
                               _vm._v(
-                                "\n                        Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.\n                    "
+                                "\n                        " +
+                                  _vm._s(
+                                    _vm.__(
+                                      "Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost."
+                                    )
+                                  ) +
+                                  "\n                    "
                               )
                             ])
                           ]
@@ -55391,7 +56026,9 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                        Enable\n                    "
+                                "\n                        " +
+                                  _vm._s(_vm.__("Enable")) +
+                                  "\n                    "
                               )
                             ]
                           )
@@ -55414,7 +56051,11 @@ var render = function() {
                                 { staticClass: "mr-3" },
                                 [
                                   _vm._v(
-                                    "\n                        Regenerate Recovery Codes\n                    "
+                                    "\n                        " +
+                                      _vm._s(
+                                        _vm.__("Regenerate Recovery Codes")
+                                      ) +
+                                      "\n                    "
                                   )
                                 ]
                               )
@@ -55433,7 +56074,9 @@ var render = function() {
                                 { staticClass: "mr-3" },
                                 [
                                   _vm._v(
-                                    "\n                        Show Recovery Codes\n                    "
+                                    "\n                        " +
+                                      _vm._s(_vm.__("Show Recovery Codes")) +
+                                      "\n                    "
                                   )
                                 ]
                               )
@@ -55456,7 +56099,9 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                        Disable\n                    "
+                                "\n                        " +
+                                  _vm._s(_vm.__("Disable")) +
+                                  "\n                    "
                               )
                             ]
                           )
@@ -55502,7 +56147,9 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Update Password\n    ")]
+          return [
+            _vm._v("\n        " + _vm._s(_vm.__("Update Password")) + "\n    ")
+          ]
         },
         proxy: true
       },
@@ -55511,7 +56158,13 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Ensure your account is using a long, random password to stay secure.\n    "
+              "\n        " +
+                _vm._s(
+                  _vm.__(
+                    "Ensure your account is using a long, random password to stay secure."
+                  )
+                ) +
+                "\n    "
             )
           ]
         },
@@ -55526,7 +56179,10 @@ var render = function() {
               { staticClass: "col-span-6 sm:col-span-4" },
               [
                 _c("jet-label", {
-                  attrs: { for: "current_password", value: "Current Password" }
+                  attrs: {
+                    for: "current_password",
+                    value: _vm.__("Current Password")
+                  }
                 }),
                 _vm._v(" "),
                 _c("jet-input", {
@@ -55559,7 +56215,7 @@ var render = function() {
               { staticClass: "col-span-6 sm:col-span-4" },
               [
                 _c("jet-label", {
-                  attrs: { for: "password", value: "New Password" }
+                  attrs: { for: "password", value: _vm.__("New Password") }
                 }),
                 _vm._v(" "),
                 _c("jet-input", {
@@ -55593,7 +56249,7 @@ var render = function() {
                 _c("jet-label", {
                   attrs: {
                     for: "password_confirmation",
-                    value: "Confirm Password"
+                    value: _vm.__("Confirm Password")
                   }
                 }),
                 _vm._v(" "),
@@ -55634,7 +56290,11 @@ var render = function() {
                 staticClass: "mr-3",
                 attrs: { on: _vm.form.recentlySuccessful }
               },
-              [_vm._v("\n            Saved.\n        ")]
+              [
+                _vm._v(
+                  "\n            " + _vm._s(_vm.__("Saved.")) + "\n        "
+                )
+              ]
             ),
             _vm._v(" "),
             _c(
@@ -55643,7 +56303,7 @@ var render = function() {
                 class: { "opacity-25": _vm.form.processing },
                 attrs: { disabled: _vm.form.processing }
               },
-              [_vm._v("\n            Save\n        ")]
+              [_vm._v("\n            " + _vm._s(_vm.__("Save")) + "\n        ")]
             )
           ]
         },
@@ -55680,7 +56340,11 @@ var render = function() {
       {
         key: "title",
         fn: function() {
-          return [_vm._v("\n        Profile Information\n    ")]
+          return [
+            _vm._v(
+              "\n        " + _vm._s(_vm.__("Profile Information")) + "\n    "
+            )
+          ]
         },
         proxy: true
       },
@@ -55689,7 +56353,13 @@ var render = function() {
         fn: function() {
           return [
             _vm._v(
-              "\n        Update your account's profile information and email address.\n    "
+              "\n        " +
+                _vm._s(
+                  _vm.__(
+                    "Update your account's profile information and email address."
+                  )
+                ) +
+                "\n    "
             )
           ]
         },
@@ -55777,7 +56447,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                Select A New Photo\n            "
+                          "\n                " +
+                            _vm._s(_vm.__("Select A New Photo")) +
+                            "\n            "
                         )
                       ]
                     ),
@@ -55797,7 +56469,9 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Remove Photo\n            "
+                              "\n                " +
+                                _vm._s(_vm.__("Remove Photo")) +
+                                "\n            "
                             )
                           ]
                         )
@@ -55816,7 +56490,9 @@ var render = function() {
               "div",
               { staticClass: "col-span-6 sm:col-span-4" },
               [
-                _c("jet-label", { attrs: { for: "name", value: "Name" } }),
+                _c("jet-label", {
+                  attrs: { for: "name", value: _vm.__("Name") }
+                }),
                 _vm._v(" "),
                 _c("jet-input", {
                   staticClass: "mt-1 block w-full",
@@ -55877,7 +56553,11 @@ var render = function() {
                 staticClass: "mr-3",
                 attrs: { on: _vm.form.recentlySuccessful }
               },
-              [_vm._v("\n            Saved.\n        ")]
+              [
+                _vm._v(
+                  "\n            " + _vm._s(_vm.__("Saved.")) + "\n        "
+                )
+              ]
             ),
             _vm._v(" "),
             _c(
@@ -55886,7 +56566,7 @@ var render = function() {
                 class: { "opacity-25": _vm.form.processing },
                 attrs: { disabled: _vm.form.processing }
               },
-              [_vm._v("\n            Save\n        ")]
+              [_vm._v("\n            " + _vm._s(_vm.__("Save")) + "\n        ")]
             )
           ]
         },
@@ -55894,6 +56574,41 @@ var render = function() {
       }
     ])
   })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Shared/LanguageSelector.vue?vue&type=template&id=ed67559a&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Shared/LanguageSelector.vue?vue&type=template&id=ed67559a& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "inertia-link",
+    {
+      class: _vm.classes,
+      attrs: { href: _vm.route("language", [_vm.selectable_locale]) }
+    },
+    [
+      _vm.selectable_locale == "fr"
+        ? _c("div", [_vm._v("FR")])
+        : _c("div", [_vm._v("EN")])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -70640,6 +71355,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Shared/LanguageSelector.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/Shared/LanguageSelector.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _LanguageSelector_vue_vue_type_template_id_ed67559a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LanguageSelector.vue?vue&type=template&id=ed67559a& */ "./resources/js/Shared/LanguageSelector.vue?vue&type=template&id=ed67559a&");
+/* harmony import */ var _LanguageSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LanguageSelector.vue?vue&type=script&lang=js& */ "./resources/js/Shared/LanguageSelector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LanguageSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LanguageSelector_vue_vue_type_template_id_ed67559a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LanguageSelector_vue_vue_type_template_id_ed67559a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Shared/LanguageSelector.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Shared/LanguageSelector.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/Shared/LanguageSelector.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LanguageSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./LanguageSelector.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Shared/LanguageSelector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LanguageSelector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Shared/LanguageSelector.vue?vue&type=template&id=ed67559a&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Shared/LanguageSelector.vue?vue&type=template&id=ed67559a& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LanguageSelector_vue_vue_type_template_id_ed67559a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./LanguageSelector.vue?vue&type=template&id=ed67559a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Shared/LanguageSelector.vue?vue&type=template&id=ed67559a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LanguageSelector_vue_vue_type_template_id_ed67559a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LanguageSelector_vue_vue_type_template_id_ed67559a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -70671,6 +71455,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.mixin({
     route: route
   }
 });
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.mixin(__webpack_require__(/*! ./base */ "./resources/js/base.js"));
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(laravel_jetstream__WEBPACK_IMPORTED_MODULE_2__["InertiaForm"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(portal_vue__WEBPACK_IMPORTED_MODULE_3___default.a);
@@ -70702,6 +71487,46 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     });
   }
 }).$mount(app);
+
+/***/ }),
+
+/***/ "./resources/js/base.js":
+/*!******************************!*\
+  !*** ./resources/js/base.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  methods: {
+    /**
+     * Translate the given key.
+     */
+    __: function __(key) {
+      var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var translation = this.$page.language[key] ? this.$page.language[key] : key;
+      Object.keys(replace).forEach(function (key) {
+        translation = translation.replace(':' + key, replace[key]);
+      });
+      return translation;
+    },
+
+    /** 
+    * Translate the given key with basic pluralization. 
+    */
+    __n: function __n(key, number) {
+      var replace = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      var options = key.split('|');
+      key = options[1];
+
+      if (number == 1) {
+        key = options[0];
+      }
+
+      return tt(key, replace);
+    }
+  }
+};
 
 /***/ }),
 
