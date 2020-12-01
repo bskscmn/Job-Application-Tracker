@@ -7,6 +7,7 @@ import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
 
 import moment from 'moment';
+require('moment/locale/fr');
 
 Vue.mixin({ methods: { route } });
 Vue.mixin(require('./base'))
@@ -17,19 +18,19 @@ Vue.use(PortalVue);
 
 Vue.filter('toDate', function (value) {
     if (value) {
-        return moment(String(value)).format('DD / MM / YYYY')
+        return moment(String(value)).locale(value[1]).format('DD / MM / YYYY')
     }
 });
 
 Vue.filter('toTime', function (value) {
     if (value) {
-        return moment(String(value)).format('h : mm : A')
+        return moment(String(value)).locale(value[1]).format('h : mm : A')
     }
 });
 
 Vue.filter('toDateTime', function (value) {
     if (value) {
-        return moment(String(value)).format('Do MMMM YYYY, h:mm A')
+        return moment(String(value[0])).locale(value[1]).format('Do MMMM YYYY, h:mm A')
     }
 });
 
