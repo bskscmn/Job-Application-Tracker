@@ -67,9 +67,7 @@ class Kernel extends HttpKernel
     ];
 
     protected $middlewarePriority = [
-        // ...
         \Illuminate\Session\Middleware\StartSession::class,
         \App\Http\Middleware\SetLocale::class,
-        // ...
     ];
 }

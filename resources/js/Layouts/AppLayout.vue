@@ -247,7 +247,7 @@
     import JetDropdownLink from '@/Jetstream/DropdownLink'
     import JetNavLink from '@/Jetstream/NavLink'
     import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink'
-    import LanguageSelector from '@/Shared/LanguageSelector'
+    import LanguageSelector from '@/Language/LanguageSelector'
  
     export default {
         components: {
