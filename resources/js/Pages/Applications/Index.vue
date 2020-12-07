@@ -25,24 +25,7 @@
                                     <span v-else>{{ __('Application Date is empty!') }}</span> 
                                 </div>
 
-                				<div v-if="app.condition_id == 1">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
-								</div>
-								<div v-else-if="app.condition_id == 2">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">{{  __(app.condition.condition) }}</span>
-								</div>
-								<div v-else-if="app.condition_id == 3">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">{{  __(app.condition.condition) }}</span>
-								</div>
-								<div v-else-if="app.condition_id == 4">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">{{  __(app.condition.condition) }}</span>
-								</div>
-								<div v-else-if="app.condition_id == 5">
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white">{{  __(app.condition.condition) }}</span>
-								</div>
-								<div v-else>
-								  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
-								</div>
+                				<app-status :id="app.condition_id" :condition="app.condition.condition"/>
                 				
                 			</div>
                 			<div><b>{{ __('Company') }}:</b> {{app.company}} </div>
@@ -67,11 +50,13 @@
 	import moment from 'moment'
     import AppLayout from '@/Layouts/AppLayout'
     import Search from './Search'
+    import AppStatus from './AppStatus'
 
     export default {
         components: {
             AppLayout,
-            Search
+            Search,
+            AppStatus
         },
 
         props: ['apps'],

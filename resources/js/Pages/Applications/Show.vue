@@ -19,30 +19,7 @@
             			<div class="flex justify-between items-center">
                             <div class="text-sm text-teal-800">
                                 {{ __('Application Date') }}: <span v-if="app.app_date !== null"><b>{{ [app.app_date, get_locale] | toDateTime }}</b></span> </div>
-
-                            <div v-if="app.condition_id == 1">
-                              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">{{  __(app.condition.condition) }}</span>
-                            </div>
-                            <div v-else-if="app.condition_id == 2">
-                              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">{{  __(app.condition.condition) }}</span>
-                            </div>
-                            <div v-else-if="app.condition_id == 3">
-                              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">{{  __(app.condition.condition) }}</span>
-                            </div>
-                            <div v-else-if="app.condition_id == 4">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">{
-                                    { app.condition.condition }}</span>
-                            </div>
-                            <div v-else-if="app.condition_id == 5">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-teal-100 text-white">
-                                    {{  __(app.condition.condition) }}
-                                </span>
-                            </div>
-                            <div v-else>
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">
-                                    {{  __(app.condition.condition) }}
-                                </span>
-                            </div>
+                            <app-status :id="app.condition_id" :condition="app.condition.condition"/>
             			</div>
                         
                         <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
@@ -102,7 +79,7 @@
                                     </div>
 
                                     <div class="ml-12">
-                                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" v-if="app.description != null">
                                             <p v-html="nl2br(app.description)"></p>
                                         </div>
                                     </div>
@@ -130,7 +107,7 @@
                                     </div>
 
                                     <div class="ml-12">
-                                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" v-if="app.motivation_letter != null">
                                             <p v-html="nl2br(app.motivation_letter)"></p>
                                         </div>
                                     </div>
@@ -144,7 +121,7 @@
                                     </div>
 
                                     <div class="ml-12">
-                                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" v-if="app.comment != null">
                                             <p v-html="nl2br(app.comment)"></p>
                                         </div>
                                     </div>
@@ -180,10 +157,12 @@
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
+    import AppStatus from './AppStatus'
 
     export default {
         components: {
             AppLayout,
+            AppStatus
         },
         
         props: ['app'],
