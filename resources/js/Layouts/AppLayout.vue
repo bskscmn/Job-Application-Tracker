@@ -17,13 +17,60 @@
                             <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                 {{ __('Dashboard') }}
                             </jet-nav-link>
-                            <jet-nav-link :href="route('applications.index')" :active="route().current('applications.index')">
-                                {{ __('Applications') }}
-                            </jet-nav-link>
-                            <jet-nav-link :href="route('application.create')" :active="route().current('applications.create')">
-                                {{ __('Add New Application') }}
-                            </jet-nav-link>
                             
+                            <!-- Applications -->
+                            <jet-dropdown :active="route().current('applications.index') || route().current(`application.*`)">
+                                <template #trigger>
+                                    <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        <div>{{ __('Applications') }}</div>
+
+                                        <div class="ml-1">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </template>
+
+                                <template #content>
+                                    <jet-dropdown-link :href="route('applications.index')" >
+                                        {{ __('Application List') }}
+                                    </jet-dropdown-link>
+                                    
+                                    <div class="border-t border-gray-100"></div>
+                                    
+                                    <jet-dropdown-link :href="route('application.create')" >
+                                        {{ __('Add New Application') }}
+                                    </jet-dropdown-link>
+                                </template>
+                            </jet-dropdown>
+
+                            <!-- Platforms -->
+                            <jet-dropdown :active="route().current('platforms.index') || route().current(`platform.*`)">
+                                <template #trigger>
+                                    <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        <div>{{ __('Platforms') }}</div>
+
+                                        <div class="ml-1">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </template>
+
+                                <template #content>
+                                    <jet-dropdown-link :href="route('platforms.index')" >
+                                        {{ __('Platform List') }}
+                                    </jet-dropdown-link>
+                                    
+                                    <div class="border-t border-gray-100"></div>
+                                    
+                                    <jet-dropdown-link :href="route('platform.create')" >
+                                        {{ __('Add New Platform') }}
+                                    </jet-dropdown-link>
+                                </template>
+                            </jet-dropdown>
                         </div>
                     </div>
 
@@ -134,13 +181,26 @@
                     <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                         {{ __('Dashboard') }}
                     </jet-responsive-nav-link>
+
+                    <div class="border-t border-gray-200"></div>
+
                     <jet-responsive-nav-link :href="route('applications.index')" :active="route().current('applications.index')">
                         {{ __('Applications') }}
                     </jet-responsive-nav-link>
-                    <jet-responsive-nav-link :href="route('application.create')" :active="route().current('applications.create')">
+                    <jet-responsive-nav-link :href="route('application.create')" :active="route().current('application.create')">
                         {{ __('Add New Application') }}
                     </jet-responsive-nav-link>
-                    <language-selector />
+
+                    <div class="border-t border-gray-200"></div>
+
+                    <jet-responsive-nav-link :href="route('platforms.index')" :active="route().current('platforms.index')">
+                        {{ __('Platforms') }}
+                    </jet-responsive-nav-link>
+                    <jet-responsive-nav-link :href="route('platform.create')" :active="route().current('platform.create')">
+                        {{ __('Add New Platform') }}
+                    </jet-responsive-nav-link>
+
+                    
                 </div>
 
                 <!-- Responsive Settings Options -->
@@ -209,6 +269,12 @@
                         </template>
                     </div>
                 </div>
+
+                <div class="pt-4 pb-1 pl-4 border-t border-gray-200">
+                    {{ __('Change Language: ') }}
+                    <language-selector class="ml-1 pr-2 pl-2"/>
+                </div>
+
             </div>
         </nav>
 
