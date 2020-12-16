@@ -55225,7 +55225,11 @@ var render = function() {
             ],
             staticClass:
               "rounded-l-full w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none ",
-            attrs: { id: "search", type: "text", placeholder: "Search" },
+            attrs: {
+              id: "search",
+              type: "text",
+              placeholder: _vm.__("Search")
+            },
             domProps: { value: _vm.form.search },
             on: {
               input: function($event) {
@@ -56990,7 +56994,7 @@ var render = function() {
                     [
                       _vm._v(
                         "\n                " +
-                          _vm._s(_vm.__("Job Platforms That I Signed In")) +
+                          _vm._s(_vm.__("Job Platforms")) +
                           " \n            "
                       )
                     ]
@@ -57012,7 +57016,7 @@ var render = function() {
         _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
           this.search != null
             ? _c("div", { staticClass: "mb-1" }, [
-                _vm._v("\n                Search: "),
+                _vm._v("\n                " + _vm._s(_vm.__("Search")) + ": "),
                 _c("b", [_vm._v(_vm._s(this.search))])
               ])
             : _vm._e(),
@@ -57041,7 +57045,11 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "You dont have any job platform in your list."
+                              _vm._s(
+                                _vm.__(
+                                  "You dont have any job platform in your list."
+                                )
+                              )
                             )
                           ]
                         )
@@ -57065,7 +57073,11 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "Sorry, we found 0 result for your search, Please try searching again."
+                              _vm._s(
+                                _vm.__(
+                                  "Sorry, we found 0 result for your search, Please try searching again."
+                                )
+                              )
                             )
                           ]
                         )
@@ -57238,7 +57250,11 @@ var render = function() {
             ],
             staticClass:
               "rounded-l-full w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none ",
-            attrs: { id: "search", type: "text", placeholder: "Search" },
+            attrs: {
+              id: "search",
+              type: "text",
+              placeholder: _vm.__("Search")
+            },
             domProps: { value: _vm.form.search },
             on: {
               input: function($event) {

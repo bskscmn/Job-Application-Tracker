@@ -3,6 +3,7 @@
     "This application is developped for job applicants to help tracking their job applications.":"Cette application est développée pour les demandeurs d'emploi afin de les aider à suivre leurs candidatures.",
     "Application": "Application",
     "Applications": "Applications",
+    "Application List": "Liste des Applications",
     "Add New Application": "Ajouter une nouvelle application",
     "Job Application Tracker": "Suivi des candidatures",
     "Developer": "Developpeuse",
@@ -43,8 +44,21 @@
     "This action is irreversible": "Cette action est irréversible",
     "Delete this item": "Supprimer cette candidature",
     "Clear": "Effacer",
+    "Search": "Recherche ",
+    "You dont have any application in your list.": "Vous n'avez aucune candidature dans votre liste.",
+    "Sorry, we found 0 result for your search, Please try searching again.": "Désolé, nous avons trouvé 0 résultat pour votre recherche. S'il vous plaît, essayez de nouveau.",
 
-
+    "Platform": "Plateforme",
+    "Platforms": "Plateformes",
+    "Platform List": "Liste des Plateformes",
+    "Add New Platform": "Ajouter une nouvelle plateforme",
+    "Job Platforms": "Plateformes d'Emploi",
+    "You dont have any job platform in your list.": "Vous n'avez aucune plateforme d'emploi dans votre liste.",
+    "Platform Name": "Nom de la plateforme",
+    "Platform URL": "URL de la Plateforme",
+    "Login Info": "Informations de connexion",
+    "User Name": "Nom d'utilisateur",
+    "New Platform": "Nouvelle Plateforme",
 
 
 
