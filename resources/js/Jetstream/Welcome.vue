@@ -11,23 +11,30 @@
 
             <div class="mt-6 text-gray-500">
                 <div v-if="selected_language == 'fr'">
-                    Vous pouvez facilement créer et modifier votre demande d'emploi.
+                    Vous pouvez facilement organiser votre demande d'emploi.
                 </div>
                 <div v-else>
-                    You can easily create and edit your job application. 
+                    You can easily organize your job applications. 
                 </div>
             </div>
         </div>
 
         <div v-if="selected_language == 'fr'">
             <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+
                 <div class="p-6">
-                    <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/application/create">Ajouter une nouvelle candidature</a></div>
+                    <div class="mb-6 text-xl">
+                        Candidatures
+                    </div>
+                    <div class="flex items-start">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+
+                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/application/create">Ajouter une nouvelle candidature </a></div>
                     </div>
 
-                    <div class="ml-12">
+                    <div class="ml-12 mb-1">
                         <div class="mt-2 text-sm text-gray-500">
 
                             Vous pouvez ajouter une nouvelle demande à votre liste avec ces informations : 
@@ -45,11 +52,12 @@
                             </div>
                         </a>
                     </div>
-                </div>
 
-                <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
-                    <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div class="flex items-start border-t border-gray-200 mt-1 pt-3">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+                        
                         <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/applications">Afficher et modifier vos candidatures</a></div>
                     </div>
 
@@ -69,17 +77,82 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                    <div class="mb-6 text-xl">
+                        Plateformes d'Emploi
+                    </div>
+
+                    <div class="flex items-start">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+
+                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/platform/create">Ajouter une nouvelle plateforme</a></div>
+                    </div>
+
+                    <div class="ml-12 mb-1">
+                        <div class="mt-2 text-sm text-gray-500">
+
+                            Vous pouvez ajouter une nouvelle plateforme d'emploi à votre liste avec ces informations : 
+
+                            Nom de la plateforme, lien, Informations de connexion(Nom d'utilisateur, email), notes
+                        </div>
+
+                        <a href="/platform/create">
+                            <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                                    <div>Aller à la page</div>
+
+                                    <div class="ml-1 text-indigo-500">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="flex items-start border-t border-gray-200 mt-1 pt-3">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+                        
+                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/platforms">Afficher et modifier vos plateformes</a></div>
+                    </div>
+
+                    <div class="ml-12">
+                        <div class="mt-2 text-sm text-gray-500">
+                            Consultez toutes vos plateformes et modifiez-les facilement.
+                        </div>
+
+                        <a href="/platforms">
+                            <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                                    <div>Aller à la page</div>
+
+                                    <div class="ml-1 text-indigo-500">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div v-else>
             <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+
                 <div class="p-6">
-                    <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <div class="mb-6 text-xl">
+                        Applications
+                    </div>
+                    <div class="flex items-start">
+                        
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+
                         <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/application/create">Add New Job Application</a></div>
                     </div>
 
-                    <div class="ml-12">
+                    <div class="ml-12 mb-1">
                         <div class="mt-2 text-sm text-gray-500">
 
                             You can add new application to your list with the information:
@@ -89,7 +162,7 @@
 
                         <a href="/application/create">
                             <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                    <div>Go to page</div>
+                                    <div>Go to the page</div>
 
                                     <div class="ml-1 text-indigo-500">
                                         <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -97,11 +170,12 @@
                             </div>
                         </a>
                     </div>
-                </div>
 
-                <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
-                    <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div class="flex items-start border-t border-gray-200 mt-1 pt-3">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+                        
                         <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/applications">Display and Edit Your Applications</a></div>
                     </div>
 
@@ -112,7 +186,64 @@
 
                         <a href="/applications">
                             <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                    <div>Go to page</div>
+                                    <div>Go to the page</div>
+
+                                    <div class="ml-1 text-indigo-500">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                    <div class="mb-6 text-xl">
+                        Job Platforms
+                    </div>
+
+                    <div class="flex items-start">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+
+                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/platform/create">Add New Job Platform</a></div>
+                    </div>
+
+                    <div class="ml-12 mb-1">
+                        <div class="mt-2 text-sm text-gray-500">
+
+                            You can add new platform to your list with the information:
+
+                            Platform Name, Link, Login Info(username, email), Notes
+                        </div>
+
+                        <a href="/platform/create">
+                            <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                                    <div>Go to the page</div>
+
+                                    <div class="ml-1 text-indigo-500">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="flex items-start border-t border-gray-200 mt-1 pt-3">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 510 510" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"/>
+                        </svg>
+                        
+                        <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="/platforms">Display and Edit Your Platforms</a></div>
+                    </div>
+
+                    <div class="ml-12">
+                        <div class="mt-2 text-sm text-gray-500">
+                            See all of your job platforms and edit easily.
+                        </div>
+
+                        <a href="/platforms">
+                            <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                                    <div>Go to the page</div>
 
                                     <div class="ml-1 text-indigo-500">
                                         <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -122,6 +253,9 @@
                     </div>
                 </div>
             </div>
+
+
+            
         </div>
 
             
