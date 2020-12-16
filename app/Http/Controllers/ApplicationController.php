@@ -28,7 +28,7 @@ class ApplicationController extends Controller
                 ->orWhere('location','LIKE','%'.$q.'%')
                 ->orWhere('description','LIKE','%'.$q.'%')
                 ->orderBy('id', 'DESC')->with('condition')->paginate(5);
-            return Inertia::render('Applications/Index',['apps' => $apps]);
+            return Inertia::render('Applications/Index',['apps' => $apps, 'search' => $q]);
         }else{
             $apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
             return Inertia::render('Applications/Index',['apps' => $apps]);

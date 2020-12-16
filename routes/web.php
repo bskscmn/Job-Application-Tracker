@@ -33,6 +33,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 	    return Inertia\Inertia::render('Dashboard');
 	  })->name('dashboard');
 
+    // Applications
+
     Route::get('/applications', 'App\Http\Controllers\ApplicationController@index')->name('applications.index');
 
     Route::get('/application/create', 'App\Http\Controllers\ApplicationController@create')->name('application.create');
@@ -45,6 +47,20 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
   	Route::delete('/application/delete/{id}', 'App\Http\Controllers\ApplicationController@destroy')->name('application.delete');
+
+    // Platforms
+
+    Route::get('/platforms', 'App\Http\Controllers\PlatformController@index')->name('platforms.index');
+
+    Route::get('/platform/create', 'App\Http\Controllers\PlatformController@create')->name('platform.create');
+    Route::post('/platform/store', 'App\Http\Controllers\PlatformController@store')->name('platform.store');
+
+
+    Route::get('/platform/edit/{id}', 'App\Http\Controllers\PlatformController@edit')->name('platform.edit');
+    Route::patch('/platform/update/{id}', 'App\Http\Controllers\PlatformController@update')->name('platform.update');
+
+
+    Route::delete('/platform/delete/{id}', 'App\Http\Controllers\PlatformController@destroy')->name('platform.delete');
 
 });
 

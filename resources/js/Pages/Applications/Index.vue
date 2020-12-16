@@ -3,7 +3,8 @@
         <template #header>
             <div class="flex justify-between items-center">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    Applications
+                    {{ __('Applications') }} 
+
                 </h2>
                 <search/>
             </div>
@@ -11,12 +12,20 @@
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div v-if="this.search != null" class="mb-1">
+                    Search: <b>{{ this.search }}</b>
+                </div>
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
-                	<div v-if="this.appList.data.length == 0" class="text-center">
-                		<div class="px-5 py-2 bg-indigo-800 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-						    <span class="font-semibold text-center flex-auto">You dont have any job application in your list.</span>
-						</div>
-					</div>
+                	<div v-if="this.search == null && this.appList.data.length == 0" class="text-center">
+                        <div class="px-5 py-2 bg-indigo-800 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+                            <span class="font-semibold text-center flex-auto">You dont have any application in your list.</span>
+                        </div>
+                    </div>
+                    <div v-else-if="this.search != null && this.appList.data.length == 0" class="text-center">
+                        <div class="px-5 py-2 bg-indigo-800 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+                            <span class="font-semibold text-center flex-auto">Sorry, we found 0 result for your search, Please try searching again.</span>
+                        </div>
+                    </div>
                 	<div v-for="app in this.appList.data" v-bind:key="'app-'+app.id" >
                 		<div class="p-3 shadow-xl">
                 			<div class="flex justify-between items-center">
@@ -59,7 +68,7 @@
             AppStatus
         },
 
-        props: ['apps'],
+        props: ['apps', 'search'],
 
         data() {
         	return {

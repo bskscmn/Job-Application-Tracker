@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Platform;
 use App\Models\Application;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -62,5 +63,9 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function applications() {
         return $this->hasMany(Application::class);
+    }
+
+    public function platforms() {
+        return $this->hasMany(Platform::class);
     }
 }

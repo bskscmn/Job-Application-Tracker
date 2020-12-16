@@ -17,7 +17,6 @@
 </template>
 
 <script>
-	import moment from 'moment'
     import AppLayout from '@/Layouts/AppLayout'
 
     export default {
@@ -32,7 +31,7 @@
 
         methods: {
             submit() {
-              this.$inertia.get('/applications', this.form)
+              this.$inertia.get('/platforms', this.form)
             },
         }    	
         

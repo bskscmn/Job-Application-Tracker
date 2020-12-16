@@ -25,9 +25,7 @@
 
     export default {
         
-
         props: ['id', 'condition'],
-
         
     }
 </script>
