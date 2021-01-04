@@ -30,8 +30,20 @@ class ApplicationController extends Controller
                 ->orderBy('id', 'DESC')->with('condition')->paginate(5);
             return Inertia::render('Applications/Index',['apps' => $apps, 'search' => $q]);
         }else{
+            $tab = $request['tab'];
+
+            if( $tab == 'applied'  ) {
+            $apps = Application::where('user_id', $user->id)->where('condition_id', '!=', 1)->orderBy('app_date', 'DESC')->with('condition')->paginate(5);
+            return Inertia::render('Applications/Index',['apps' => $apps, 'tab' => $tab]);
+            }
+            if( $tab == 'notApplied'  ) {
+            $apps = Application::where('user_id', $user->id)->where('condition_id', 1)->orderBy('id', 'DESC')->with('condition')->paginate(5);
+            return Inertia::render('Applications/Index',['apps' => $apps, 'tab' => $tab]);
+            }
+            if( $tab == null  ) {
             $apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
-            return Inertia::render('Applications/Index',['apps' => $apps]);
+            return Inertia::render('Applications/Index',['apps' => $apps, 'tab' => $tab]);
+            }
         }
         	
     }
@@ -56,6 +68,7 @@ class ApplicationController extends Controller
     	$validator = Validator::make($request->all(), [
             'company' => 'required|max:255',
             'post_title' => 'required',
+            'app_date'  => 'required_unless:condition_id,1'
         ])->validate();
 
     	$user = auth()->user();
@@ -84,6 +97,7 @@ class ApplicationController extends Controller
     	$validator = Validator::make($request->all(), [
             'company' => 'required|max:255',
             'post_title' => 'required',
+            'app_date'  => 'required_unless:condition_id,1'
         ])->validate();
     	
     	if($request['app_date']){

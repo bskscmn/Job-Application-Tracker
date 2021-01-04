@@ -11,11 +11,16 @@
         </template>
 
         <div class="py-12">
+
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
                 <div v-if="this.search != null" class="mb-1">
                     Search: <b>{{ this.search }}</b>
                 </div>
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
+
+                    <tabs-app :tab="this.tab"/>
+
                 	<div v-if="this.search == null && this.appList.data.length == 0" class="text-center">
                         <div class="px-5 py-2 bg-indigo-800 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                             <span class="font-semibold text-center flex-auto">You dont have any application in your list.</span>
@@ -60,15 +65,17 @@
     import AppLayout from '@/Layouts/AppLayout'
     import Search from './Search'
     import AppStatus from './AppStatus'
+    import TabsApp from './TabsApp'
 
     export default {
         components: {
             AppLayout,
             Search,
-            AppStatus
+            AppStatus,
+            TabsApp
         },
 
-        props: ['apps', 'search'],
+        props: ['apps', 'search', 'tab'],
 
         data() {
         	return {

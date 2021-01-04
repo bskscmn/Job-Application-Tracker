@@ -17,8 +17,6 @@
 </template>
 
 <script>
-	import moment from 'moment'
-    import AppLayout from '@/Layouts/AppLayout'
 
     export default {
 

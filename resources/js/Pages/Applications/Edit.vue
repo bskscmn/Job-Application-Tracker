@@ -16,9 +16,39 @@
 
                     <form @submit.prevent="submit" class="w-full">
 
-                        <div class="mt-4 bg-white dark:bg-gray-800  shadow sm:rounded-lg">    
+                        <div class="mt-4 bg-white dark:bg-gray-800  shadow-lg sm:rounded-lg">    
                             <div class="container mx-auto p-4 ">
                                 <div class="md:flex md:items-center mb-3 ">
+
+                                    <div class="w-full md:w-1/2 px-3 ">
+                                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="company">
+                                            {{ __('Company') }} *
+                                        </label>
+                                        <input v-model="appData.company" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="company" type="text" v-bind:placeholder="__('Company Name')">
+                                        <div v-if="$page.errors.company" class="text-red-700 text-sm">{{ $page.errors.company[0] }}</div>
+                                    </div>
+
+                                    <div class="w-full md:w-1/2 px-3 ">
+                                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="location">
+                                            {{ __('Location') }} 
+                                        </label>
+                                        <input v-model="appData.location" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="location" type="text" v-bind:placeholder="__('Location')">
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="md:flex md:items-center mb-3">
+                                    <div class="w-full px-3 max-w-3xl">
+                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="post_title">
+                                        {{ __('Post Title') }} *
+                                      </label>
+                                      <input v-model="appData.post_title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="post_title" type="text" v-bind:placeholder="__('Title')">
+                                      <div v-if="$page.errors.post_title" class="text-red-700 text-sm">{{ $page.errors.post_title[0] }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="md:flex md:items-center mb-3">
+
                                     <div class="w-full md:w-1/2 px-3">
                                         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="condition_id">
                                             {{ __('Status') }} 
@@ -30,45 +60,20 @@
                                             </option>
                                         </select>
                                     </div>
+
                                     <div class="w-full md:w-1/2 px-3 mb-3 ">
-                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
-                                        {{ __('Aplication Date - Time') }} 
-                                      </label>
-                                      <Datetime format="DD-MM-YYYY H:i" class="shadow appearance-none border rounded w-full  py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="appDateTime" readonly></Datetime>
+                                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
+                                            {{ __('Aplication Date - Time') }} 
+                                        </label>
+                                        <Datetime format="DD-MM-YYYY H:i" class="shadow appearance-none border rounded w-full  py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="appDateTime" readonly></Datetime>
+                                        <div v-if="$page.errors.app_date" class="text-red-700 text-sm">{{ $page.errors.app_date[0] }}</div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
-                                
-                        <div class="mt-6 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                            <div class="mt-2 p-4">
-                                <div class="md:flex md:items-center mb-3 mt-2">
-                                    <div class="w-full px-3 max-w-lg">
-                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="company">
-                                        {{ __('Company') }} *
-                                      </label>
-                                      <input v-model="appData.company" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="company" type="text" v-bind:placeholder="__('Company Name')">
-                                      <div v-if="$page.errors.company" class="text-red-700 text-sm">{{ $page.errors.company[0] }}</div>
-                                    </div>
-                                </div>
-                                <div class="md:flex md:items-center mb-3">
-                                    <div class="w-full px-3 max-w-lg">
-                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="location">
-                                        {{ __('Location') }} 
-                                      </label>
-                                      <input v-model="appData.location" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="location" type="text" v-bind:placeholder="__('Location')">
-                                    </div>
-                                </div>
-                                <div class="md:flex md:items-center mb-3">
-                                    <div class="w-full px-3">
-                                      <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="post_title">
-                                        {{ __('Post Title') }} *
-                                      </label>
-                                      <input v-model="appData.post_title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="post_title" type="text" v-bind:placeholder="__('Title')">
-                                      <div v-if="$page.errors.post_title" class="text-red-700 text-sm">{{ $page.errors.post_title[0] }}</div>
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div class="mt-4 bg-white dark:bg-gray-800  shadow sm:rounded-lg">  
 
                             <div class="grid grid-cols-1">
                                 <div class="p-6">
@@ -130,6 +135,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="mt-6 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
