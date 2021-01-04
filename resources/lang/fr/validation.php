@@ -130,8 +130,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'app_date' => [
+            'required_unless' => 'Le champ :attribute est obligatoire sauf si :other est "Aucune action".',
         ],
     ],
 
@@ -176,5 +176,9 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
+        'company'               => 'entreprise',
+        'post_title'            => 'titre du poste',      
+        'app_date'              => 'date et heure d\'application',
+        'condition_id'          => 'statut',
     ],
 ];

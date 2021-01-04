@@ -131,10 +131,12 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'app_date' => [
+            'required_unless' => 'The :attribute field is required unless :other is selected as "No Action".',
         ],
     ],
+
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -147,6 +149,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'app_date' => 'Application Date',
+        'app_date'              => 'Aplication Date - Time',
+        'condition_id'          => 'status',
+    ],
 
 ];
