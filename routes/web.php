@@ -24,7 +24,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
   Route::get('/language/{language}', function ($language) {
       Session()->put('locale', $language);
-   
+      App::setLocale($language);
       return redirect()->back();
   })->name('language');
 
