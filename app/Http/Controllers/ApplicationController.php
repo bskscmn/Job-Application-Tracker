@@ -27,21 +27,22 @@ class ApplicationController extends Controller
                 ->orWhere('post_title','LIKE','%'.$q.'%')
                 ->orWhere('location','LIKE','%'.$q.'%')
                 ->orWhere('description','LIKE','%'.$q.'%')
-                ->orderBy('id', 'DESC')->with('condition')->paginate(5);
+                ->orderBy('id', 'DESC')->with('condition')->paginate(5)
+                ->withQueryString();
             return Inertia::render('Applications/Index',['apps' => $apps, 'search' => $q]);
         }else{
             $tab = $request['tab'];
 
             if( $tab == 'applied'  ) {
-            $apps = Application::where('user_id', $user->id)->where('condition_id', '!=', 1)->orderBy('app_date', 'DESC')->with('condition')->paginate(5);
+            $apps = Application::where('user_id', $user->id)->where('condition_id', '!=', 1)->orderBy('app_date', 'DESC')->with('condition')->paginate(5)->withQueryString();
             return Inertia::render('Applications/Index',['apps' => $apps, 'tab' => $tab]);
             }
             if( $tab == 'notApplied'  ) {
-            $apps = Application::where('user_id', $user->id)->where('condition_id', 1)->orderBy('id', 'DESC')->with('condition')->paginate(5);
+            $apps = Application::where('user_id', $user->id)->where('condition_id', 1)->orderBy('id', 'DESC')->with('condition')->paginate(5)->withQueryString();
             return Inertia::render('Applications/Index',['apps' => $apps, 'tab' => $tab]);
             }
             if( $tab == null  ) {
-            $apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5);
+            $apps = Application::where('user_id', $user->id)->orderBy('id', 'DESC')->with('condition')->paginate(5)->withQueryString();
             return Inertia::render('Applications/Index',['apps' => $apps, 'tab' => $tab]);
             }
         }
