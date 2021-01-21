@@ -21,6 +21,7 @@
     "Title": "Titre",
     "No Action": "Aucune action",
     "Applied": "Appliqué",
+    "Not Applied": "Non Appliqué",
     "Accepted": "Accepté",
     "Refused": "Refus",
     "Hired": "Recruté",
@@ -48,8 +49,7 @@
     "You dont have any application in your list.": "Vous n'avez aucune candidature dans votre liste.",
     "Sorry, we found 0 result for your search, Please try searching again.": "Désolé, nous avons trouvé 0 résultat pour votre recherche. S'il vous plaît, essayez de nouveau.",
     "All": "Toutes",
-    "Applied": "Appliquées",
-    "Not Applied": "Non Appliquées",
+    
 
     "Platform": "Plateforme",
     "Platforms": "Plateformes",
