@@ -1,10 +1,16 @@
+
+### This is the old version of the application and new version is not published as public.
+#### For demo page: [http://jobseeker.basaksecmen.com/](http://jobseeker.basaksecmen.com/)
+
+
+
+##
 <img src="./logo.png">
 
 ## About Job Application Tracker
 
-This application is developped for job applicants to help tracking their job applications.
 
-For demo page: [http://jobapplications.basaksecmen.com/](http://jobapplications.basaksecmen.com/)
+This application is developped for job applicants to help tracking their job applications.
 
 ### Technologies
 
